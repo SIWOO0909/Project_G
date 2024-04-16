@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1572119118283434186}
-  - component: {fileID: 5559618906973725081}
+  - component: {fileID: 4179804484961192406}
   m_Layer: 0
   m_Name: Terrain Generator
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5559618906973725081
+--- !u!114 &4179804484961192406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,14 +41,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2916671120970525654}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97bc9633950994642bc95945b9b69322, type: 3}
+  m_Script: {fileID: 11500000, guid: 32a31044500d08c48a9b5c20fb04bf2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDistanceFromPlayer: 20
-  maxTerrainCount: 25
-  terrainDatas:
-  - {fileID: 11400000, guid: 341895489d535944bb981f101d7bd17d, type: 2}
-  - {fileID: 11400000, guid: 8e347c96888d356418b5eb5a7c5c477d, type: 2}
-  - {fileID: 11400000, guid: b7126da0de6e2ce42b786bda12efbe15, type: 2}
-  terrainHolder: {fileID: 0}
-  currentPosition: {x: 0, y: 0, z: 0}
+  carril: 0
+  pisos:
+  - {fileID: 6628279150855088754, guid: 800cad5e2eeb88443b5a4f0ff8bd3dab, type: 3}
+  - {fileID: 7919302269561344640, guid: ee9d5afa8d15e5740baa39851b4c6532, type: 3}
+  - {fileID: 6818877068535214360, guid: ce7697140fc04594196ce4d7bd2dd40b, type: 3}
+  - {fileID: 5263603206205895816, guid: ee810d7e8f5a09b4c9f93e2b33b779f4, type: 3}
+  - {fileID: 9176246493037295662, guid: 59b0b544876ba2c4388e61370ed1e1c3, type: 3}
+  - {fileID: 9176246493037295662, guid: 59b0b544876ba2c4388e61370ed1e1c3, type: 3}
+  - {fileID: 2184740699496793013, guid: 14d4b68a6e04dc8478c7c44b36aa6541, type: 3}
+  - {fileID: 6615728822472016414, guid: 852916d5b9d1fa24d8a482a9c5d6b698, type: 3}
+  - {fileID: 7418781340585527263, guid: 298572561e41d294aa3adf63be254944, type: 3}
+  - {fileID: 6250889574098181883, guid: d64fed4fc1c19ee44aa9d4e515670184, type: 3}
+  pisosDiferencia: 20
