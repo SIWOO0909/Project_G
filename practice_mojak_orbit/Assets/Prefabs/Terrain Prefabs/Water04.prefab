@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0020124, y: -0.2, z: 0.1}
-  m_LocalScale: {x: 0.71799505, y: 1.620691, z: 0.047108002}
+  m_LocalScale: {x: 0.71799505, y: 1.620691, z: 0.0731446}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3369149943431661293}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a1ed362e9d5d4bd47888cac21f4fe84c, type: 2}
+  - {fileID: 2100000, guid: b88b9cbf7d3ad614aa097af22fd23fca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -149,7 +149,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0020124, y: -0.2, z: -0.08}
-  m_LocalScale: {x: 0.71799505, y: 1.620691, z: 0.047108002}
+  m_LocalScale: {x: 0.71799505, y: 1.620691, z: 0.071081266}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3369149943431661293}
@@ -182,7 +182,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a1ed362e9d5d4bd47888cac21f4fe84c, type: 2}
+  - {fileID: 2100000, guid: b88b9cbf7d3ad614aa097af22fd23fca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -267,8 +267,8 @@ Transform:
   m_GameObject: {fileID: 2146852877611845686}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0020124, y: -0.2, z: -0.19999999}
-  m_LocalScale: {x: 0.71799505, y: 1.620691, z: 0.047108002}
+  m_LocalPosition: {x: 0.0020124, y: -0.2, z: -0.2188}
+  m_LocalScale: {x: 0.71799505, y: 1.620691, z: 0.07074874}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3369149943431661293}
@@ -301,7 +301,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a1ed362e9d5d4bd47888cac21f4fe84c, type: 2}
+  - {fileID: 2100000, guid: b88b9cbf7d3ad614aa097af22fd23fca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -369,7 +369,6 @@ GameObject:
   - component: {fileID: 2703077083438117465}
   - component: {fileID: 950749966988092331}
   - component: {fileID: 8909422407791727726}
-  - component: {fileID: 5338387221568759670}
   m_Layer: 4
   m_Name: Water04
   m_TagString: Aqua
@@ -464,32 +463,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.1, z: 0}
---- !u!54 &5338387221568759670
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7418781340585527263}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
+  m_Size: {x: 1, y: 0.90391487, z: 1}
+  m_Center: {x: 0, y: 0.05195737, z: 0}

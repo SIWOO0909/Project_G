@@ -74,7 +74,7 @@ public class Move : MonoBehaviour
 
         for(int i = 1; i < 11; i++)
         {
-            transform.position = Vector3.Lerp(posActual, posPlayer, i * 0.1f) + Vector3.up * curve.Evaluate(i * 0.1f);
+            transform.position = Vector3.Lerp(posActual, posPlayer, i * 0.1f); //+ Vector3.up * curve.Evaluate(i * 0.1f);
             yield return new WaitForSeconds(1f / velocidad);
         }
         bloqueo = false;
@@ -93,7 +93,7 @@ public class Move : MonoBehaviour
         }
 
         positionX++;
-        //animations.SetTrigger("run");
+        animations.SetTrigger("run");
         if (positionX > carril)
         {
             
@@ -157,6 +157,7 @@ public class Move : MonoBehaviour
     {
         if (other.CompareTag("carro"))
         {
+            StartCoroutine(FreezeTime());
             animations.SetTrigger("car");
             vivo = false;
         }
@@ -174,11 +175,20 @@ public class Move : MonoBehaviour
         {
              if (hit.collider.CompareTag("Aqua"))
              {
-                
+                StartCoroutine(FreezeTime());
                 vivo = false;
                 animations.SetTrigger("aqua");
              }
 
         }
+    }
+
+    IEnumerator FreezeTime()
+    {
+        // 충돌 후 1초를 기다립니다
+        yield return new WaitForSeconds(1f);
+
+        // 시간을 정지합니다
+        Time.timeScale = 0;
     }
 }
