@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class YooniLDong : MonoBehaviour
+public class Minsu : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("¾îÀÌ À±ÀÏµ¿ Â÷·Ç!");
+        Debug.Log("¹Î¼ö ¤¾¤·");
     }
 
     // Update is called once per frame
