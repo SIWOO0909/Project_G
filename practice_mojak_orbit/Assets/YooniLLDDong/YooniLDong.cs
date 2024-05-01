@@ -7,7 +7,7 @@ public class YooniLDong : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("辣老悼 瞒非!");
+        Debug.Log("绢捞 辣老悼 瞒非!");
     }
 
     // Update is called once per frame
