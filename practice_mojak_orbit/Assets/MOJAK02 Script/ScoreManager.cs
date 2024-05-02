@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     Text text;
-    public static int scoreValue;
+    public int scoreValue;
     public Transform trackedObject;
     private float previousXPosition;
 
@@ -36,6 +36,6 @@ public class ScoreManager : MonoBehaviour
         previousXPosition = currentXPosition;
 
         // UI 텍스트 업데이트
-        text.text = "Score  " + scoreValue;
+        text.text = "Score  " + (scoreValue/10)*10;
     }
 }

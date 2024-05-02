@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
@@ -153,19 +154,23 @@ public class Move : MonoBehaviour
         return false;
     }
 
+    // 움직이는 얘랑 충돌시 씬전환
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("carro"))
         {
-            StartCoroutine(FreezeTime());
+
             animations.SetTrigger("car");
             vivo = false;
+            Debug.Log("교통사고");
+            StartCoroutine(FreezeTime());
         }
 
 
 
     }
 
+    // 물이랑 접촉시 씬전환
     public void MirarAqua()
     {
         RaycastHit hit;
@@ -175,10 +180,11 @@ public class Move : MonoBehaviour
         {
              if (hit.collider.CompareTag("Aqua"))
              {
-                StartCoroutine(FreezeTime());
                 vivo = false;
                 animations.SetTrigger("aqua");
-             }
+                Debug.Log("익사");
+                StartCoroutine(FreezeTime());
+            }
 
         }
     }
@@ -189,6 +195,6 @@ public class Move : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         // 시간을 정지합니다
-        Time.timeScale = 0;
+        SceneManager.LoadScene("GameOver");
     }
 }
