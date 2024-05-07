@@ -19,6 +19,7 @@ public class Move : MonoBehaviour
     public float speed;
     public Animator animations;
     public AnimationCurve curve;
+    public Attack attack;
 
     bool bloqueo = false;
 
@@ -94,7 +95,7 @@ public class Move : MonoBehaviour
         }
 
         positionX++;
-        animations.SetTrigger("run");
+        //animations.SetTrigger("run");
         if (positionX > carril)
         {
             
