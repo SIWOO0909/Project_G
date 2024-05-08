@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 689980768492582665}
   - component: {fileID: 1827709025637865173}
   - component: {fileID: 5369959470514584137}
-  - component: {fileID: 1871197945738536011}
   - component: {fileID: 1790832663936242212}
+  - component: {fileID: 895050546059803454}
   m_Layer: 4
   m_Name: Log 1
   m_TagString: hoja
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0020124, y: -0.2, z: 0.1}
-  m_LocalScale: {x: 0.71799505, y: 1.620691, z: 0.0731446}
+  m_LocalScale: {x: 0.968709, y: 1.620691, z: 0.0731446}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3369149943431661293}
@@ -85,27 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1871197945738536011
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 139316395035177074}
-  m_Material: {fileID: 13400000, guid: 6e938d3a482b0004f9737ae3d34d172e, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.4021431, y: 1, z: 1}
-  m_Center: {x: -0.010053497, y: 0, z: 0}
 --- !u!114 &1790832663936242212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +98,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoja: {fileID: 5436174207205043707, guid: af69fd7492d52c24b88b4d9af97a287f, type: 3}
+--- !u!65 &895050546059803454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139316395035177074}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.99999994}
+  m_Center: {x: 0, y: -0.000000007450581, z: -0.00000011920929}
 --- !u!1 &2016946375467870311
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,8 +130,8 @@ GameObject:
   - component: {fileID: 2234517422939084362}
   - component: {fileID: 2319234391920546326}
   - component: {fileID: 5371746998568914610}
-  - component: {fileID: 7246448459326352220}
   - component: {fileID: 6263049380857931153}
+  - component: {fileID: 3178647436635751782}
   m_Layer: 4
   m_Name: Log 1 (1)
   m_TagString: hoja
@@ -149,7 +149,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0020124, y: -0.2, z: -0.08}
-  m_LocalScale: {x: 0.71799505, y: 1.620691, z: 0.071081266}
+  m_LocalScale: {x: 0.968709, y: 1.620691, z: 0.071081266}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3369149943431661293}
@@ -204,27 +204,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7246448459326352220
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016946375467870311}
-  m_Material: {fileID: 13400000, guid: 6e938d3a482b0004f9737ae3d34d172e, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.4021431, y: 1, z: 1}
-  m_Center: {x: -0.010053497, y: 0, z: 0}
 --- !u!114 &6263049380857931153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +217,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoja: {fileID: 5436174207205043707, guid: af69fd7492d52c24b88b4d9af97a287f, type: 3}
+--- !u!65 &3178647436635751782
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016946375467870311}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1.0000001}
+  m_Center: {x: 0, y: -0.000000007450581, z: 0}
 --- !u!1 &2146852877611845686
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,8 +249,8 @@ GameObject:
   - component: {fileID: 6986593446779676080}
   - component: {fileID: 7884323439149714950}
   - component: {fileID: 6241004692067360181}
-  - component: {fileID: 4042405357648807290}
   - component: {fileID: 6832790769157758412}
+  - component: {fileID: 5514071754454587822}
   m_Layer: 4
   m_Name: Log 1 (2)
   m_TagString: hoja
@@ -268,7 +268,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0020124, y: -0.2, z: -0.2188}
-  m_LocalScale: {x: 0.71799505, y: 1.620691, z: 0.07074874}
+  m_LocalScale: {x: 0.968709, y: 1.620691, z: 0.07074874}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3369149943431661293}
@@ -323,27 +323,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4042405357648807290
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146852877611845686}
-  m_Material: {fileID: 13400000, guid: 6e938d3a482b0004f9737ae3d34d172e, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.4021431, y: 1, z: 1}
-  m_Center: {x: -0.010053497, y: 0, z: 0}
 --- !u!114 &6832790769157758412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,6 +336,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoja: {fileID: 5436174207205043707, guid: af69fd7492d52c24b88b4d9af97a287f, type: 3}
+--- !u!65 &5514071754454587822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146852877611845686}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.99999994}
+  m_Center: {x: 0, y: -0.000000007450581, z: 0.00000023841858}
 --- !u!1 &7418781340585527263
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +459,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

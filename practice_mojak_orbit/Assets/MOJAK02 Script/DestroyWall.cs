@@ -10,5 +10,9 @@ public class DestroyWall : MonoBehaviour
         {
             Destroy(other.transform.gameObject);
         }
+        if (other.transform.CompareTag("carro"))
+        {
+            Destroy(other.transform.gameObject);
+        }
     }
 }
