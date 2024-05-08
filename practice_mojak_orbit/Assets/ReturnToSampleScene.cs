@@ -11,4 +11,24 @@ public class ReturnToSampleScene : MonoBehaviour
         // SampleScene으로 씬을 전환
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void ReturnToMainLobby()
+    {
+        SceneManager.LoadScene("MainLobby");
+    }
+
+    public void ReturnToRanking()
+    {
+        SceneManager.LoadScene("Ranking");
+    }
+
+    public void ReturnToSkin()
+    {
+        SceneManager.LoadScene("Skin");
+    }
+
+    public void ReturnToStore()
+    {
+        SceneManager.LoadScene("Store");
+    }
 }

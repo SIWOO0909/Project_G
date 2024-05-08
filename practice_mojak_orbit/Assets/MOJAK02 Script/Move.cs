@@ -28,6 +28,24 @@ public class Move : MonoBehaviour
         InvokeRepeating("MirarAqua", 1, 0.5f);
     }
 
+    public void LeftClick()
+    {
+        Laterales(1); // 왼쪽
+    }
+    public void RightClick()
+    {
+        Laterales(-1); // 오른쪽
+    }
+    public void ForwardClick() // 앞키
+    {
+        Avanzar();
+    }
+
+    public void BackClick()
+    {
+        Retroceder(); // 뒤키
+    }
+
     void Update()
     {
         ActualizarPosition();
