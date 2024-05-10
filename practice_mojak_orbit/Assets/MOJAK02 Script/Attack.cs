@@ -37,4 +37,11 @@ public class Attack : MonoBehaviour
         }
         isOn = false;
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+           Hit();
+        }
+    }
 }
