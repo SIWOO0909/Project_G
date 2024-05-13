@@ -12,7 +12,10 @@ public class AdmobAds : MonoBehaviour
 
     public string appID = "";
 
-
+    string bannerId = "ca-app-pub-3940256099942544/6300978111";
+    string interId = "ca-app-pub-3940256099942544/1033173712";
+    string rewardedId = "ca-app-pub-3940256099942544/5224354917";
+    //string nativeId = "ca-app-pub-3940256099942544/2247696110\r\n";
 #if UNITY_ANDROID
     string bannerId = "ca-app-pub-3940256099942544/6300978111";
     string interId = "ca-app-pub-3940256099942544/1033173712";

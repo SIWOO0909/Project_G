@@ -20,6 +20,8 @@ public class Move : MonoBehaviour
     public Animator animations;
     public AnimationCurve curve;
     public Attack attack;
+    // 게임 오버 판넬
+    public GameObject gameoverPanel;
 
     bool bloqueo = false;
 
@@ -207,12 +209,17 @@ public class Move : MonoBehaviour
         }
     }
 
+    // 죽을 때
     IEnumerator FreezeTime()
     {
         // 충돌 후 1초를 기다립니다
         yield return new WaitForSeconds(1f);
 
-        // 시간을 정지합니다
-        SceneManager.LoadScene("GameOver");
+        // SceneManager.LoadScene("GameOver");
+
+        gameoverPanel.SetActive(true);
+
+        Debug.Log("게임 오버");
+        Time.timeScale = 0;
     }
 }
