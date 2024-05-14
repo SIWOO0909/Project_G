@@ -11,11 +11,11 @@ public class SkinManager : MonoBehaviour
     public GameObject sub2;
     void Start()
     {
-        if (minsu == null)
-        {
-            DestroyAllCharacter();
-            Main.SetActive(true);
-        }
+        //if (minsu == null)
+        //{
+        //    DestroyAllCharacter();
+        //    Main.SetActive(true);
+        //}
     }
     private void Update()
     {
