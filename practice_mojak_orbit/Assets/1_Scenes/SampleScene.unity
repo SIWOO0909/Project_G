@@ -939,11 +939,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 680627943}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 322, y: 103}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -23.7, y: -23.2}
   m_SizeDelta: {x: 220, y: 220}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &98732312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1613,10 +1613,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21acd7a66340551469e551061d541fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 1.1
-  boostedSpeed: 6
-  distanceThreshold: 15
+  playerTransform: {fileID: 0}
+  moveSpeed: 5
+  boostedSpeed: 10
+  distanceThreshold: 20
   delayTime: 10
 --- !u!4 &276252731 stripped
 Transform:
@@ -3008,10 +3008,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21acd7a66340551469e551061d541fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 1.1
-  boostedSpeed: 6
-  distanceThreshold: 15
+  playerTransform: {fileID: 0}
+  moveSpeed: 5
+  boostedSpeed: 10
+  distanceThreshold: 20
   delayTime: 10
 --- !u!4 &639969260 stripped
 Transform:
@@ -3050,11 +3050,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 680627943}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 322.47995, y: 102.52001}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -28.1, y: -27.6}
   m_SizeDelta: {x: 200, y: 200}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &660146852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3155,10 +3155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21acd7a66340551469e551061d541fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 1.1
-  boostedSpeed: 6
-  distanceThreshold: 15
+  playerTransform: {fileID: 0}
+  moveSpeed: 5
+  boostedSpeed: 10
+  distanceThreshold: 20
   delayTime: 10
 --- !u!4 &668990272 stripped
 Transform:
@@ -3276,28 +3276,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
+      time: -0.00157547
+      value: -0.0035324097
+      inSlope: 1.0164129
+      outSlope: 1.0164129
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.5
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.49765038
+      value: 0.5038872
+      inSlope: -0.006089449
+      outSlope: -0.006089449
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -2
-      outSlope: -2
+      time: 0.9937134
+      value: -0.0063591003
+      inSlope: -1.0285918
+      outSlope: -1.0285918
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -3737,10 +3737,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21acd7a66340551469e551061d541fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 1.1
-  boostedSpeed: 6
-  distanceThreshold: 15
+  playerTransform: {fileID: 0}
+  moveSpeed: 5
+  boostedSpeed: 10
+  distanceThreshold: 20
   delayTime: 10
 --- !u!4 &697634287 stripped
 Transform:
@@ -5809,10 +5809,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21acd7a66340551469e551061d541fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 1.1
-  boostedSpeed: 6
-  distanceThreshold: 15
+  playerTransform: {fileID: 0}
+  moveSpeed: 5
+  boostedSpeed: 10
+  distanceThreshold: 20
   delayTime: 10
 --- !u!4 &1033901587 stripped
 Transform:
@@ -7319,10 +7319,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21acd7a66340551469e551061d541fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 1.1
-  boostedSpeed: 6
-  distanceThreshold: 15
+  playerTransform: {fileID: 0}
+  moveSpeed: 5
+  boostedSpeed: 10
+  distanceThreshold: 20
   delayTime: 10
 --- !u!4 &1242021434 stripped
 Transform:
@@ -9341,7 +9341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreValue: 0
   minsu1: 0
-  trackedObject: {fileID: 9183361220290221300}
+  trackedObject: {fileID: 543450651733588194}
 --- !u!1 &1474802044
 GameObject:
   m_ObjectHideFlags: 0
@@ -10193,10 +10193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21acd7a66340551469e551061d541fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 1.1
-  boostedSpeed: 6
-  distanceThreshold: 15
+  playerTransform: {fileID: 0}
+  moveSpeed: 5
+  boostedSpeed: 10
+  distanceThreshold: 20
   delayTime: 10
 --- !u!4 &1592933732 stripped
 Transform:
@@ -10636,7 +10636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21acd7a66340551469e551061d541fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 3683154131899419213}
+  playerTransform: {fileID: 0}
   moveSpeed: 5
   boostedSpeed: 10
   distanceThreshold: 20
@@ -11868,10 +11868,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21acd7a66340551469e551061d541fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 1.1
-  boostedSpeed: 6
-  distanceThreshold: 15
+  playerTransform: {fileID: 0}
+  moveSpeed: 5
+  boostedSpeed: 10
+  distanceThreshold: 20
   delayTime: 10
 --- !u!4 &1929495030 stripped
 Transform:
@@ -12089,7 +12089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCoinsTxt: {fileID: 0}
-  appID: ca-app-pub-4284385980753154~5311336737
+  appID: 
 --- !u!4 &1961294223
 Transform:
   m_ObjectHideFlags: 0
@@ -12282,28 +12282,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
+      time: -0.00157547
+      value: -0.0035324097
+      inSlope: 1.0164129
+      outSlope: 1.0164129
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.5
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.49765038
+      value: 0.5038872
+      inSlope: -0.006089449
+      outSlope: -0.006089449
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -2
-      outSlope: -2
+      time: 0.9937134
+      value: -0.0063591003
+      inSlope: -1.0285918
+      outSlope: -1.0285918
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -12311,7 +12311,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  attack: {fileID: 1981076382}
+  attack: {fileID: 9183361220290221304}
   gameoverPanel: {fileID: 1409694169}
 --- !u!65 &1981076385
 BoxCollider:
@@ -13054,7 +13054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 9183361220290221300}
-  smoothSpeed: 1
+  smoothSpeed: 0.125
 --- !u!1 &2116596954 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bd0a4c1abbcfef443843d16181b912eb, type: 3}
@@ -13120,10 +13120,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21acd7a66340551469e551061d541fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 1.1
-  boostedSpeed: 6
-  distanceThreshold: 15
+  playerTransform: {fileID: 0}
+  moveSpeed: 5
+  boostedSpeed: 10
+  distanceThreshold: 20
   delayTime: 10
 --- !u!4 &2116596959 stripped
 Transform:

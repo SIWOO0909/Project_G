@@ -15,7 +15,7 @@ public class Attack : MonoBehaviour
     public void Hit()
     {
         if (!isOn)
-            StartCoroutine(DelayAndStartColliderOn(0.3f)); // 0.7초 지연 후 ColliderOn 실행
+            StartCoroutine(DelayAndStartColliderOn(0.2f)); // 지연 후 ColliderOn 실행
     }
 
     private IEnumerator DelayAndStartColliderOn(float delay)
