@@ -8,20 +8,13 @@ public class Attack : MonoBehaviour
     public float cooltime = 5f;
     public Collider hit;
     public Text text;
-<<<<<<< HEAD
-    bool isOn;
-=======
     public GameObject targetObject; // 활성화/비활성화할 게임 오브젝트
     bool isOn;
     public Button targetButton; // 비활성화할 버튼
->>>>>>> SIWOO
 
     public void Hit()
     {
         if (!isOn)
-<<<<<<< HEAD
-            StartCoroutine("ColliderOn");
-=======
             StartCoroutine(DelayAndStartColliderOn(0.3f)); // 0.7초 지연 후 ColliderOn 실행
     }
 
@@ -29,32 +22,11 @@ public class Attack : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         StartCoroutine(ColliderOn());
->>>>>>> SIWOO
     }
 
     IEnumerator ColliderOn()
     {
         hit.enabled = true;
-<<<<<<< HEAD
-        yield return new WaitForSeconds(0.01f);
-        hit.enabled = false;
-        StartCoroutine("CoolDown");
-    }
-
-
-    IEnumerator CoolDown()
-    {
-        isOn = true;
-        float delay = 0f;
-        while(delay < cooltime)
-        {
-            delay += Time.deltaTime;
-            text.text = delay.ToString();
-            yield return new WaitForSeconds(Time.deltaTime);
-        }
-        isOn = false;
-    }
-=======
         yield return new WaitForSeconds(0.1f);
         hit.enabled = false;
     }
@@ -91,7 +63,6 @@ public class Attack : MonoBehaviour
         }
     }
 
->>>>>>> SIWOO
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.J))
@@ -99,8 +70,6 @@ public class Attack : MonoBehaviour
            Hit();
         }
     }
-<<<<<<< HEAD
-=======
 
     private IEnumerator DisableButtonForSeconds()
     {
@@ -114,5 +83,4 @@ public class Attack : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         targetObject.SetActive(false);
     }
->>>>>>> SIWOO
 }

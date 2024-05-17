@@ -15,11 +15,7 @@ C:/Users/hdgeh/OneDrive/ë¬¸ì„œ/GitHub/Project_G/practice_mojak_orbit
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-<<<<<<< HEAD
-57856
-=======
 51233
->>>>>>> SIWOO
 Successfully changed project path to: C:/Users/hdgeh/OneDrive/ë¬¸ì„œ/GitHub/Project_G/practice_mojak_orbit
 C:/Users/hdgeh/OneDrive/ë¬¸ì„œ/GitHub/Project_G/practice_mojak_orbit
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -53,21 +49,12 @@ C:/Users/hdgeh/OneDrive/ë¬¸ì„œ/GitHub/Project_G/practice_mojak_orbit
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-<<<<<<< HEAD
-Player connection [3912] Host "[IP] 192.168.219.198 [Port] 0 [Flags] 2 [Guid] 4200622096 [EditorId] 4200622096 [Version] 1048832 [Id] WindowsEditor(7,RIKKA7061) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
-
-Player connection [3912] Host "[IP] 192.168.219.198 [Port] 0 [Flags] 2 [Guid] 4200622096 [EditorId] 4200622096 [Version] 1048832 [Id] WindowsEditor(7,RIKKA7061) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
-
-[Physics::Module] Initialized MultithreadedJobDispatcher with 23 workers.
-Refreshing native plugins compatible for Editor in 20.23 ms, found 3 plugins.
-=======
 Player connection [22620] Host "[IP] 192.168.219.198 [Port] 0 [Flags] 2 [Guid] 890486120 [EditorId] 890486120 [Version] 1048832 [Id] WindowsEditor(7,RIKKA7061) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
 Player connection [22620] Host "[IP] 192.168.219.198 [Port] 0 [Flags] 2 [Guid] 890486120 [EditorId] 890486120 [Version] 1048832 [Id] WindowsEditor(7,RIKKA7061) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 23 workers.
 Refreshing native plugins compatible for Editor in 22.88 ms, found 3 plugins.
->>>>>>> SIWOO
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.13f1 (5f90a5ebde0f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/Resources/UnitySubsystems
@@ -83,73 +70,31 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-<<<<<<< HEAD
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56880
-=======
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56668
->>>>>>> SIWOO
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-<<<<<<< HEAD
-Registered in 0.011658 seconds.
-- Loaded All Assemblies, in  0.240 seconds
-=======
 Registered in 0.013616 seconds.
 - Loaded All Assemblies, in  0.250 seconds
->>>>>>> SIWOO
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-<<<<<<< HEAD
-Android Extension - Scanning For ADB Devices 174 ms
-Native extension for WebGL target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.397 seconds
-Domain Reload Profiling: 635ms
-	BeginReloadAssembly (74ms)
-=======
 Android Extension - Scanning For ADB Devices 189 ms
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.384 seconds
 Domain Reload Profiling: 631ms
 	BeginReloadAssembly (81ms)
->>>>>>> SIWOO
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (0ms)
-<<<<<<< HEAD
-	RebuildCommonClasses (20ms)
-	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (48ms)
-	LoadAllAssembliesAndSetupDomain (91ms)
-		LoadAssemblies (73ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (89ms)
-			TypeCache.Refresh (88ms)
-				TypeCache.ScanAssembly (80ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (397ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (363ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (252ms)
-			SetLoadedEditorAssemblies (2ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (74ms)
-			ProcessInitializeOnLoadMethodAttributes (33ms)
-=======
 	RebuildCommonClasses (21ms)
 	RebuildNativeTypeToScriptingClass (5ms)
 	initialDomainReloadingComplete (49ms)
@@ -172,7 +117,6 @@ Domain Reload Profiling: 631ms
 			BeforeProcessingInitializeOnLoad (1ms)
 			ProcessInitializeOnLoadAttributes (53ms)
 			ProcessInitializeOnLoadMethodAttributes (26ms)
->>>>>>> SIWOO
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -180,13 +124,8 @@ Domain Reload Profiling: 631ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-<<<<<<< HEAD
-- Loaded All Assemblies, in  0.670 seconds
-Refreshing native plugins compatible for Editor in 10.58 ms, found 3 plugins.
-=======
 - Loaded All Assemblies, in  0.459 seconds
 Refreshing native plugins compatible for Editor in 6.99 ms, found 3 plugins.
->>>>>>> SIWOO
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
@@ -195,79 +134,14 @@ Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Unable to write to 'ProjectSettings\GvhProjectSettings.xml' (System.IO.IOException: Sharing violation on path C:\Users\hdgeh\OneDrive\ë¬¸ì„œ\GitHub\Project_G\practice_mojak_orbit\ProjectSettings\GvhProjectSettings.xml
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <834b2ded5dad441e8c7a4287897d63c7>:0 
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <834b2ded5dad441e8c7a4287897d63c7>:0 
-  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean useAsync) [0x00000] in <834b2ded5dad441e8c7a4287897d63c7>:0 
-  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,bool)
-  at System.Xml.XmlWriterSettings.CreateWriter (System.String outputFileName) [0x00051] in <cec8eb42eacd40439ca76aa290dad7e2>:0 
-  at System.Xml.XmlWriter.Create (System.String outputFileName, System.Xml.XmlWriterSettings settings) [0x0000a] in <cec8eb42eacd40439ca76aa290dad7e2>:0 
-  at Google.ProjectSettings.Save () [0x00079] in /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:821 , Project settings were not saved!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-Google.Logger:Log (string,Google.LogLevel) (at /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/Logger.cs:136)
-Google.ProjectSettings:Save () (at /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:844)
-Google.ProjectSettings:SetBool (string,bool,Google.SettingsLocation) (at /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:485)
-Google.ProjectSettings:SetBool (string,bool) (at /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:497)
-Google.IOSResolver:set_VerboseLoggingEnabled (bool) (at /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:1041)
-Google.IOSResolver:.cctor () (at /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:727)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs Line: 844)
-
 Mono: successfully reloaded assembly
-<<<<<<< HEAD
-- Finished resetting the current domain, in  0.413 seconds
-Domain Reload Profiling: 1078ms
-	BeginReloadAssembly (119ms)
-=======
 - Finished resetting the current domain, in  0.342 seconds
 Domain Reload Profiling: 798ms
 	BeginReloadAssembly (96ms)
->>>>>>> SIWOO
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-<<<<<<< HEAD
-		CreateAndSetChildDomain (15ms)
-	RebuildCommonClasses (20ms)
-	RebuildNativeTypeToScriptingClass (6ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (479ms)
-		LoadAssemblies (388ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (166ms)
-			TypeCache.Refresh (151ms)
-				TypeCache.ScanAssembly (133ms)
-			ScanForSourceGeneratedMonoScriptInfo (12ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (414ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (316ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (31ms)
-			SetLoadedEditorAssemblies (3ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (51ms)
-			ProcessInitializeOnLoadAttributes (210ms)
-			ProcessInitializeOnLoadMethodAttributes (13ms)
-			AfterProcessingInitializeOnLoad (7ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 16.79 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3244 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 59 unused Assets / (67.6 KB). Loaded Objects now: 3702.
-Memory consumption went from 135.7 MB to 135.6 MB.
-Total: 3.341600 ms (FindLiveObjects: 0.227700 ms CreateObjectMapping: 0.067000 ms MarkObjects: 2.880200 ms  DeleteObjects: 0.165800 ms)
-=======
 		CreateAndSetChildDomain (12ms)
 	RebuildCommonClasses (18ms)
 	RebuildNativeTypeToScriptingClass (6ms)
@@ -302,17 +176,12 @@ Unloading 3248 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 59 unused Assets / (67.7 KB). Loaded Objects now: 3706.
 Memory consumption went from 135.8 MB to 135.7 MB.
 Total: 2.013900 ms (FindLiveObjects: 0.138400 ms CreateObjectMapping: 0.041100 ms MarkObjects: 1.707800 ms  DeleteObjects: 0.125600 ms)
->>>>>>> SIWOO
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-<<<<<<< HEAD
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-=======
->>>>>>> SIWOO
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -321,117 +190,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-<<<<<<< HEAD
-========================================================================
-Received Import Request.
-  Time since last request: 221638.834476 seconds.
-  path: Assets/Models/craft_speederD.fbx
-  artifactKey: Guid(a525c6773e3552841ac4eb28fe6ca71a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/craft_speederD.fbx using Guid(a525c6773e3552841ac4eb28fe6ca71a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '155946500259bdbc77a3ef96226b26db') in 0.133948 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Models/rock.fbx
-  artifactKey: Guid(35cf758c5dab70d438ea6b2b4040cc4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/rock.fbx using Guid(35cf758c5dab70d438ea6b2b4040cc4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94a765c7081495bcab101456033a6dff') in 0.023520 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Models/rock_largeB.fbx
-  artifactKey: Guid(f395a65b78616b54babcf87b87a769b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/rock_largeB.fbx using Guid(f395a65b78616b54babcf87b87a769b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e691bd9c5cf4cfd411b2d5215d72b214') in 0.021258 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 9
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Materials/Road.mat
-  artifactKey: Guid(1054e08e79434b74f94e21274971756d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Road.mat using Guid(1054e08e79434b74f94e21274971756d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ce99784fba9fe714c363c163a3888d9') in 0.011665 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Models/coin.fbx
-  artifactKey: Guid(6be806d95c1bef448855fde1505f5428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/coin.fbx using Guid(6be806d95c1bef448855fde1505f5428) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89834bcc8751abab72aeeebef7b8611a') in 0.058455 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 27
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Materials/Wall.mat
-  artifactKey: Guid(b88b9cbf7d3ad614aa097af22fd23fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Wall.mat using Guid(b88b9cbf7d3ad614aa097af22fd23fca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed4699738190941f6603cb54c2367da9') in 0.012400 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Models/craft_speederA.fbx
-  artifactKey: Guid(b5354b6777b3cc24ebf60dc2bbcdc857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/craft_speederA.fbx using Guid(b5354b6777b3cc24ebf60dc2bbcdc857) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e5961ff6f0cc88f8e7a83ffbd608a03') in 0.032077 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Models/craft_miner.fbx
-  artifactKey: Guid(392e4a39edbe4b24da22170df62c19fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/craft_miner.fbx using Guid(392e4a39edbe4b24da22170df62c19fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06745a446cf5b5dbaf2ed18bb4ff93ff') in 0.024347 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Models/meteor.fbx
-  artifactKey: Guid(ade92f872d8f0d14e8d28efee393123f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Models/meteor.fbx using Guid(ade92f872d8f0d14e8d28efee393123f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39e5dc9d497204d64ddcfdcc2ee4fa39') in 0.014055 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 8
-========================================================================
-Received Import Request.
-  Time since last request: 45.834862 seconds.
-  path: Assets/Prefabs/Player.prefab
-  artifactKey: Guid(a769089d464a109489d274d0bedbf17d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player.prefab using Guid(a769089d464a109489d274d0bedbf17d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4746df700398519dcc17c060c37655dd') in 0.182196 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 75
-========================================================================
-Received Import Request.
-  Time since last request: 12.062784 seconds.
-  path: Assets/Prefabs/Terrain Prefabs/Ground04.prefab
-  artifactKey: Guid(8b0a36cb62634ba4f8ea0e38cdcfc953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Terrain Prefabs/Ground04.prefab using Guid(8b0a36cb62634ba4f8ea0e38cdcfc953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '349c74992eb579cc8fb8fcf91d8bbde5') in 0.012305 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 57
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Prefabs/Terrain Prefabs/Road01.prefab
-  artifactKey: Guid(ce7697140fc04594196ce4d7bd2dd40b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Terrain Prefabs/Road01.prefab using Guid(ce7697140fc04594196ce4d7bd2dd40b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a20456b9ec1b2a96b5439c45b181db84') in 0.010444 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 30
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/Prefabs/Terrain Prefabs/Water02.prefab
-  artifactKey: Guid(852916d5b9d1fa24d8a482a9c5d6b698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Terrain Prefabs/Water02.prefab using Guid(852916d5b9d1fa24d8a482a9c5d6b698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b756f88d314dde401da4baad465a5b0d') in 0.008944 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 43
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: ½º·¹µå Á¾·á ¶Ç´Â ÀÀ¿ë ÇÁ·Î±×·¥ ¿äÃ» ¶§¹®¿¡ I/O ÀÛ¾÷ÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
-=======
 ========================================================================
 Received Prepare
 Refreshing native plugins compatible for Editor in 6.87 ms, found 3 plugins.
@@ -803,4 +561,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
->>>>>>> SIWOO
