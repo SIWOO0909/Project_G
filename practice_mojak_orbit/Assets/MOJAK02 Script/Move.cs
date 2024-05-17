@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class Move : MonoBehaviour
     public float speed;
     public Animator animations;
     public AnimationCurve curve;
+    public Attack attack;
+    // 게임 오버 판넬
+    public GameObject gameoverPanel;
 
     bool bloqueo = false;
 
@@ -26,10 +30,27 @@ public class Move : MonoBehaviour
         InvokeRepeating("MirarAqua", 1, 0.5f);
     }
 
+    //public void LeftClick()
+    //{
+    //    Laterales(1); // 왼쪽
+    //}
+    //public void RightClick()
+    //{
+    //    Laterales(-1); // 오른쪽
+    //}
+    //public void ForwardClick() // 앞키
+    //{
+    //    Avanzar();
+    //}
+
+    //public void BackClick()
+    //{
+    //    Retroceder(); // 뒤키
+    //}
+
     void Update()
     {
         ActualizarPosition();
-        
 
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -74,7 +95,7 @@ public class Move : MonoBehaviour
 
         for(int i = 1; i < 11; i++)
         {
-            transform.position = Vector3.Lerp(posActual, posPlayer, i * 0.1f) + Vector3.up * curve.Evaluate(i * 0.1f);
+            transform.position = Vector3.Lerp(posActual, posPlayer, i * 0.1f); //+ Vector3.up * curve.Evaluate(i * 0.1f);
             yield return new WaitForSeconds(1f / velocidad);
         }
         bloqueo = false;
@@ -153,18 +174,23 @@ public class Move : MonoBehaviour
         return false;
     }
 
+    // 움직이는 얘랑 충돌시 씬전환
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("carro"))
         {
+
             animations.SetTrigger("car");
             vivo = false;
+            Debug.Log("교통사고");
+            StartCoroutine(FreezeTime());
         }
 
 
 
     }
 
+    // 물이랑 접촉시 씬전환
     public void MirarAqua()
     {
         RaycastHit hit;
@@ -174,11 +200,26 @@ public class Move : MonoBehaviour
         {
              if (hit.collider.CompareTag("Aqua"))
              {
-                
                 vivo = false;
                 animations.SetTrigger("aqua");
-             }
+                Debug.Log("익사");
+                StartCoroutine(FreezeTime());
+            }
 
         }
+    }
+
+    // 죽을 때
+    IEnumerator FreezeTime()
+    {
+        // 충돌 후 1초를 기다립니다
+        yield return new WaitForSeconds(1f);
+
+        // SceneManager.LoadScene("GameOver");
+
+        gameoverPanel.SetActive(true);
+
+        Debug.Log("게임 오버");
+        Time.timeScale = 0;
     }
 }
