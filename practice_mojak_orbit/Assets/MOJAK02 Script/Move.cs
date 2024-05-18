@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
+
+
+    #region 선언
     public int carril;
     public int lateral;
     int positionX = -3;
@@ -24,12 +27,13 @@ public class Move : MonoBehaviour
     public GameObject gameoverPanel;
 
     bool bloqueo = false;
-
+    #endregion
     private void Start()
     {
         InvokeRepeating("MirarAqua", 1, 0.5f);
     }
 
+    #region 키보드 조작1 (구버전)
     //public void LeftClick()
     //{
     //    Laterales(1); // 왼쪽
@@ -47,7 +51,9 @@ public class Move : MonoBehaviour
     //{
     //    Retroceder(); // 뒤키
     //}
+    #endregion
 
+    #region 키보드 조작2
     void Update()
     {
         ActualizarPosition();
@@ -69,10 +75,10 @@ public class Move : MonoBehaviour
             Laterales(1);
         }
     }
+    #endregion
 
     private void OnDrawGizmos()
     {
-        
         Gizmos.color = Color.green;
         Gizmos.DrawLine(grafico.position + Vector3.up * 0.5f, grafico.position + Vector3.up * 0.5f + grafico.right * distanciaVista);
     }
@@ -83,8 +89,6 @@ public class Move : MonoBehaviour
         {
             return;
         }
-        
-
     }
 
     public IEnumerator CambiarPosition()
@@ -101,6 +105,7 @@ public class Move : MonoBehaviour
         bloqueo = false;
     }
 
+    #region 앞으로 1칸
     public void Avanzar()
     {
         if (!vivo || bloqueo)
@@ -117,14 +122,14 @@ public class Move : MonoBehaviour
         //animations.SetTrigger("run");
         if (positionX > carril)
         {
-            
             carril = positionX;
             mundo.CrearPiso();
         }
         StartCoroutine(CambiarPosition());
-        
     }
+    #endregion
 
+    #region 뒤로 1칸
     public void Retroceder()
     {
         if (!vivo || bloqueo)
@@ -143,7 +148,9 @@ public class Move : MonoBehaviour
         }
         StartCoroutine(CambiarPosition());
     }
+    #endregion
 
+    #region 왼쪽/오른쪽으로 1칸
     public void Laterales(int count)
     {
         if (!vivo)
@@ -159,8 +166,8 @@ public class Move : MonoBehaviour
         //animations.SetTrigger("run");
         lateral = Mathf.Clamp(lateral, -10, 10);
         StartCoroutine(CambiarPosition());
-
     }
+    #endregion
 
     public bool MirarAdelante()
     {
@@ -174,23 +181,20 @@ public class Move : MonoBehaviour
         return false;
     }
 
-    // 움직이는 얘랑 충돌시 씬전환
+    #region 교통사고
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("carro"))
         {
-
             animations.SetTrigger("car");
             vivo = false;
             Debug.Log("교통사고");
             StartCoroutine(FreezeTime());
         }
-
-
-
     }
+    #endregion
 
-    // 물이랑 접촉시 씬전환
+    #region 익사
     public void MirarAqua()
     {
         RaycastHit hit;
@@ -209,7 +213,10 @@ public class Move : MonoBehaviour
         }
     }
 
-    // 죽을 때
+
+    #endregion
+
+    #region 게임 오버
     IEnumerator FreezeTime()
     {
         // 충돌 후 1초를 기다립니다
@@ -221,5 +228,9 @@ public class Move : MonoBehaviour
 
         Debug.Log("게임 오버");
         Time.timeScale = 0;
+
+        ScoreManager.abc = 1;
     }
+ 
 }
+#endregion

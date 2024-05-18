@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using GoogleMobileAds.Api;
 using TMPro;
-using UnityEngine.UI;
-using System;
 
 public class AdmobAds : MonoBehaviour
 {
@@ -25,15 +21,14 @@ public class AdmobAds : MonoBehaviour
     //string nativeId = "ca-app-pub-3940256099942544/3986624511";
 
 #endif
-
     BannerView bannerView;
     InterstitialAd interstitialAd;
     RewardedAd rewardedAd;
-    NativeAd nativeAd;
+    // NativeAd nativeAd;
 
     private void Start()
     {
-        //ShowCoins();
+        ShowCoins();
         MobileAds.RaiseAdEventsOnUnityMainThread = true;
         MobileAds.Initialize(initStatus =>
         {
@@ -156,6 +151,9 @@ public class AdmobAds : MonoBehaviour
             interstitialAd = ad;
             InterstitialEvent(interstitialAd);
         });
+
+        // 전면광고 실행
+        ShowInterstitialAd();
     }
     public void ShowInterstitialAd()
     {
@@ -232,6 +230,9 @@ public class AdmobAds : MonoBehaviour
             rewardedAd = ad;
             RewardedAdEvents(rewardedAd);
         });
+
+        // 리워드 광고 실행
+        ShowRewardedAd();
     }
 
     public void ShowRewardedAd()
@@ -291,8 +292,9 @@ public class AdmobAds : MonoBehaviour
 
     #endregion
 
+    // 코인 증정
     #region extra
-    void GrantCoins(int coins)
+    public void GrantCoins(int coins)
     {
         int crrCoins = PlayerPrefs.GetInt("totalCoins");
         crrCoins += coins;
@@ -300,13 +302,23 @@ public class AdmobAds : MonoBehaviour
 
         ShowCoins();
     }
-    void ShowCoins()
+
+    public int zeroCoins = 0;
+
+    // 코인 초기화
+    public void ResetCoins(int zeroCoins)
+    {
+        int crrCoins = PlayerPrefs.GetInt("totalCoins");
+        crrCoins = zeroCoins;
+        PlayerPrefs.SetInt("totalCoins", crrCoins);
+
+        ShowCoins();
+    }
+
+    public void ShowCoins()
     {
         totalCoinsTxt.text = PlayerPrefs.GetInt("totalCoins").ToString();
     }
-
-
-
 
     #endregion
 }
