@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Attack : MonoBehaviour
 {
     public float cooltime = 5f;
-    public Collider hit;
+    public Collider[] hit; // 배열로 변경
     public Text text;
     public GameObject targetObject; // 활성화/비활성화할 게임 오브젝트
     bool isOn;
@@ -26,11 +26,17 @@ public class Attack : MonoBehaviour
 
     IEnumerator ColliderOn()
     {
-        hit.enabled = true;
+        // 모든 Collider를 활성화하고 0.1초 후 비활성화
+        foreach (var col in hit)
+        {
+            col.enabled = true;
+        }
         yield return new WaitForSeconds(0.1f);
-        hit.enabled = false;
+        foreach (var col in hit)
+        {
+            col.enabled = false;
+        }
     }
-
 
     public void ToggleActiveState()
     {
@@ -67,7 +73,7 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.J))
         {
-           Hit();
+            Hit();
         }
     }
 
