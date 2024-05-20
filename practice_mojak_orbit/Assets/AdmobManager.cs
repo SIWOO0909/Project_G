@@ -5,7 +5,6 @@ using TMPro;
 public class AdmobAds : MonoBehaviour
 {
     public TextMeshProUGUI totalCoinsTxt;
-
     public string appID = "";
 
 #if UNITY_ANDROID
@@ -26,6 +25,7 @@ public class AdmobAds : MonoBehaviour
     RewardedAd rewardedAd;
     // NativeAd nativeAd;
 
+    #region 시작함수
     private void Start()
     {
         ShowCoins();
@@ -35,11 +35,12 @@ public class AdmobAds : MonoBehaviour
 
             print("광고 준비 중..");
         });
-
+        // 배너,전면,리워드 광고 불러오는 함수
+        LoadBannerAd();
     }
+    #endregion
 
-    // 배너광고
-    #region Banner
+    #region 배너광고
     public void LoadBannerAd()
     {
         // 배너광고 생성
@@ -75,7 +76,7 @@ public class AdmobAds : MonoBehaviour
     {
         bannerView.OnBannerAdLoaded += () =>
         {
-            Debug.Log("Banner view loaded an ad with response : "
+            Debug.Log("배너광고가 불러와졌습니다. : "
                 + bannerView.GetResponseInfo());
         };
         // Raised when an ad fails to load into the banner view.
@@ -124,8 +125,7 @@ public class AdmobAds : MonoBehaviour
 
     #endregion 
 
-    // 전면광고
-    #region Interstitial
+    #region 전면광고
 
     public void LoadInterstitalAd()
     {
@@ -151,9 +151,6 @@ public class AdmobAds : MonoBehaviour
             interstitialAd = ad;
             InterstitialEvent(interstitialAd);
         });
-
-        // 전면광고 실행
-        ShowInterstitialAd();
     }
     public void ShowInterstitialAd()
     {
@@ -163,7 +160,7 @@ public class AdmobAds : MonoBehaviour
         }
         else
         {
-            print("Intersitial ad not ready ! !");
+            print("전면광고가 준비가 되지 않았습니다.");
         }
     }
     public void InterstitialEvent(InterstitialAd ad)
@@ -188,12 +185,12 @@ public class AdmobAds : MonoBehaviour
         // Raised when an ad opened full screen content.
         interstitialAd.OnAdFullScreenContentOpened += () =>
         {
-            Debug.Log("Interstitial ad full screen content opened.");
+            Debug.Log("전면광고가 화면에 꽉차게 보입니다.");
         };
         // Raised when the ad closed full screen content.
         interstitialAd.OnAdFullScreenContentClosed += () =>
         {
-            Debug.Log("Interstitial ad full screen content closed.");
+            Debug.Log("전면광고가 닫혔습니다.");
         };
         // Raised when the ad failed to open full screen content.
         interstitialAd.OnAdFullScreenContentFailed += (AdError error) =>
@@ -206,8 +203,7 @@ public class AdmobAds : MonoBehaviour
 
     #endregion
 
-    // 리워드광고
-    #region Rewarded
+    #region 리워드광고
     public void LoadRewardedAd()
     {
         if (rewardedAd != null)
@@ -230,9 +226,6 @@ public class AdmobAds : MonoBehaviour
             rewardedAd = ad;
             RewardedAdEvents(rewardedAd);
         });
-
-        // 리워드 광고 실행
-        ShowRewardedAd();
     }
 
     public void ShowRewardedAd()
@@ -292,8 +285,7 @@ public class AdmobAds : MonoBehaviour
 
     #endregion
 
-    // 코인 증정
-    #region extra
+    #region 코인
     public void GrantCoins(int coins)
     {
         int crrCoins = PlayerPrefs.GetInt("totalCoins");

@@ -25,6 +25,7 @@ public class Move : MonoBehaviour
     public Attack attack;
     // 게임 오버 판넬
     public GameObject gameoverPanel;
+    public GameObject BlackPanTteKi;
 
     bool bloqueo = false;
     #endregion
@@ -225,6 +226,8 @@ public class Move : MonoBehaviour
         // SceneManager.LoadScene("GameOver");
 
         gameoverPanel.SetActive(true);
+
+        BlackPanTteKi.SetActive(true);
 
         Debug.Log("게임 오버");
         Time.timeScale = 0;

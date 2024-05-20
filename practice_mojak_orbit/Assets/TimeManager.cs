@@ -7,17 +7,17 @@ public class TimeManager : MonoBehaviour
 {
     // Start is called before the first frame update
     int x = 0;
-    private void Update()
-    {
-        if (x == 0)
-        {
-            TimeStop();
-        }
-        //else
-        //{
-        //    TimeStart();
-        //}
-    }
+    //private void Update()
+    //{
+    //    if (x == 0)
+    //    {
+    //        TimeStop();
+    //    }
+    //    //else
+    //    //{
+    //    //    TimeStart();
+    //    //}
+    //}
 
     private void Start()
     {
@@ -26,7 +26,7 @@ public class TimeManager : MonoBehaviour
     public void TimeStop()
     {
         Time.timeScale = 0;
-        Debug.Log("타이무 스토뿌");
+        Debug.Log("현재 게임세상은 멈춰져 있습니다.");
     }
 
     public void TimeStart()

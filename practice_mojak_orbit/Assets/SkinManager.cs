@@ -19,37 +19,43 @@ public class SkinManager : MonoBehaviour
     }
     private void Update()
     {
-        if (minsu == 0)
+        if (PlayerPrefs.GetInt("Character") == 0)
         {
             DestroyAllCharacter();
             Main.SetActive(true);
             minsu = 0;
+            PlayerPrefs.SetInt("Character", 0);
         }
-        else if (minsu == 1)
+        else if (PlayerPrefs.GetInt("Character") == 1)
         {
             DestroyAllCharacter();
             sub1.SetActive(true);
             minsu = 1;
+            PlayerPrefs.SetInt("Character", 1);
         }
-        else if (minsu == 2)
+        else if (PlayerPrefs.GetInt("Character") == 2)
         {
             DestroyAllCharacter();
             sub2.SetActive(true);
             minsu = 2;
+            PlayerPrefs.SetInt("Character", 2);
         }
     }
 
     public void MainC()
     {
         minsu = 0;
+        PlayerPrefs.SetInt("Character", 0);
     }
     public void SubC1()
     {
         minsu = 1;
+        PlayerPrefs.SetInt("Character", 1);
     }
     public void SubC2()
     {
         minsu = 2;
+        PlayerPrefs.SetInt("Character", 2);
     }
 
     public void DestroyAllCharacter()
