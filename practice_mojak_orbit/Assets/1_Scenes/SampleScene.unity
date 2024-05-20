@@ -1717,7 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 5
+  moveSpeed: 2
   boostedSpeed: 10
   distanceThreshold: 20
   delayTime: 10
@@ -3122,7 +3122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 5
+  moveSpeed: 2
   boostedSpeed: 10
   distanceThreshold: 20
   delayTime: 10
@@ -3403,7 +3403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 5
+  moveSpeed: 2
   boostedSpeed: 10
   distanceThreshold: 20
   delayTime: 10
@@ -3909,7 +3909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 5
+  moveSpeed: 2
   boostedSpeed: 10
   distanceThreshold: 20
   delayTime: 10
@@ -5916,7 +5916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 5
+  moveSpeed: 2
   boostedSpeed: 10
   distanceThreshold: 20
   delayTime: 10
@@ -7467,7 +7467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 5
+  moveSpeed: 2
   boostedSpeed: 10
   distanceThreshold: 20
   delayTime: 10
@@ -9651,7 +9651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1515602256
 Transform:
   m_ObjectHideFlags: 0
@@ -10219,7 +10219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 5
+  moveSpeed: 2
   boostedSpeed: 10
   distanceThreshold: 20
   delayTime: 10
@@ -12183,7 +12183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 5
+  moveSpeed: 2
   boostedSpeed: 10
   distanceThreshold: 20
   delayTime: 10
@@ -13685,7 +13685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 9183361220290221300}
-  moveSpeed: 5
+  moveSpeed: 2
   boostedSpeed: 10
   distanceThreshold: 20
   delayTime: 10
@@ -13846,8 +13846,16 @@ PrefabInstance:
       value: Terrain Generator
       objectReference: {fileID: 0}
     - target: {fileID: 4179804484961192406, guid: 5113ef9609eaff840ae089ec07311249, type: 3}
+      propertyPath: nextmap
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179804484961192406, guid: 5113ef9609eaff840ae089ec07311249, type: 3}
       propertyPath: pisos.Array.size
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179804484961192406, guid: 5113ef9609eaff840ae089ec07311249, type: 3}
+      propertyPath: nextpisos.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4179804484961192406, guid: 5113ef9609eaff840ae089ec07311249, type: 3}
       propertyPath: pisos.Array.data[10]
@@ -13869,6 +13877,22 @@ PrefabInstance:
       propertyPath: pisos.Array.data[14]
       value: 
       objectReference: {fileID: 4411986339543328943, guid: dc36921add500df4e96a72f0f4ad58a5, type: 3}
+    - target: {fileID: 4179804484961192406, guid: 5113ef9609eaff840ae089ec07311249, type: 3}
+      propertyPath: nextpisos.Array.data[0]
+      value: 
+      objectReference: {fileID: 501688085979429585, guid: c1b26fd4432354a4c8657e881913bd06, type: 3}
+    - target: {fileID: 4179804484961192406, guid: 5113ef9609eaff840ae089ec07311249, type: 3}
+      propertyPath: nextpisos.Array.data[1]
+      value: 
+      objectReference: {fileID: 492585071036372123, guid: 9230a4f39c0e47e4fb174234d13a8bfc, type: 3}
+    - target: {fileID: 4179804484961192406, guid: 5113ef9609eaff840ae089ec07311249, type: 3}
+      propertyPath: nextpisos.Array.data[2]
+      value: 
+      objectReference: {fileID: 501688085979429585, guid: c1b26fd4432354a4c8657e881913bd06, type: 3}
+    - target: {fileID: 4179804484961192406, guid: 5113ef9609eaff840ae089ec07311249, type: 3}
+      propertyPath: nextpisos.Array.data[3]
+      value: 
+      objectReference: {fileID: 492585071036372123, guid: 9230a4f39c0e47e4fb174234d13a8bfc, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
