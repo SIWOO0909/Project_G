@@ -9,10 +9,12 @@ public class DestroyWall : MonoBehaviour
         if (other.transform.CompareTag("obstaculo"))
         {
             Destroy(other.transform.gameObject);
+            Debug.Log("돌 하세기!");
         }
         if (other.transform.CompareTag("carro"))
         {
             Destroy(other.transform.gameObject);
+            Debug.Log("비행체 하세기!");
         }
     }
 }

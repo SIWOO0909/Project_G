@@ -237,6 +237,9 @@ public class AdmobAds : MonoBehaviour
                 print("리워드 광고를 시청했으므로 플레이어에게 보상을 줍니다.");
 
                 GrantCoins(100);
+
+                Time.timeScale = 0;
+                print("시간아 멈춰라 얍!");
             });
         }
         else
