@@ -315,5 +315,6 @@ public class AdmobAds : MonoBehaviour
         totalCoinsTxt.text = PlayerPrefs.GetInt("totalCoins").ToString();
     }
 
+
     #endregion
 }
