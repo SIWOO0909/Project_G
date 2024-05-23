@@ -3,8 +3,11 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    #region Good-Bye Declaration (굿바이 선언)
+    #region 선언
+    // UI 
     public TextMeshProUGUI TotalScoreTxt;
+    public TextMeshProUGUI totalCoinsTxt_InGame;
+
     public TextMeshProUGUI gameOverTotalScoreTxt;
     public TextMeshProUGUI gameOverBestScoreTxt;
 
@@ -14,10 +17,10 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI four;
     public TextMeshProUGUI five;
 
-
-
     static public int abc = 0;
+    static public int a = 0;
 
+    // 전체 점수
     public static int scoreValueSaved;
     private int scoreValue;
     private int minsu1;
@@ -57,13 +60,23 @@ public class ScoreManager : MonoBehaviour
                 scoreValue = minsu1;
             }
             scoreValueSaved = scoreValue;
+            
         }
         previousXPosition = currentXPosition;
 
         // score +10
         int a = (scoreValueSaved / 10) * 10;
-        #endregion
 
+        if ( a % 100 == 0)
+        {
+            int crrCoins = PlayerPrefs.GetInt("scoreCoins");
+            crrCoins = a / 100;
+            PlayerPrefs.SetInt("scoreCoins", crrCoins);
+            totalCoinsTxt_InGame.text = PlayerPrefs.GetInt("scoreCoins").ToString();
+        }
+
+
+        #endregion
         if (abc > 0)
         {
             RankSys(a);
@@ -71,7 +84,15 @@ public class ScoreManager : MonoBehaviour
 
         #region 출력
         TotalScoreTxt.text = a.ToString();
-        gameOverTotalScoreTxt.text = a.ToString();
+
+        // 점수 느리게 하는 시스템
+        float floata = a;
+        floata += 1000 * Time.deltaTime * 1.2f;
+        // 게임오버시 현점수 텍스트
+        gameOverTotalScoreTxt.text = floata.ToString();
+
+        float floatb = PlayerPrefs.GetInt(0 + "BestScore");
+        floatb += 1000 * Time.deltaTime * 1.2f;
         gameOverBestScoreTxt.text = PlayerPrefs.GetInt(0 + "BestScore").ToString();
 
         one.text = PlayerPrefs.GetInt(0 + "BestScore").ToString();

@@ -233,7 +233,11 @@ public class Move : MonoBehaviour
         Time.timeScale = 0;
 
         ScoreManager.abc = 1;
+
+        // 100칸 = 1코인 증정 헤헤헤헤헤
+        int crrCoins = PlayerPrefs.GetInt("totalCoins");
+        crrCoins += PlayerPrefs.GetInt("scoreCoins");
+        PlayerPrefs.SetInt("totalCoins", crrCoins);
     }
- 
 }
 #endregion

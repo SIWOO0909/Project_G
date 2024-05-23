@@ -5,6 +5,7 @@ using TMPro;
 public class AdmobAds : MonoBehaviour
 {
     public TextMeshProUGUI totalCoinsTxt;
+
     public string appID = "";
 
 #if UNITY_ANDROID
@@ -310,11 +311,10 @@ public class AdmobAds : MonoBehaviour
         ShowCoins();
     }
 
+    // UI에서 보여주개
     public void ShowCoins()
     {
         totalCoinsTxt.text = PlayerPrefs.GetInt("totalCoins").ToString();
     }
-
-
     #endregion
 }
