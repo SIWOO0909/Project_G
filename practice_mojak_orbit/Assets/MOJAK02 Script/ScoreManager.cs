@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class ScoreManager : MonoBehaviour
 
     public void Update()
     {
-        #region 점수 시스템
+
         // 플레이어의 X좌표 가져오기
         float currentXPosition = trackedObject.position.x;
 
@@ -67,33 +68,50 @@ public class ScoreManager : MonoBehaviour
         // score +10
         int a = (scoreValueSaved / 10) * 10;
 
-        if ( a % 100 == 0)
-        {
-            int crrCoins = PlayerPrefs.GetInt("scoreCoins");
-            crrCoins = a / 100;
-            PlayerPrefs.SetInt("scoreCoins", crrCoins);
-            totalCoinsTxt_InGame.text = PlayerPrefs.GetInt("scoreCoins").ToString();
-        }
+        RankSys(a);
 
 
-        #endregion
         if (abc > 0)
         {
             RankSys(a);
         }
 
-        #region 출력
+        // 만약 점수를 100으로 나눈뒤 나머지가 0일 때
+        if (a % 100 == 0)
+        {
+            int crrCoins = PlayerPrefs.GetInt("scoreCoins"); // scoreCoins형태로 기기저장 점수가 crrCoins에 값이 입력되고
+            crrCoins = a / 100; // 현 점수를 100으로 나눈값이 crrCoins
+            PlayerPrefs.SetInt("scoreCoins", crrCoins); // crrCoins를 다시 scoreCoins형태로 기기저장
+
+            // UI상 기기에 저장된 scoreCoin 보여지기
+            totalCoinsTxt_InGame.text = PlayerPrefs.GetInt("scoreCoins").ToString();
+
+            if (a >= 100)
+            {
+                crrCoins += PlayerPrefs.GetInt("scoreCoins");
+                PlayerPrefs.SetInt("totalCoins", crrCoins - 1);
+            }
+        }
+
         TotalScoreTxt.text = a.ToString();
+
+        
 
         // 점수 느리게 하는 시스템
         float floata = a;
-        floata += 1000 * Time.deltaTime * 1.2f;
+        floata += 2000 * Time.deltaTime * 0.8f;
+
+        // float -> int
+        int aaa = (int)Mathf.Round(floata);
+
         // 게임오버시 현점수 텍스트
-        gameOverTotalScoreTxt.text = floata.ToString();
+        gameOverTotalScoreTxt.text = aaa.ToString();
+
 
         float floatb = PlayerPrefs.GetInt(0 + "BestScore");
-        floatb += 1000 * Time.deltaTime * 1.2f;
-        gameOverBestScoreTxt.text = PlayerPrefs.GetInt(0 + "BestScore").ToString();
+        floatb += 2000 * Time.deltaTime * 0.8f;
+        int bbb = (int)Mathf.Round(floatb);
+        gameOverBestScoreTxt.text = bbb.ToString();
 
         one.text = PlayerPrefs.GetInt(0 + "BestScore").ToString();
         two.text = PlayerPrefs.GetInt(1 + "BestScore").ToString();
@@ -101,8 +119,8 @@ public class ScoreManager : MonoBehaviour
         four.text = PlayerPrefs.GetInt(3 + "BestScore").ToString();
         five.text = PlayerPrefs.GetInt(4 + "BestScore").ToString();
         
-        #endregion
     }
+    
 
     #region 랭킹 초기화 버튼
     public void ResetRankings()

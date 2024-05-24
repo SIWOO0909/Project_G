@@ -25,7 +25,6 @@ public class Move : MonoBehaviour
     public Attack attack;
     // 게임 오버 판넬
     public GameObject gameoverPanel;
-    public GameObject BlackPanTteKi;
 
     bool bloqueo = false;
     #endregion
@@ -222,22 +221,15 @@ public class Move : MonoBehaviour
     {
         // 충돌 후 1초를 기다립니다
         yield return new WaitForSeconds(1f);
-
-        // SceneManager.LoadScene("GameOver");
-
         gameoverPanel.SetActive(true);
-
-        BlackPanTteKi.SetActive(true);
-
         Debug.Log("게임 오버");
         Time.timeScale = 0;
 
+        // 점수 Top 5 시작점
         ScoreManager.abc = 1;
 
-        // 100칸 = 1코인 증정 헤헤헤헤헤
-        int crrCoins = PlayerPrefs.GetInt("totalCoins");
-        crrCoins += PlayerPrefs.GetInt("scoreCoins");
-        PlayerPrefs.SetInt("totalCoins", crrCoins);
+        // 뒤지면 전면광고
+        // AdmobAds.def = 1;
     }
 }
 #endregion

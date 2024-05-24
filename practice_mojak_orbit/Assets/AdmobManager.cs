@@ -5,7 +5,7 @@ using TMPro;
 public class AdmobAds : MonoBehaviour
 {
     public TextMeshProUGUI totalCoinsTxt;
-
+    static public int def = 0;
     public string appID = "";
 
 #if UNITY_ANDROID
@@ -36,10 +36,11 @@ public class AdmobAds : MonoBehaviour
 
             print("광고 준비 중..");
         });
-        // 배너,전면,리워드 광고 불러오는 함수
-        LoadBannerAd();
+        // LoadBannerAd();
     }
     #endregion
+
+    
 
     #region 배너광고
     public void LoadBannerAd()
