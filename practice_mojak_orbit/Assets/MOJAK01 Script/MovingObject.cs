@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.SceneManagement;
 
 public class MovingObject : MonoBehaviour
 {
@@ -28,12 +29,12 @@ public class MovingObject : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Á¢ÃË½Ã PC°¡ ÆÄ±«
-    //private void OnCollisionEnter(Collision collision) // Ãæµ¹
+    // ÇÃ·¹ÀÌ¾î Á¢ÃË½Ã ¾ÀÀüÈ¯
+    //private void OnCollisionEnter(Collision collision)
     //{
-    //    if(collision.collider.GetComponent<Player>() != null)
+    //    if (collision.collider.GetComponent<Player>())
     //    {
-    //        Destroy(collision.gameObject);
+    //        SceneManager.LoadScene("GameOver");
     //    }
 
     //}
