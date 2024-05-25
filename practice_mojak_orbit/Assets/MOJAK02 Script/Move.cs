@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
+
+
+    #region 선언
     public int carril;
     public int lateral;
     int positionX = -3;
@@ -18,18 +22,41 @@ public class Move : MonoBehaviour
     public float speed;
     public Animator animations;
     public AnimationCurve curve;
+    public Attack attack;
+    // 게임 오버 판넬
+    public GameObject gameoverPanel;
 
     bool bloqueo = false;
-
+    #endregion
     private void Start()
     {
         InvokeRepeating("MirarAqua", 1, 0.5f);
     }
 
+    #region 키보드 조작1 (구버전)
+    //public void LeftClick()
+    //{
+    //    Laterales(1); // 왼쪽
+    //}
+    //public void RightClick()
+    //{
+    //    Laterales(-1); // 오른쪽
+    //}
+    //public void ForwardClick() // 앞키
+    //{
+    //    Avanzar();
+    //}
+
+    //public void BackClick()
+    //{
+    //    Retroceder(); // 뒤키
+    //}
+    #endregion
+
+    #region 키보드 조작2
     void Update()
     {
         ActualizarPosition();
-        
 
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -48,10 +75,10 @@ public class Move : MonoBehaviour
             Laterales(1);
         }
     }
+    #endregion
 
     private void OnDrawGizmos()
     {
-        
         Gizmos.color = Color.green;
         Gizmos.DrawLine(grafico.position + Vector3.up * 0.5f, grafico.position + Vector3.up * 0.5f + grafico.right * distanciaVista);
     }
@@ -62,8 +89,6 @@ public class Move : MonoBehaviour
         {
             return;
         }
-        
-
     }
 
     public IEnumerator CambiarPosition()
@@ -74,12 +99,13 @@ public class Move : MonoBehaviour
 
         for(int i = 1; i < 11; i++)
         {
-            transform.position = Vector3.Lerp(posActual, posPlayer, i * 0.1f) + Vector3.up * curve.Evaluate(i * 0.1f);
+            transform.position = Vector3.Lerp(posActual, posPlayer, i * 0.1f); //+ Vector3.up * curve.Evaluate(i * 0.1f);
             yield return new WaitForSeconds(1f / velocidad);
         }
         bloqueo = false;
     }
 
+    #region 앞으로 1칸
     public void Avanzar()
     {
         if (!vivo || bloqueo)
@@ -96,14 +122,14 @@ public class Move : MonoBehaviour
         //animations.SetTrigger("run");
         if (positionX > carril)
         {
-            
             carril = positionX;
             mundo.CrearPiso();
         }
         StartCoroutine(CambiarPosition());
-        
     }
+    #endregion
 
+    #region 뒤로 1칸
     public void Retroceder()
     {
         if (!vivo || bloqueo)
@@ -122,7 +148,9 @@ public class Move : MonoBehaviour
         }
         StartCoroutine(CambiarPosition());
     }
+    #endregion
 
+    #region 왼쪽/오른쪽으로 1칸
     public void Laterales(int count)
     {
         if (!vivo)
@@ -138,8 +166,8 @@ public class Move : MonoBehaviour
         //animations.SetTrigger("run");
         lateral = Mathf.Clamp(lateral, -10, 10);
         StartCoroutine(CambiarPosition());
-
     }
+    #endregion
 
     public bool MirarAdelante()
     {
@@ -153,18 +181,20 @@ public class Move : MonoBehaviour
         return false;
     }
 
+    #region 교통사고
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("carro"))
         {
             animations.SetTrigger("car");
             vivo = false;
+            Debug.Log("교통사고");
+            StartCoroutine(FreezeTime());
         }
-
-
-
     }
+    #endregion
 
+    #region 익사
     public void MirarAqua()
     {
         RaycastHit hit;
@@ -174,11 +204,32 @@ public class Move : MonoBehaviour
         {
              if (hit.collider.CompareTag("Aqua"))
              {
-                
                 vivo = false;
                 animations.SetTrigger("aqua");
-             }
+                Debug.Log("익사");
+                StartCoroutine(FreezeTime());
+            }
 
         }
     }
+
+
+    #endregion
+
+    #region 게임 오버
+    IEnumerator FreezeTime()
+    {
+        // 충돌 후 1초를 기다립니다
+        yield return new WaitForSeconds(1f);
+        gameoverPanel.SetActive(true);
+        Debug.Log("게임 오버");
+        Time.timeScale = 0;
+
+        // 점수 Top 5 시작점
+        ScoreManager.abc = 1;
+
+        // 뒤지면 전면광고
+        // AdmobAds.def = 1;
+    }
 }
+#endregion
