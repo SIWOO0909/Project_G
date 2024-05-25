@@ -4,13 +4,13 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreManager : MonoBehaviour
 {
-    #region 선언
-    // UI 
+    // UI Component
     public TextMeshProUGUI TotalScoreTxt;
     public TextMeshProUGUI totalCoinsTxt_InGame;
 
     public TextMeshProUGUI gameOverTotalScoreTxt;
     public TextMeshProUGUI gameOverBestScoreTxt;
+    public TextMeshProUGUI gameOverEarnCoinTxt;
 
     public TextMeshProUGUI one;
     public TextMeshProUGUI two;
@@ -18,24 +18,29 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI four;
     public TextMeshProUGUI five;
 
-    static public int abc = 0;
-    static public int a = 0;
+    public Transform trackedObject;
 
-    // 전체 점수
+    // 변수 선언
+    static public int abc = 0; // 랭크 시스템 작동 여부 abc값이 1일때 실행
+    static public int a = 0;
     public static int scoreValueSaved;
     private int scoreValue;
     private int minsu1;
-
-    public Transform trackedObject;
     private float previousXPosition;
-    #endregion
+    public float NowScoreSlowEffect;
+    public float BestScoreSlowEffect;
+    //float text_score = 0f;
+
+    // 시작함수
     private void Start()
     {
         abc = 0;
         previousXPosition = trackedObject.position.x;
         minsu1 = 0;
+        //text_score = 0;
     }
 
+    // 업데이트 함수
     public void Update()
     {
 
@@ -65,18 +70,19 @@ public class ScoreManager : MonoBehaviour
         }
         previousXPosition = currentXPosition;
 
-        // score +10
+        // 점수가 10점 단위로 증가하게 됩니다.
         int a = (scoreValueSaved / 10) * 10;
 
+        // top5점수 계산 함수입니다.
         RankSys(a);
 
-
+        // 플레이어 사망시 TOP5 랭킹시스템 실행
         if (abc > 0)
         {
             RankSys(a);
         }
 
-        // 만약 점수를 100으로 나눈뒤 나머지가 0일 때
+        // 점수 100점당 1코인 지급
         if (a % 100 == 0)
         {
             int crrCoins = PlayerPrefs.GetInt("scoreCoins"); // scoreCoins형태로 기기저장 점수가 crrCoins에 값이 입력되고
@@ -92,33 +98,45 @@ public class ScoreManager : MonoBehaviour
                 PlayerPrefs.SetInt("totalCoins", crrCoins - 1);
             }
         }
+        TotalScoreTxt.text = a.ToString(); // 현재 점수 출력
 
-        TotalScoreTxt.text = a.ToString();
-
-        
-
-        // 점수 느리게 하는 시스템
+        // 게임오버UI 현재 점수 연출 시스템
+        //float floata = a;
+        //floata += 2000 * Time.deltaTime * 0.8f;
+        //int aaa = (int)Mathf.Round(floata);
+        //gameOverTotalScoreTxt.text = aaa.ToString(); // 게임오버UI에 현재 점수 출력
         float floata = a;
-        floata += 2000 * Time.deltaTime * 0.8f;
+        floata += 1000 * Time.deltaTime * NowScoreSlowEffect;
+        if (a >= 1000)
+        {
+            gameOverTotalScoreTxt.text = 1000.ToString("F0");
+        }
+        else
+        {
+            gameOverTotalScoreTxt.text = floata.ToString("F0");
+        }
 
-        // float -> int
-        int aaa = (int)Mathf.Round(floata);
-
-        // 게임오버시 현점수 텍스트
-        gameOverTotalScoreTxt.text = aaa.ToString();
-
-
+        // 게임오버시 베스트 점수 연출 시스템
         float floatb = PlayerPrefs.GetInt(0 + "BestScore");
-        floatb += 2000 * Time.deltaTime * 0.8f;
+        floatb += 2000 * Time.deltaTime * NowScoreSlowEffect;
         int bbb = (int)Mathf.Round(floatb);
-        gameOverBestScoreTxt.text = bbb.ToString();
+        gameOverBestScoreTxt.text = bbb.ToString(); // 게임오버UI베스트 점수 출력
 
+        // 
+        if (a > 100)
+        {
+            float floatc = PlayerPrefs.GetInt("scoreCoins");
+            floatc += 2000 * Time.deltaTime * NowScoreSlowEffect;
+            int ccc = (int)Mathf.Round(floatc);
+            gameOverEarnCoinTxt.text = ccc.ToString();
+        }
+
+        // Top 5 출력
         one.text = PlayerPrefs.GetInt(0 + "BestScore").ToString();
         two.text = PlayerPrefs.GetInt(1 + "BestScore").ToString();
         three.text = PlayerPrefs.GetInt(2 + "BestScore").ToString();
         four.text = PlayerPrefs.GetInt(3 + "BestScore").ToString();
         five.text = PlayerPrefs.GetInt(4 + "BestScore").ToString();
-        
     }
     
 
