@@ -38,8 +38,8 @@ public class ScoreManager : MonoBehaviour
     public static int scoreValueSaved;
     private int scoreValue;
     private int minsu1;
-    private int score;
-    private int displayScore;
+    //private int score;
+    //private int displayScore;
     private float previousXPosition;
     // public float NowScoreSlowEffect;
     // public float BestScoreSlowEffect;
@@ -55,9 +55,9 @@ public class ScoreManager : MonoBehaviour
         abc_score = 0;
         previousXPosition = trackedObject.position.x;
         minsu1 = 0;
-        // Date1.text = DateTime.Now.ToString("yyyy/M/d h:mm:ss tt");
-        score = 0;
-        displayScore = 0;
+        // Date1.text = DateTime.Now.ToString("yyyy/M/d");
+        //score = 0;
+        //displayScore = 0;
     }
 
     
@@ -210,103 +210,15 @@ public class ScoreManager : MonoBehaviour
         PlayerPrefs.SetInt(4 + "BestScore",1);
 
         // 0번 때 Date에 현재 날짜를 지금으로 초기화
-        PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-        PlayerPrefs.SetString(1 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-        PlayerPrefs.SetString(2 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-        PlayerPrefs.SetString(3 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-        PlayerPrefs.SetString(4 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+        PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
+        PlayerPrefs.SetString(1 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
+        PlayerPrefs.SetString(2 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
+        PlayerPrefs.SetString(3 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
+        PlayerPrefs.SetString(4 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
     }
     #endregion
 
-    #region 날짜 함수(사용안함)
-    public void DateSys(string v)
-    {
-        #region 임시 (str)저장소
-        string tempStr1 = "";
-        string tempStr2 = "";
-        string tempStr3 = "";
-        string tempStr4 = "";
-        #endregion        
-
-        //// 만약 (1위 < 현 점수) 
-        //if (a > PlayerPrefs.GetInt(0 + "BestScore"))
-        //{
-        //    Debug.Log("1등 시 날짜 기록");
-        //    // 1등 날짜 <- 현 날짜
-        //    tempStr1 = PlayerPrefs.GetString(0 + "Date"); 
-        //    PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy-MM-dd HHmmss"));
-
-        //    // 2등 날짜 <- 1등 날짜
-        //    tempStr2 = PlayerPrefs.GetString(1 + "Date"); 
-        //    PlayerPrefs.SetString(1 + "Date", tempStr1);
-
-        //    // 3등 날짜 <- 2등 날짜
-        //    tempStr3 = PlayerPrefs.GetString(2 + "Date");
-        //    PlayerPrefs.SetString(2 + "Date", tempStr2);
-
-        //    // 4등 날짜 <- 3등 날짜 
-        //    tempStr4 = PlayerPrefs.GetString(3 + "Date"); 
-        //    PlayerPrefs.SetString(3 + "Date", tempStr3);
-
-        //    // 5등 날짜 <- 4등 날짜 
-        //    PlayerPrefs.SetString(4 + "BestScore", tempStr4);
-        //}
-
-        //// 만약 (2위 < 현 점수 < 1위) 
-        //else if (a > PlayerPrefs.GetInt(1 + "BestScore") && a < PlayerPrefs.GetInt(0 + "BestScore"))
-        //{
-        //    // 2등 날짜 <- 현 날짜
-        //    tempStr2 = PlayerPrefs.GetString(1 + "Date"); 
-        //    PlayerPrefs.SetString(1 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-
-        //    // 3등 날짜 <- 2등 날짜 
-        //    tempStr3 = PlayerPrefs.GetString(2 + "Date");
-        //    PlayerPrefs.SetString(2 + "Date", tempStr2);
-
-        //    // 4등 날짜 <- 3등 날짜 
-        //    tempStr4 = PlayerPrefs.GetString(3 + "Date");
-        //    PlayerPrefs.SetString(3 + "Date", tempStr3);
-
-        //    // 5등 날짜 <- 4등 날짜 
-        //    PlayerPrefs.SetString(4 + "Date", tempStr4); 
-        //}
-
-        //// 만약 (3위 < 현 점수 < 2위)
-        //else if (a > PlayerPrefs.GetInt(2 + "BestScore") && a < PlayerPrefs.GetInt(1 + "BestScore"))
-        //{
-        //    // 3등 날짜 <- 2등 날짜
-        //    tempStr3 = PlayerPrefs.GetString(2 + "Date");
-        //    PlayerPrefs.SetString(2 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-
-        //    // 4등 날짜 <- 3등 날짜
-        //    tempStr4 = PlayerPrefs.GetString(3 + "Date"); 
-        //    PlayerPrefs.SetString(3 + "Date", tempStr3);
-
-        //    // 5등 날짜 <- 4등 날짜
-        //    PlayerPrefs.SetString(4 + "Date", tempStr4);
-        //}
-
-        //// 만약 (4위 < 현 점수 < 3위)
-        //else if (a > PlayerPrefs.GetInt(3 + "BestScore") && a < PlayerPrefs.GetInt(2 + "BestScore"))
-        //{
-        //    // 4등 점수 <- 3등 점수 값
-        //    tempStr4 = PlayerPrefs.GetString(3 + "BestScore"); 
-        //    PlayerPrefs.SetString(3 + "BestScore", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")); 
-
-        //    // 5등 점수 <- 4등 점수 값
-        //    PlayerPrefs.SetString(4 + "BestScore", tempStr4);
-        //}
-
-        //// 만약 (5위 < 현 점수 < 4위)
-        //else if (a > PlayerPrefs.GetInt(4 + "BestScore") && a < PlayerPrefs.GetInt(3 + "BestScore"))
-        //{
-        //    // 5등 날짜 <- 현 날짜
-        //    PlayerPrefs.SetString(4 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-        //}
-    }
-    #endregion
-
-    #region TOP 5 랭킹 함수
+    #region TOP 5 랭킹 및 날짜 함수
     static public void RankSys(int intValue) // intValue = 현재 점수 값
     {
         #region TOP 5 랭킹 함수 규칙
@@ -342,7 +254,7 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt(0 + "BestScore", intValue); // 1등 <- 현재 점수
             // 1등 날짜 <- 현 날짜
             tempStr1 = PlayerPrefs.GetString(0 + "Date");
-            PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+            PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
 
             // 2등 점수 <- 1등 점수 값
             temp2 = PlayerPrefs.GetInt(1 + "BestScore"); // temp2 <- 2등
@@ -379,7 +291,7 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt(1 + "BestScore", intValue); // 2등 <- intValue (현재점수)
             // 2등 날짜 <- 현 날짜
             tempStr2 = PlayerPrefs.GetString(1 + "Date");
-            PlayerPrefs.SetString(1 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+            PlayerPrefs.SetString(1 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
 
             // 3등 점수 <- 2등 점수 값
             temp3 = PlayerPrefs.GetInt(2 + "BestScore"); // temp3 <- 3등
@@ -409,7 +321,7 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt(2 + "BestScore", intValue); // 3등 <- intValue (현재점수)
             // 3등 날짜 <- 2등 날짜
             tempStr3 = PlayerPrefs.GetString(2 + "Date");
-            PlayerPrefs.SetString(2 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+            PlayerPrefs.SetString(2 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
 
             // 4등 점수 <- 3등 점수 값
             temp4 = PlayerPrefs.GetInt(3 + "BestScore"); // temp4 <- 4등
@@ -432,7 +344,7 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt(3 + "BestScore", intValue); // 4등 <- intValue (현재점수)
             // 4등 점수 <- 3등 점수 값
             tempStr4 = PlayerPrefs.GetString(3 + "BestScore");
-            PlayerPrefs.SetString(3 + "BestScore", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+            PlayerPrefs.SetString(3 + "BestScore", DateTime.Now.ToString("yyyy/MM/dd"));
 
             // 5등 점수 <- 4등 점수 값
             PlayerPrefs.SetInt(4 + "BestScore", temp4); // 5등 <- temp4 (4등)
@@ -446,7 +358,7 @@ public class ScoreManager : MonoBehaviour
             // 5등 점수 <- 4등 점수 값
             PlayerPrefs.SetInt(4 + "BestScore", intValue); // 5등 <- intValue (현재점수)
             // 5등 날짜 <- 현 날짜
-            PlayerPrefs.SetString(4 + "Date", DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+            PlayerPrefs.SetString(4 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
         }
     }
     #endregion
