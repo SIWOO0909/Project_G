@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System;
 using System.Collections;
+using UnityEngine.XR;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -29,6 +30,19 @@ public class ScoreManager : MonoBehaviour
 
     public GameObject GameOverUI;
 
+    public TextMeshProUGUI ROne;
+    public TextMeshProUGUI RTwo;
+    public TextMeshProUGUI RThree;
+    public TextMeshProUGUI RFour;
+    public TextMeshProUGUI RFive;
+
+    public TextMeshProUGUI RDate1;
+    public TextMeshProUGUI RDate2;
+    public TextMeshProUGUI RDate3;
+    public TextMeshProUGUI RDate4;
+    public TextMeshProUGUI RDate5;
+
+
     public float pf;
 
     // public float i;
@@ -55,9 +69,6 @@ public class ScoreManager : MonoBehaviour
         abc_score = 0;
         previousXPosition = trackedObject.position.x;
         minsu1 = 0;
-        // Date1.text = DateTime.Now.ToString("yyyy/M/d");
-        //score = 0;
-        //displayScore = 0;
     }
 
     
@@ -96,13 +107,14 @@ public class ScoreManager : MonoBehaviour
         #endregion
 
         #region 게임오버시
-        if (abc > 0)
+        switch (abc)
         {
-            // 랭킹 함수 현 점수
-            RankSys(a);
-
-            // 날짜 함수 현 날짜
-            // DateSys(DateTime.Now.ToString("yyyy/M/d h:mm:ss tt"));
+            case 1:
+                RankSys(a);
+                RecentSys(a);
+                abc = 0;
+                Debug.Log("TOP5, 최근기록 함수를 실행합니다.");
+                break;
         }
         #endregion
 
@@ -147,7 +159,7 @@ public class ScoreManager : MonoBehaviour
         }
         #endregion
 
-        #region TOP 5 랭킹 출력
+        #region TOP 5 출력
         if (PlayerPrefs.GetInt(0 + "BestScore") < 6)
         {
             one.text = "0";
@@ -190,31 +202,115 @@ public class ScoreManager : MonoBehaviour
         }
         #endregion
 
-        #region 날짜 출력
+        #region TOP5 날짜 출력
         Date1.text = PlayerPrefs.GetString(0 + "Date").ToString();
         Date2.text = PlayerPrefs.GetString(1 + "Date").ToString();
         Date3.text = PlayerPrefs.GetString(2 + "Date").ToString();
         Date4.text = PlayerPrefs.GetString(3 + "Date").ToString();
         Date5.text = PlayerPrefs.GetString(4 + "Date").ToString();
         #endregion
+
+        #region 최근 기록 출력
+        ROne.text = PlayerPrefs.GetInt(0 + "RecentScore").ToString();
+        RTwo.text = PlayerPrefs.GetInt(1 + "RecentScore").ToString();
+        RThree.text = PlayerPrefs.GetInt(2 + "RecentScore").ToString();
+        RFour.text = PlayerPrefs.GetInt(3 + "RecentScore").ToString();
+        RFive.text = PlayerPrefs.GetInt(4 + "RecentScore").ToString();
+        #endregion
+
+        #region 최근 기록 날짜 출력
+        RDate1.text = PlayerPrefs.GetString(0 + "RDate").ToString();
+        RDate2.text = PlayerPrefs.GetString(1 + "RDate").ToString();
+        RDate3.text = PlayerPrefs.GetString(2 + "RDate").ToString();
+        RDate4.text = PlayerPrefs.GetString(3 + "RDate").ToString();
+        RDate5.text = PlayerPrefs.GetString(4 + "RDate").ToString();
+        #endregion
     }
 
-    #region 랭킹, 날짜 초기화 함수
-    public void ResetRankings()
+    #region 최근기록 함수
+    static public void RecentSys(int a)
     {
-        // 0번 때 BestScore에 5점 넘겨준다.
-        PlayerPrefs.SetInt(0 + "BestScore",5);
+        #region 임시 int 저장소
+        // 임시 저장 변수 생성 
+        // temp는 임시라는 뜻
+        int Rtemp1 = 0;
+        int Rtemp2 = 0;
+        int Rtemp3 = 0;
+        int Rtemp4 = 0;
+        #endregion
+
+        #region 임시 str 저장소
+        string RtempStr1 = "";
+        string RtempStr2 = "";
+        string RtempStr3 = "";
+        string RtempStr4 = "";
+        #endregion
+
+        // 1등 <- 현재 점수
+        Rtemp1 = PlayerPrefs.GetInt(0 + "RecentScore"); // temp <- 1등
+        PlayerPrefs.SetInt(0 + "RecentScore", a); // 1등 <- 현재 점수
+        // 1등 날짜 <- 현 날짜
+        RtempStr1 = PlayerPrefs.GetString(0 + "RDate");
+        PlayerPrefs.SetString(0 + "RDa'te", DateTime.Now.ToString("yyyy/MM/dd"));
+
+        // 2등 점수 <- 1등 점수 값
+        Rtemp2 = PlayerPrefs.GetInt(1 + "RecentScore"); // temp2 <- 2등
+        PlayerPrefs.SetInt(1 + "RecentScore", Rtemp1); // 2등 <- temp (1등)
+        // 2등 날짜 <- 1등 날짜
+        RtempStr2 = PlayerPrefs.GetString(1 + "RDate");
+        PlayerPrefs.SetString(1 + "RDate", RtempStr1);
+
+        // 3등 점수 <- 2등 점수 값
+        Rtemp3 = PlayerPrefs.GetInt(2 + "RecentScore"); // temp3 <- 3등
+        PlayerPrefs.SetInt(2 + "RecentScore", Rtemp2); // 3등 <- temp2 (2등)
+        // 3등 날짜 <- 2등 날짜
+        RtempStr3 = PlayerPrefs.GetString(2 + "RDate");
+        PlayerPrefs.SetString(2 + "RDate", RtempStr2);
+
+        // 4등 점수 <- 3등 점수 값
+        Rtemp4 = PlayerPrefs.GetInt(3 + "RecentScore"); // temp4 <- 4등
+        PlayerPrefs.SetInt(3 + "RecentScore", Rtemp3); // 4등 <- temp3 (3등)
+        // 4등 날짜 <- 3등 날짜 
+        RtempStr4 = PlayerPrefs.GetString(3 + "RDate");
+        PlayerPrefs.SetString(3 + "RDate", RtempStr3);
+
+        // 5등 점수 <- 4등 점수 값
+        PlayerPrefs.SetInt(4 + "RecentScore", Rtemp4); // 5등 <- temp4 (4등)
+        // 5등 날짜 <- 4등 날짜 
+        PlayerPrefs.SetString(4 + "RDate", RtempStr4);
+    }
+    #endregion
+
+    #region 랭킹, 날짜, 최근기록 초기화 함수
+    static public void ResetRankings()
+    {
+        // TOP 5
+        PlayerPrefs.SetInt(0 + "BestScore",5);// 0번 때 BestScore에 5점 넘겨준다.
         PlayerPrefs.SetInt(1 + "BestScore",4);
         PlayerPrefs.SetInt(2 + "BestScore",3);
         PlayerPrefs.SetInt(3 + "BestScore",2);
         PlayerPrefs.SetInt(4 + "BestScore",1);
 
-        // 0번 때 Date에 현재 날짜를 지금으로 초기화
-        PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
+        // TOP 5 날짜
+        PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));// 0번 때 Date에 현재 날짜를 지금으로 초기화
         PlayerPrefs.SetString(1 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
         PlayerPrefs.SetString(2 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
         PlayerPrefs.SetString(3 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
         PlayerPrefs.SetString(4 + "Date", DateTime.Now.ToString("yyyy/MM/dd"));
+
+        // 최근 기록
+        PlayerPrefs.SetInt(0 + "RecentScore", 0);
+        PlayerPrefs.SetInt(1 + "RecentScore", 0);
+        PlayerPrefs.SetInt(2 + "RecentScore", 0);
+        PlayerPrefs.SetInt(3 + "RecentScore", 0);
+        PlayerPrefs.SetInt(4 + "RecentScore", 0);
+
+        // 최근 기록 날짜
+        PlayerPrefs.SetString(0 + "RDate", DateTime.Now.ToString("yyyy/MM/dd"));
+        PlayerPrefs.SetString(1 + "RDate", DateTime.Now.ToString("yyyy/MM/dd"));
+        PlayerPrefs.SetString(2 + "RDate", DateTime.Now.ToString("yyyy/MM/dd"));
+        PlayerPrefs.SetString(3 + "RDate", DateTime.Now.ToString("yyyy/MM/dd"));
+        PlayerPrefs.SetString(4 + "RDate", DateTime.Now.ToString("yyyy/MM/dd"));
     }
     #endregion
 
@@ -362,4 +458,10 @@ public class ScoreManager : MonoBehaviour
         }
     }
     #endregion
+
+    //public void AllRankSysBtn()
+    //{
+    //    RankSys(a);
+    //    RecentSys(a);
+    //}
 }
