@@ -36,11 +36,9 @@ public class AdmobAds : MonoBehaviour
 
             print("±§∞Ì ¡ÿ∫Ò ¡ﬂ..");
         });
-        // LoadBannerAd();
+        LoadBannerAd();
     }
     #endregion
-
-    
 
     #region πË≥ ±§∞Ì
     public void LoadBannerAd()
