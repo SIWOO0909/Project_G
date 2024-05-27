@@ -221,15 +221,23 @@ public class Move : MonoBehaviour
     {
         // 충돌 후 1초를 기다립니다
         yield return new WaitForSeconds(1f);
-        gameoverPanel.SetActive(true);
+
+        // 게임오버 판넬 보이기
+        // gameoverPanel.SetActive(true);
+
         Debug.Log("게임 오버");
         Time.timeScale = 0;
 
+        // 게임오버 판넬 보이기
+        gameoverPanel.SetActive(true);
         // 점수 Top 5 시작점
         ScoreManager.abc = 1;
 
-        // 뒤지면 전면광고
+        // 전면광고
         // AdmobAds.def = 1;
+
+        // 게임오버 씬으로 갑니다.
+        // SceneManager.LoadScene("GameOverScene");
     }
 }
 #endregion

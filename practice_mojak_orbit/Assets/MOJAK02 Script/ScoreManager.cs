@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using System;
+using System.Collections;
+
 public class ScoreManager : MonoBehaviour
 {
     #region 선언
@@ -25,15 +27,23 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI Date4;
     public TextMeshProUGUI Date5;
 
+    public GameObject GameOverUI;
+
+    public float pf;
+
+    // public float i;
     // 변수 선언
     static public int abc = 0; // 랭크 시스템 작동 여부 abc값이 1일때 실행
     static public int a = 0;
     public static int scoreValueSaved;
     private int scoreValue;
     private int minsu1;
+    private int score;
+    private int displayScore;
     private float previousXPosition;
-    public float NowScoreSlowEffect;
-    public float BestScoreSlowEffect;
+    // public float NowScoreSlowEffect;
+    // public float BestScoreSlowEffect;
+    public static int abc_score = 0; // 점수 연출
     //float text_score = 0f;
 
     #endregion
@@ -42,10 +52,15 @@ public class ScoreManager : MonoBehaviour
     private void Start()
     {
         abc = 0;
+        abc_score = 0;
         previousXPosition = trackedObject.position.x;
         minsu1 = 0;
         // Date1.text = DateTime.Now.ToString("yyyy/M/d h:mm:ss tt");
+        score = 0;
+        displayScore = 0;
     }
+
+    
     #endregion
     public void Update() // 매 프레임 실행
     {
@@ -111,30 +126,25 @@ public class ScoreManager : MonoBehaviour
         #endregion
 
         #region 점수 연출
+        float scaledIncrement = 1000 * Time.deltaTime *pf; // Time.deltaTime을 곱하여 프레임당 증가량 계산
+
+        // 현재 점수
         float floata = a;
-        floata += 1000 * Time.deltaTime * NowScoreSlowEffect;
-        if (a >= 1000)
-        {
-            gameOverTotalScoreTxt.text = 1000.ToString("F0");
-        }
-        else
-        {
-            gameOverTotalScoreTxt.text = floata.ToString("F0");
-        }
+        floata += scaledIncrement;
+        gameOverTotalScoreTxt.text = floata.ToString();
 
-        // 게임오버시 베스트 점수 연출 시스템
+
+        // 베스트 점수
         float floatb = PlayerPrefs.GetInt(0 + "BestScore");
-        floatb += 2000 * Time.deltaTime * NowScoreSlowEffect;
-        int bbb = (int)Mathf.Round(floatb);
-        gameOverBestScoreTxt.text = bbb.ToString(); // 게임오버UI베스트 점수 출력
+        floatb += scaledIncrement;
+        gameOverBestScoreTxt.text = floatb.ToString(); // 게임오버UI베스트 점수 출력
 
-        // 
+        // 얻은 코인
         if (a > 100)
         {
             float floatc = PlayerPrefs.GetInt("scoreCoins");
-            floatc += 2000 * Time.deltaTime * NowScoreSlowEffect;
-            int ccc = (int)Mathf.Round(floatc);
-            gameOverEarnCoinTxt.text = ccc.ToString();
+            floatc += scaledIncrement;
+            gameOverEarnCoinTxt.text = floatc.ToString();
         }
         #endregion
 
@@ -201,11 +211,11 @@ public class ScoreManager : MonoBehaviour
         PlayerPrefs.SetInt(4 + "BestScore",1);
 
         // 0번 때 Date에 현재 날짜를 지금으로 초기화
-        PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy/M/d h:mm:ss tt"));
-        PlayerPrefs.SetString(1 + "Date", DateTime.Now.ToString("yyyy/M/d h:mm:ss tt"));
-        PlayerPrefs.SetString(2 + "Date", DateTime.Now.ToString("yyyy/M/d h:mm:ss tt"));
-        PlayerPrefs.SetString(3 + "Date", DateTime.Now.ToString("yyyy/M/d h:mm:ss tt"));
-        PlayerPrefs.SetString(4 + "Date", DateTime.Now.ToString("yyyy/M/d h:mm:ss tt"));
+        PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy/M/d hh:mm:ss"));
+        PlayerPrefs.SetString(1 + "Date", DateTime.Now.ToString("yyyy/M/d hh:mm:ss"));
+        PlayerPrefs.SetString(2 + "Date", DateTime.Now.ToString("yyyy/M/d hh:mm:ss"));
+        PlayerPrefs.SetString(3 + "Date", DateTime.Now.ToString("yyyy/M/d hh:mm:ss"));
+        PlayerPrefs.SetString(4 + "Date", DateTime.Now.ToString("yyyy/M/d hh:mm:ss"));
     }
     #endregion
     
@@ -225,7 +235,7 @@ public class ScoreManager : MonoBehaviour
             Debug.Log("1등 시 날짜 기록");
             // 1등 날짜 <- 현 날짜
             tempStr1 = PlayerPrefs.GetString(0 + "Date"); 
-            PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy/M/d h:mm:ss tt"));
+            PlayerPrefs.SetString(0 + "Date", DateTime.Now.ToString("yyyy/M/d hh:mm:ss"));
 
             // 2등 날짜 <- 1등 날짜
             tempStr2 = PlayerPrefs.GetString(1 + "Date"); 
@@ -248,7 +258,7 @@ public class ScoreManager : MonoBehaviour
         {
             // 2등 날짜 <- 현 날짜
             tempStr2 = PlayerPrefs.GetString(1 + "Date"); 
-            PlayerPrefs.SetString(1 + "Date", DateTime.Now.ToString("yyyy/M/d h:mm:ss tt"));
+            PlayerPrefs.SetString(1 + "Date", DateTime.Now.ToString("yyyy/M/d hh:mm:ss"));
 
             // 3등 날짜 <- 2등 날짜 
             tempStr3 = PlayerPrefs.GetString(2 + "Date");
@@ -267,7 +277,7 @@ public class ScoreManager : MonoBehaviour
         {
             // 3등 날짜 <- 2등 날짜
             tempStr3 = PlayerPrefs.GetString(2 + "Date");
-            PlayerPrefs.SetString(2 + "Date", DateTime.Now.ToString("yyyy/M/d h:mm:ss tt"));
+            PlayerPrefs.SetString(2 + "Date", DateTime.Now.ToString("yyyy/M/d hh:mm:ss"));
 
             // 4등 날짜 <- 3등 날짜
             tempStr4 = PlayerPrefs.GetString(3 + "Date"); 
@@ -282,7 +292,7 @@ public class ScoreManager : MonoBehaviour
         {
             // 4등 점수 <- 3등 점수 값
             tempStr4 = PlayerPrefs.GetString(3 + "BestScore"); 
-            PlayerPrefs.SetString(3 + "BestScore", DateTime.Now.ToString("yyyy/M/d h:mm:ss tt")); 
+            PlayerPrefs.SetString(3 + "BestScore", DateTime.Now.ToString("yyyy/M/d hh:mm:ss")); 
 
             // 5등 점수 <- 4등 점수 값
             PlayerPrefs.SetString(4 + "BestScore", tempStr4);
@@ -292,7 +302,7 @@ public class ScoreManager : MonoBehaviour
         else if (a > PlayerPrefs.GetInt(4 + "BestScore") && a < PlayerPrefs.GetInt(3 + "BestScore"))
         {
             // 5등 날짜 <- 현 날짜
-            PlayerPrefs.SetString(4 + "Date", DateTime.Now.ToString("yyyy/M/d h:mm:ss tt"));
+            PlayerPrefs.SetString(4 + "Date", DateTime.Now.ToString("yyyy/M/d hh:mm:ss"));
         }
     }
     #endregion
