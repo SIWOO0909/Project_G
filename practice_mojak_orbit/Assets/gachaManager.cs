@@ -5,25 +5,54 @@ using UnityEngine.UI;
 
 public class gachaManager : MonoBehaviour
 {
-    //public int wigleyStart;
-    //public int wigleyEnd;
-
+    #region 선언
+    // 뽑기 버튼
     public GameObject gachaBtn;
 
+    // 뽑기 성공시 보여주는 이미지
     public GameObject Wigley;
     public GameObject Box;
     public GameObject Krab;
+    public GameObject WR;
+    public GameObject WO;
+    public GameObject WY;
+    public GameObject WB;
+    public GameObject WPu;
+    public GameObject WPi;
+    public GameObject WG;
+    public GameObject WW;
 
-    // public GameObject WigleyLocked;
+    // 해금
     public GameObject BoxLocked;
     public GameObject KrabLocked;
+    public GameObject WRLocked;
+    public GameObject WOLocked;
+    public GameObject WYLocked;
+    public GameObject WBLocked;
+    public GameObject WPuLocked;
+    public GameObject WPiLocked;
+    public GameObject WGLocked;
+    public GameObject WWLocked;
 
+    // 뽑힐 확률 // from 구글 시트
+    public static float w;
+    public static float b;
+    public static float k;
+    public static float wr;
+    public static float wo;
+    public static float wy;
+    public static float wb;
+    public static float wpu;
+    public static float wpi;
+    public static float wg;
+    public static float ww;
 
+    #endregion
 
-
-
+    #region 매 프레임마다 해금 여부 확인
     private void Update()
     {
+        #region 가챠 살돈 없으면 못사요
         if (PlayerPrefs.GetInt("totalCoins") < 2000)
         {
             gachaBtn.SetActive(false);
@@ -32,8 +61,9 @@ public class gachaManager : MonoBehaviour
         {
             gachaBtn.SetActive(true);
         }
+        #endregion
 
-
+        // 박스 2
         if (PlayerPrefs.GetInt("BoxCharacter") == 1) // 박스캐릭터가 한번 이상 뽑힐시
         {
             BoxLocked.SetActive(false); // 박스캐릭터 잠금해제
@@ -43,6 +73,7 @@ public class gachaManager : MonoBehaviour
             BoxLocked.SetActive(true); // 박스 캐릭터 잠금
         }
 
+        // 크랩 3
         if (PlayerPrefs.GetInt("KrabCharacter") == 1) // 크랩캐릭터가 한번 이상 뽑힐시
         {
             KrabLocked.SetActive(false); // 크랩 잠금해제
@@ -51,46 +82,216 @@ public class gachaManager : MonoBehaviour
         {
             KrabLocked.SetActive(true); // 크랩 캐릭터 잠금 
         }
-    }
 
+        // 위글리 빨강 4
+        if (PlayerPrefs.GetInt("WRC") == 1) 
+        {
+            WRLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("WRC") == 0) 
+        {
+            WRLocked.SetActive(true);
+        }
+
+        // 위글리 주황 5 
+        if (PlayerPrefs.GetInt("WOC") == 1)
+        {
+            WOLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("WOC") == 0)
+        {
+            WOLocked.SetActive(true);
+        }
+        // 위글리 노랑 6
+        if (PlayerPrefs.GetInt("WYC") == 1)
+        {
+            WYLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("WYC") == 0)
+        {
+            WYLocked.SetActive(true);
+        }
+        // 위글리 파랑 7
+        if (PlayerPrefs.GetInt("WBC") == 1)
+        {
+            WBLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("WBC") == 0)
+        {
+            WBLocked.SetActive(true);
+        }
+        // 위글리 보라 8
+        if (PlayerPrefs.GetInt("WPuC") == 1)
+        {
+            WPuLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("WPuC") == 0)
+        {
+            WPuLocked.SetActive(true);
+        }
+        // 위글리 핑크 9 
+        if (PlayerPrefs.GetInt("WPiC") == 1)
+        {
+            WPiLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("WPiC") == 0)
+        {
+            WPiLocked.SetActive(true);
+        }
+        // 위글리 그레이10
+        if (PlayerPrefs.GetInt("WGC") == 1)
+        {
+            WGLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("WGC") == 0)
+        {
+            WGLocked.SetActive(true);
+        }
+        // 위글리 화이트 11
+        if (PlayerPrefs.GetInt("WWC") == 1)
+        {
+            WWLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("WWC") == 0)
+        {
+            WWLocked.SetActive(true);
+        }
+    }
+    #endregion
+
+    #region 뽑기 시스템 함수
     public void GachaStart()
     {
-        int result = Random.Range(0, 100);
-        Debug.Log(result);
-
-        if (result >= 0 && result < 30) // 0이상 30 미만
+        float hap = w + b + k + wr + wy + wb + wpu + wpi + wg + ww; 
+        float GachaResult = Random.Range(0, hap);
+        Debug.Log(GachaResult);
+        // 위글리
+        if (GachaResult >= 0 && GachaResult < w) // 0이상 9 미만
         {
             Debug.Log("위글리 획득!");
             Wigley.SetActive(true);
         }
-        else if(result >= 30 && result < 60) // 30이상 60 미만 
+        // 박스
+        else if(GachaResult >= w && GachaResult < w+b) // 9이상 18 미만 
         {
             Debug.Log("박스 획득!");
             Box.SetActive(true); // 뽑기 결과화면에 박스가 보여집니다.
             BoxLocked.SetActive(false); // 박스 캐릭터 잠금해제
             PlayerPrefs.SetInt("BoxCharacter", 1); // 박스 캐릭터 잠금해제 된것을 기기에 저장
         }
-        else if(result >=60 && result <= 100) // 60이상 100 미만
+        // 크랩
+        else if(GachaResult >= w+b && GachaResult < w+b+k) // 18이상 27 미만
         {
             Debug.Log("크랩 획득!");
             Krab.SetActive(true); // 뽑기 결과화면에 크랩이 보여집니다.
             KrabLocked.SetActive(false); // 크랩 캐릭터 잠금해제
             PlayerPrefs.SetInt("KrabCharacter", 1); // 크랩 캐릭터 잠금해제된것을 기기에 저장
         }
+        // 위글리 빨강
+        else if (GachaResult >= w + b + k && GachaResult < w + b + k + wr)
+        {
+            WR.SetActive(true); 
+            WRLocked.SetActive(false); 
+            PlayerPrefs.SetInt("WRC", 1); 
+        }
+        // 위글리 주황
+        else if (GachaResult >= w + b + k + wr && GachaResult < w + b + k + wr + wy)
+        {
+            WO.SetActive(true);
+            WOLocked.SetActive(false);
+            PlayerPrefs.SetInt("WOC", 1);
+        }
+        // 위글리 노랑
+        else if (GachaResult >= w + b + k + wr + wy && GachaResult < w + b + k + wr + wy + wb)
+        {
+            WY.SetActive(true);
+            WYLocked.SetActive(false);
+            PlayerPrefs.SetInt("WYC", 1);
+        }
+        // 위글리 파랑
+        else if (GachaResult >= w + b + k + wr + wy + wb && GachaResult < w + b + k + wr + wy + wb + wpu)
+        {
+            WB.SetActive(true);
+            WBLocked.SetActive(false);
+            PlayerPrefs.SetInt("WBC", 1);
+        }
+        // 위글리 보라
+        else if (GachaResult >= w + b + k + wr + wy + wb + wpu && GachaResult < w + b + k + wr + wy + wb + wpu + wpi)
+        {
+            WPu.SetActive(true);
+            WPuLocked.SetActive(false);
+            PlayerPrefs.SetInt("WPuC", 1);
+        }
+        // 위글리 핑크
+        else if (GachaResult >= w + b + k + wr + wy + wb + wpu + wpi && GachaResult < w + b + k + wr + wy + wb + wpu + wpi + wg)
+        {
+            WPi.SetActive(true);
+            WPiLocked.SetActive(false);
+            PlayerPrefs.SetInt("WPiC", 1);
+        }
+        // 위글리 그레이
+        else if (GachaResult >= w + b + k + wr + wy + wb + wpu + wpi + wg && GachaResult < w + b + k + wr + wy + wb + wpu + wpi + wg + ww)
+        {
+            WG.SetActive(true);
+            WGLocked.SetActive(false);
+            PlayerPrefs.SetInt("WGC", 1);
+        }
+        // 위글리 화이트
+        else if (GachaResult >= w + b + k + wr + wy + wb + wpu + ww && GachaResult < hap)
+        {
+            WW.SetActive(true);
+            WWLocked.SetActive(false);
+            PlayerPrefs.SetInt("WWC", 1);
+        }
     }
+    #endregion
 
-    // 뽑기시 보여질 이미지 다시 없애는 함수
+    #region 뽑기시 보여질 이미지 없애는 함수
     public void UnShowGachaPopUpImage()
     {
         Wigley.SetActive(false);
         Box.SetActive(false);
         Krab.SetActive(false);
+        WR.SetActive(false);
+        WO.SetActive(false);
+        WY.SetActive(false);
+        WB.SetActive(false);
+        WPu.SetActive(false);
+        WPi.SetActive(false);
+        WG.SetActive(false);
+        WW.SetActive(false);
     }
+    #endregion
 
-    // 소유 캐릭터 목록 초기화해주는 함수
+    #region 캐릭터 전부 해금
+    public void AllCharacterGetto()
+    {
+        PlayerPrefs.SetInt("BoxCharacter", 1);
+        PlayerPrefs.SetInt("KrabCharacter", 1);
+        PlayerPrefs.SetInt("WRC", 1);
+        PlayerPrefs.SetInt("WYC", 1);
+        PlayerPrefs.SetInt("WOC", 1);
+        PlayerPrefs.SetInt("WBC", 1);
+        PlayerPrefs.SetInt("WPuC", 1);
+        PlayerPrefs.SetInt("WPiC", 1);
+        PlayerPrefs.SetInt("WGC", 1);
+        PlayerPrefs.SetInt("WWC", 1);
+    }
+    #endregion
+
+    #region 캐릭터 전부 잠금
     public void CharacterUnGetted()
     {
         PlayerPrefs.SetInt("BoxCharacter", 0); // 박스 캐릭터 잠금
         PlayerPrefs.SetInt("KrabCharacter", 0); // 크랩 캐릭터 잠금
+        PlayerPrefs.SetInt("WRC", 0);
+        PlayerPrefs.SetInt("WYC", 0);
+        PlayerPrefs.SetInt("WOC", 0);
+        PlayerPrefs.SetInt("WBC", 0);
+        PlayerPrefs.SetInt("WPuC", 0);
+        PlayerPrefs.SetInt("WPiC", 0);
+        PlayerPrefs.SetInt("WGC", 0);
+        PlayerPrefs.SetInt("WWC", 0);
     }
+    #endregion
 }
