@@ -111,9 +111,10 @@ public class ScoreManager : MonoBehaviour
         {
             case 1:
                 RankSys(a);
-                RecentSys(a);
+                PlayerPrefs.SetInt("NowScore", a);
+                // RecentSys(a);
                 abc = 0;
-                Debug.Log("TOP5, 최근기록 함수를 실행합니다.");
+                Debug.Log("TOP5함수를 실행합니다.");
                 break;
         }
         #endregion
@@ -459,9 +460,12 @@ public class ScoreManager : MonoBehaviour
     }
     #endregion
 
-    //public void AllRankSysBtn()
-    //{
-    //    RankSys(a);
-    //    RecentSys(a);
-    //}
+    #region 최근기록 함수
+    public void RescentRankSysBtn()
+    {
+        Debug.Log("최근기록 함수를 실행합니다.");
+        // RankSys(a);
+        RecentSys(PlayerPrefs.GetInt("NowScore"));
+    }
+    #endregion
 }
