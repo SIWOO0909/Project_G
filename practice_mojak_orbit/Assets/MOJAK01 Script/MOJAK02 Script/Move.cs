@@ -225,8 +225,7 @@ public class Move : MonoBehaviour
         // 게임오버 판넬 보이기
         // gameoverPanel.SetActive(true);
 
-        Debug.Log("게임 오버 ");
-        Debug.Log("게임 세상이 정지됩니다.");
+        Debug.Log("게임 오버");
         Time.timeScale = 0;
 
         // 게임오버 판넬 보이기
