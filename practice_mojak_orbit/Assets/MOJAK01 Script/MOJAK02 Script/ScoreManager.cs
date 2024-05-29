@@ -3,6 +3,7 @@ using TMPro;
 using System;
 using System.Collections;
 using UnityEngine.XR;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -20,7 +21,12 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI four;
     public TextMeshProUGUI five;
 
+    // 위치
     public Transform trackedObject;
+    public Transform police;
+
+    // ui warning 이미지
+    public GameObject uiImage;
 
     public TextMeshProUGUI Date1;
     public TextMeshProUGUI Date2;
@@ -28,7 +34,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI Date4;
     public TextMeshProUGUI Date5;
 
-    public GameObject GameOverUI;
+    public Image GameOverUI;
 
     public TextMeshProUGUI ROne;
     public TextMeshProUGUI RTwo;
@@ -98,12 +104,29 @@ public class ScoreManager : MonoBehaviour
                 scoreValue = minsu1;
             }
             scoreValueSaved = scoreValue;
-            
+
         }
         previousXPosition = currentXPosition;
 
         // 점수가 10점 단위로 증가하게 됩니다.
         int a = (scoreValueSaved / 10) * 10;
+        #endregion
+
+        #region 폴리스와의 거리 계산
+        // 폴리스 x좌표
+        float PoliceCurrentXPosition = police.position.x;
+
+        // 플레이어의 x 좌표 - 폴리스의 x좌표
+        if (currentXPosition - PoliceCurrentXPosition < 10)
+        {
+            Debug.Log("폴리스랑 너무 가까워요!!!");
+            uiImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("폴리스랑 너무 멀어요~");
+            uiImage.gameObject.SetActive(false);
+        }
         #endregion
 
         #region 게임오버시
