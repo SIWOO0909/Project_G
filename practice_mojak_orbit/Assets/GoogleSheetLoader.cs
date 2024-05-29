@@ -45,7 +45,7 @@ public class GoogleSheetLoader : MonoBehaviour
 
 
         // 첫번째 행의 아이템 이름과 Description을 출력한다.
-        // displayText.text = columns[1] + "\n" + columns[2];
+        displayText.text = columns[1] + "\n" + columns[2];
         displayText.text = columns[3].ToString(); // 윤일동 차렷 
         // columns[2].ToString(); // 위글리 확률 0.3
         // columns2[2].ToString(); // 박스 확률 0.2
