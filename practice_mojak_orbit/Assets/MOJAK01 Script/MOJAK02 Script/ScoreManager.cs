@@ -26,7 +26,7 @@ public class ScoreManager : MonoBehaviour
     public Transform police;
 
     // ui warning 이미지
-    public GameObject uiImage;
+    public GameObject uiWarning;
 
     public TextMeshProUGUI Date1;
     public TextMeshProUGUI Date2;
@@ -34,7 +34,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI Date4;
     public TextMeshProUGUI Date5;
 
-    public Image GameOverUI;
+    // public Image GameOverUI;
 
     public TextMeshProUGUI ROne;
     public TextMeshProUGUI RTwo;
@@ -117,15 +117,15 @@ public class ScoreManager : MonoBehaviour
         float PoliceCurrentXPosition = police.position.x;
 
         // 플레이어의 x 좌표 - 폴리스의 x좌표
-        if (currentXPosition - PoliceCurrentXPosition < 10)
+        if (currentXPosition - PoliceCurrentXPosition < 5)
         {
             Debug.Log("폴리스랑 너무 가까워요!!!");
-            uiImage.gameObject.SetActive(true);
+            uiWarning.gameObject.SetActive(true);
         }
         else
         {
             Debug.Log("폴리스랑 너무 멀어요~");
-            uiImage.gameObject.SetActive(false);
+            uiWarning.gameObject.SetActive(false);
         }
         #endregion
 

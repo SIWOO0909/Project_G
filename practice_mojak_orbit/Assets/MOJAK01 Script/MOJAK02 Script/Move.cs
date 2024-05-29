@@ -25,6 +25,7 @@ public class Move : MonoBehaviour
     public Attack attack;
     // 게임 오버 판넬
     public GameObject gameoverPanel;
+    public GameObject ingamePanel;
 
     bool bloqueo = false;
     #endregion
@@ -230,6 +231,9 @@ public class Move : MonoBehaviour
 
         // 게임오버 판넬 보이기
         gameoverPanel.SetActive(true);
+        ingamePanel.SetActive(false);
+
+
         // 점수 Top 5 시작점
         ScoreManager.abc = 1;
 

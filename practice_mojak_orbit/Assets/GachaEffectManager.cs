@@ -11,6 +11,8 @@ public class GachaEffectManager : MonoBehaviour
         // 파티클 시스템 실행
         particleSysComp.Play();
 
+        Debug.Log("뽑기 연출을 실행합니다.");
+
         // 파티클 시스템 멈춤
         // particleSysComp.Stop();
 
