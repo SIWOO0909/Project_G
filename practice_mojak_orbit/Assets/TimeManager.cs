@@ -21,7 +21,8 @@ public class TimeManager : MonoBehaviour
 
     private void Start()
     {
-        // TimeStop();
+        TimeStart();
+        Debug.Log("현재 세상은 움직이고 있습니다.");
     }
     public void TimeStop()
     {

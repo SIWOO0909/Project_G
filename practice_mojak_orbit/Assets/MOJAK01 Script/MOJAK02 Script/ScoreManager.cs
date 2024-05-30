@@ -120,12 +120,12 @@ public class ScoreManager : MonoBehaviour
         // 플레이어의 x 좌표 - 폴리스의 x좌표
         if (currentXPosition - PoliceCurrentXPosition < 5)
         {
-            Debug.Log("폴리스랑 너무 가까워요!!!");
+            //Debug.Log("폴리스랑 너무 가까워요!!!");
             uiWarning.gameObject.SetActive(true);
         }
         else
         {
-            Debug.Log("폴리스랑 너무 멀어요~");
+            //Debug.Log("폴리스랑 너무 멀어요~");
             uiWarning.gameObject.SetActive(false);
         }
         #endregion
