@@ -8,6 +8,12 @@ public class Move : MonoBehaviour
 
 
     #region 선언
+
+    // 죽는 소리
+    public AudioSource deadVoice;
+
+    public int x = 0;
+
     public int carril;
     public int lateral;
     int positionX = -3;
@@ -191,6 +197,13 @@ public class Move : MonoBehaviour
             vivo = false;
             Debug.Log("교통사고");
             StartCoroutine(FreezeTime());
+
+            if (x < 1)
+            {
+                deadVoice.Play();
+                x = 1;
+            }
+
         }
     }
     #endregion
@@ -209,7 +222,13 @@ public class Move : MonoBehaviour
                 animations.SetTrigger("aqua");
                 Debug.Log("익사");
                 StartCoroutine(FreezeTime());
-            }
+
+                if (x < 1)
+                {
+                    deadVoice.Play();
+                    x = 1;
+                } 
+             }
 
         }
     }

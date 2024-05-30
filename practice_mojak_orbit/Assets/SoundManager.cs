@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource LobbyMusicsource;
     public AudioSource IngameMusicSource;
 
+    public AudioSource dead;
 
     public AudioSource GameOverSound;
 
@@ -21,10 +22,14 @@ public class SoundManager : MonoBehaviour
     public AudioSource PlayBtn;
     public AudioSource LvUpBtn;
 
+    public AudioSource bora;
+
+    // 배경음악 조절
     public void SetMusicVolume(float volume) 
     {  
         LobbyMusicsource.volume = volume;
         IngameMusicSource.volume = volume;
+        bora.volume = volume;
     }
 
     public void SetButtonVolume(float volume)
@@ -38,6 +43,7 @@ public class SoundManager : MonoBehaviour
         PlayBtn.volume = volume;
         GameOverSound.volume = volume;
         LvUpBtn.volume = volume;
+        dead.volume = volume;
     }
 
     public void CoinBtnSound()
