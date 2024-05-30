@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,9 @@ public class Attack : MonoBehaviour
     public void Hit()
     {
         if (!isOn)
+        {
             StartCoroutine(DelayAndStartColliderOn(0.2f)); // 지연 후 ColliderOn 실행
+        }
     }
 
     private IEnumerator DelayAndStartColliderOn(float delay)

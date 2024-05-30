@@ -110,6 +110,7 @@ public class ScoreManager : MonoBehaviour
 
         // 점수가 10점 단위로 증가하게 됩니다.
         int a = (scoreValueSaved / 10) * 10;
+        PlayerPrefs.SetInt("siwoo",a);
         #endregion
 
         #region 폴리스와의 거리 계산
@@ -158,7 +159,7 @@ public class ScoreManager : MonoBehaviour
                 PlayerPrefs.SetInt("totalCoins", crrCoins - 1);
             }
         }
-        TotalScoreTxt.text = a.ToString(); // 현재 점수 출력
+        TotalScoreTxt.text = PlayerPrefs.GetInt("siwoo").ToString(); // 현재 점수 출력
         #endregion
 
         #region 점수 연출
