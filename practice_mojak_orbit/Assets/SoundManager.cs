@@ -24,17 +24,23 @@ public class SoundManager : MonoBehaviour
     public AudioSource PlayBtn;
     public AudioSource LvUpBtn;
 
+    public AudioSource Siren; // 사이렌 소리
+
     public AudioSource bora;
 
     static public float ButtonVolume;
 
+    // 볼륨 조절 바 (로비)
     public Slider BtnVolumeSlider;
     public Slider MusicVolumeSlider;
 
+    // 볼륨 조절바 (인게임)
     public Slider IngameBtnVolumeSlider;
     public Slider IngameMusicVolumeSlider;
+    public Slider IngameSirenVolumeSlider; // 사이렌
 
     public GameObject ClickSoundBug;
+
 
     public void Start()
     {
@@ -69,11 +75,18 @@ public class SoundManager : MonoBehaviour
         PlayerPrefs.SetFloat("BtnVolume", btnVolume);
     }
 
+    public void SirenVolume(float sirenVolume)
+    {
+        Siren.volume = sirenVolume;
+        PlayerPrefs.SetFloat("SirenVolume", sirenVolume);
+    }
+
     public void LoadVolume()
     {
         // 기본값 0.5를 사용하여 저장된 버튼볼륨을 불러옴
         float BtnSavedVolume = PlayerPrefs.GetFloat("BtnVolume", 0.5f); // 효과음
         float MusicSavedVolume = PlayerPrefs.GetFloat("MusicVolume", 0.5f); // 배경음
+        float SirenSavedVolume = PlayerPrefs.GetFloat("SirenVolume", 0.5f); // 사이렌음
 
         // 불러온 볼륨을 적용 // 효과음
         coinSound.volume = BtnSavedVolume;
@@ -92,7 +105,8 @@ public class SoundManager : MonoBehaviour
         IngameMusicSource.volume = MusicSavedVolume;
         bora.volume = MusicSavedVolume;
 
-
+        // 불러온 볼륨을 적용 // 사이렌
+        Siren.volume = SirenSavedVolume;
 
         // 슬라이더 값도 불러온 볼륨으로 설정 // 효과음
         if (BtnVolumeSlider != null)
@@ -104,10 +118,17 @@ public class SoundManager : MonoBehaviour
         // 슬라이더 값도 불러온 볼륨으로 설정 // 배경음
         if (BtnVolumeSlider != null)
         {
-            MusicVolumeSlider.value = MusicSavedVolume;
-            IngameMusicVolumeSlider.value = MusicSavedVolume;
+            MusicVolumeSlider.value = MusicSavedVolume; // 로비
+            IngameMusicVolumeSlider.value = MusicSavedVolume; // 인게임
         }
 
+        // 슬라이더 값도 불러온 볼륨으로 설정 // 사이렌음
+        if (IngameSirenVolumeSlider != null)
+        {
+            IngameSirenVolumeSlider.value = SirenSavedVolume;//인게임
+        }
+
+        // 버튼 소리 판넬 재활성화
         ClickSoundBug.SetActive(true);
     }
 
