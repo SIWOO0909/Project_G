@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.13f1 (5f90a5ebde0f) revision 6262949'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'ko' Physical Memory: 16317 MB
+OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'ko' Physical Memory: 16139 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-D:\2022.3.13f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker13
 -projectPath
-C:/Users/user/Documents/GitHub/Project_G/practice_mojak_orbit
+E:/GitHub/Project_G/practice_mojak_orbit
 -logFile
 Logs/AssetImportWorker13.log
 -srvPort
-63970
-Successfully changed project path to: C:/Users/user/Documents/GitHub/Project_G/practice_mojak_orbit
-C:/Users/user/Documents/GitHub/Project_G/practice_mojak_orbit
+60648
+Successfully changed project path to: E:/GitHub/Project_G/practice_mojak_orbit
+E:/GitHub/Project_G/practice_mojak_orbit
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,68 +49,74 @@ C:/Users/user/Documents/GitHub/Project_G/practice_mojak_orbit
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [11716] Host "[IP] 192.168.35.177 [Port] 0 [Flags] 2 [Guid] 2491477561 [EditorId] 2491477561 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3B6S9KP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [26156] Host "[IP] 192.168.219.198 [Port] 0 [Flags] 2 [Guid] 3348289952 [EditorId] 3348289952 [Version] 1048832 [Id] WindowsEditor(7,RIKKA7061) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [11716] Host "[IP] 192.168.35.177 [Port] 0 [Flags] 2 [Guid] 2491477561 [EditorId] 2491477561 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-3B6S9KP) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [26156] Host "[IP] 192.168.219.198 [Port] 0 [Flags] 2 [Guid] 3348289952 [EditorId] 3348289952 [Version] 1048832 [Id] WindowsEditor(7,RIKKA7061) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-[Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
-Refreshing native plugins compatible for Editor in 148.83 ms, found 3 plugins.
+[Physics::Module] Initialized MultithreadedJobDispatcher with 23 workers.
+Refreshing native plugins compatible for Editor in 18.24 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.13f1 (5f90a5ebde0f)
-[Subsystems] Discovering subsystems at path D:/2022.3.13f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/user/Documents/GitHub/Project_G/practice_mojak_orbit/Assets
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/GitHub/Project_G/practice_mojak_orbit/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1650 SUPER (ID=0x2187)
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
     Vendor:   NVIDIA
-    VRAM:     3943 MB
-    Driver:   31.0.15.3623
+    VRAM:     12129 MB
+    Driver:   31.0.15.4633
 Initialize mono
-Mono path[0] = 'D:/2022.3.13f1/Editor/Data/Managed'
-Mono path[1] = 'D:/2022.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'D:/2022.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56096
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56532
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/2022.3.13f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: D:/2022.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.013198 seconds.
-- Loaded All Assemblies, in  0.471 seconds
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.011465 seconds.
+- Loaded All Assemblies, in  0.230 seconds
 Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 668 ms
+Android Extension - Scanning For ADB Devices 225 ms
+Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.050 seconds
-Domain Reload Profiling: 1520ms
-	BeginReloadAssembly (153ms)
+- Finished resetting the current domain, in  0.417 seconds
+Domain Reload Profiling: 645ms
+	BeginReloadAssembly (71ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (45ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (72ms)
-	LoadAllAssembliesAndSetupDomain (187ms)
-		LoadAssemblies (154ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (5ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (89ms)
+		LoadAssemblies (69ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (182ms)
-			TypeCache.Refresh (181ms)
-				TypeCache.ScanAssembly (165ms)
+		AnalyzeDomain (87ms)
+			TypeCache.Refresh (86ms)
+				TypeCache.ScanAssembly (78ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (1050ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (417ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (984ms)
+		SetupLoadedEditorAssemblies (384ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (799ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (299ms)
+			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (113ms)
-			ProcessInitializeOnLoadMethodAttributes (65ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (56ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -118,62 +124,83 @@ Domain Reload Profiling: 1520ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-Assembly 'Assets/ExternalDependencyManager/Editor/1.2.179/Google.IOSResolver.dll' will not be loaded due to errors:
-Unable to resolve reference 'UnityEditor.iOS.Extensions.Xcode'. Is the assembly missing or incompatible with the current platform?
-Reference validation can be disabled in the Plugin Inspector.
-- Loaded All Assemblies, in  1.025 seconds
-Refreshing native plugins compatible for Editor in 28.03 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.455 seconds
+Refreshing native plugins compatible for Editor in 3.72 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
 Native extension for Android target not found
+Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+System.IO.IOException: Sharing violation on path E:\GitHub\Project_G\practice_mojak_orbit\ProjectSettings\GvhProjectSettings.xml
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <834b2ded5dad441e8c7a4287897d63c7>:0 
+  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <834b2ded5dad441e8c7a4287897d63c7>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, System.Boolean detectEncodingFromByteOrderMarks, System.Int32 bufferSize) [0x00055] in <834b2ded5dad441e8c7a4287897d63c7>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Boolean detectEncodingFromByteOrderMarks) [0x00007] in <834b2ded5dad441e8c7a4287897d63c7>:0 
+  at System.IO.StreamReader..ctor (System.String path) [0x00000] in <834b2ded5dad441e8c7a4287897d63c7>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader..ctor(string)
+  at Google.XmlUtilities.ParseXmlTextFileElements (System.String filename, Google.Logger logger, Google.XmlUtilities+ParseElement parseElement) [0x00018] in /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/XmlUtilities.cs:104 
+  at Google.ProjectSettings.Load () [0x00016] in /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:777 
+  at Google.ProjectSettings.LoadIfEmpty () [0x00023] in /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:558 
+  at Google.ProjectSettings.GetBool (System.String name, System.Boolean defaultValue, Google.SettingsLocation location) [0x00035] in /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:606 
+  at Google.ProjectSettings.GetBool (System.String name, System.Boolean defaultValue) [0x00001] in /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/VersionHandlerImpl/src/ProjectSettings.cs:619 
+  at Google.IOSResolver.get_VerboseLoggingEnabled () [0x00001] in /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:1039 
+  at Google.IOSResolver..cctor () [0x00223] in /Users/amaurice/Documents/GitHub/unity-jar-resolver/source/IOSResolver/src/IOSResolver.cs:727 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.686 seconds
-Domain Reload Profiling: 1702ms
-	BeginReloadAssembly (203ms)
+- Finished resetting the current domain, in  0.353 seconds
+Domain Reload Profiling: 806ms
+	BeginReloadAssembly (95ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (6ms)
+		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (25ms)
-	RebuildCommonClasses (40ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (66ms)
-	LoadAllAssembliesAndSetupDomain (694ms)
-		LoadAssemblies (621ms)
+		CreateAndSetChildDomain (13ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (300ms)
+		LoadAssemblies (232ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (211ms)
-			TypeCache.Refresh (189ms)
-				TypeCache.ScanAssembly (167ms)
-			ScanForSourceGeneratedMonoScriptInfo (15ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (687ms)
+		AnalyzeDomain (127ms)
+			TypeCache.Refresh (115ms)
+				TypeCache.ScanAssembly (103ms)
+			ScanForSourceGeneratedMonoScriptInfo (8ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (353ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (487ms)
+		SetupLoadedEditorAssemblies (263ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (27ms)
-			SetLoadedEditorAssemblies (3ms)
+			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (76ms)
-			ProcessInitializeOnLoadAttributes (351ms)
-			ProcessInitializeOnLoadMethodAttributes (25ms)
-			AfterProcessingInitializeOnLoad (5ms)
+			BeforeProcessingInitializeOnLoad (35ms)
+			ProcessInitializeOnLoadAttributes (178ms)
+			ProcessInitializeOnLoadMethodAttributes (12ms)
+			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (23ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 62.86 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 4.97 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3269 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 60 unused Assets / (68.2 KB). Loaded Objects now: 3726.
-Memory consumption went from 137.6 MB to 137.5 MB.
-Total: 13.434500 ms (FindLiveObjects: 0.348700 ms CreateObjectMapping: 0.417200 ms MarkObjects: 12.400300 ms  DeleteObjects: 0.266800 ms)
+Unloading 59 unused Assets / (67.6 KB). Loaded Objects now: 3727.
+Memory consumption went from 138.7 MB to 138.6 MB.
+Total: 2.173000 ms (FindLiveObjects: 0.148500 ms CreateObjectMapping: 0.044000 ms MarkObjects: 1.873800 ms  DeleteObjects: 0.105600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
@@ -187,742 +214,68 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2238.442295 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Spritesheets/line-light.png
-  artifactKey: Guid(2e1d178c24189c14f9ba282c3d4f155b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Spritesheets/line-light.png using Guid(2e1d178c24189c14f9ba282c3d4f155b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dbee0e38f6ecd9976869a70bebbeeb4') in 0.122411 seconds
+  Time since last request: 179012.640357 seconds.
+  path: Assets/2_Prefabs/Moving Enemy Prefabs/SpaceShip01.prefab
+  artifactKey: Guid(2e2d3d144240b784abb688b18dfc956e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2_Prefabs/Moving Enemy Prefabs/SpaceShip01.prefab using Guid(2e2d3d144240b784abb688b18dfc956e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4abd1f2b442690132489f9bfe421e1f5') in 0.053735 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 21
 ========================================================================
 Received Import Request.
-  Time since last request: 47.835896 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark03.png
-  artifactKey: Guid(9cea6de22fb587842b9a5155481fb3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark03.png using Guid(9cea6de22fb587842b9a5155481fb3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79c8a4d5e3b6d0b5ef2ca54908d83015') in 0.032149 seconds
+  Time since last request: 1.304727 seconds.
+  path: Assets/2_Prefabs/Terrain Prefabs/Ground03.prefab
+  artifactKey: Guid(13b938ecba9ab7046a2b77763dc0e3f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2_Prefabs/Terrain Prefabs/Ground03.prefab using Guid(13b938ecba9ab7046a2b77763dc0e3f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d28e58220d7b368cd79e1fcbc63cfb0') in 0.012201 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 56
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark31.png
-  artifactKey: Guid(f87b4a0ddf4ea7d43ba7549efdf90212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark31.png using Guid(f87b4a0ddf4ea7d43ba7549efdf90212) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78f4c589348f2266fbf6c3cdb2f85930') in 0.019990 seconds
+  Time since last request: 0.000869 seconds.
+  path: Assets/2_Prefabs/Terrain Prefabs/Ground08.prefab
+  artifactKey: Guid(4a87340b3f64f2e4bb195bfd625d7e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2_Prefabs/Terrain Prefabs/Ground08.prefab using Guid(4a87340b3f64f2e4bb195bfd625d7e40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98a9f65e2e283fa5c12cfac1467e85a6') in 0.018385 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 120
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark38.png
-  artifactKey: Guid(3a79b6d58ebd6164797c6d6a75e252c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark38.png using Guid(3a79b6d58ebd6164797c6d6a75e252c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b46f190aa879f702ce481390ec4cadae') in 0.024890 seconds
+  Time since last request: 0.000012 seconds.
+  path: Assets/2_Prefabs/Terrain Prefabs/Water02.prefab
+  artifactKey: Guid(852916d5b9d1fa24d8a482a9c5d6b698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2_Prefabs/Terrain Prefabs/Water02.prefab using Guid(852916d5b9d1fa24d8a482a9c5d6b698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30c251235b92f9247779adb8107c01e9') in 0.012171 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 53
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark06.png
-  artifactKey: Guid(418417464147b0d4fafb97a4d3545c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark06.png using Guid(418417464147b0d4fafb97a4d3545c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af9ab5b3c85b1ddd7776c6451f9ffea2') in 0.022712 seconds
+  Time since last request: 0.000011 seconds.
+  path: Assets/2_Prefabs/Terrain Prefabs/Road03.prefab
+  artifactKey: Guid(14d4b68a6e04dc8478c7c44b36aa6541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2_Prefabs/Terrain Prefabs/Road03.prefab using Guid(14d4b68a6e04dc8478c7c44b36aa6541) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f5b7bf3da735092f06544738f97baa8') in 0.021209 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 87
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000476 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark17.png
-  artifactKey: Guid(5313096c08245cb4b977ae110db7650e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark17.png using Guid(5313096c08245cb4b977ae110db7650e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '982174d0cd7b6e8c1c306bf011a99334') in 0.026197 seconds
+  Time since last request: 0.000010 seconds.
+  path: Assets/2_Prefabs/Terrain Prefabs/Ground09.prefab
+  artifactKey: Guid(2e21f6f2b43f2a040a3b2f9937941639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2_Prefabs/Terrain Prefabs/Ground09.prefab using Guid(2e21f6f2b43f2a040a3b2f9937941639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9cdfdbecdbff6a6546389035dfb4d1e') in 0.016198 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 91
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001252 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark29.png
-  artifactKey: Guid(73190e9373c167d439a46354baec9ad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark29.png using Guid(73190e9373c167d439a46354baec9ad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '995c0255d44cc6611fa8ff6ef4d556db') in 0.040861 seconds
+  Time since last request: 37.318565 seconds.
+  path: Assets/Materials/Lava.mat
+  artifactKey: Guid(c0edd03d11fbfa94da9af3df76f00480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Lava.mat using Guid(c0edd03d11fbfa94da9af3df76f00480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7bc5a61384e99cae30d99cf69209101') in 0.024826 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.001812 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark48.png
-  artifactKey: Guid(7f65db3388ab3dd449e984337e3f3884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark48.png using Guid(7f65db3388ab3dd449e984337e3f3884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72540ad6fa9fbff2de52efdad75bdb66') in 0.023698 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark35.png
-  artifactKey: Guid(a9d4c0e314850cf4a91e200802e39a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark35.png using Guid(a9d4c0e314850cf4a91e200802e39a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cf3659170694760dbea4b424c5de9be') in 0.034301 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 3.525140 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight03.png
-  artifactKey: Guid(df17bf7c3d205bf45bcf3f1370557a25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight03.png using Guid(df17bf7c3d205bf45bcf3f1370557a25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf082bb787da2a64380763cb6637ded7') in 0.034278 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000655 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight13.png
-  artifactKey: Guid(09872cabf2aa32949b84bea2afb9f45e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight13.png using Guid(09872cabf2aa32949b84bea2afb9f45e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46d2669a9af99a38066b58c4a95ff27b') in 0.021499 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight40.png
-  artifactKey: Guid(7062960b98db19542b02b25f73010040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight40.png using Guid(7062960b98db19542b02b25f73010040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8b173d634c7ec8208e741825f15f67c') in 0.021576 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight47.png
-  artifactKey: Guid(bf29a589e7327ae4a9c03ea9d347983f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight47.png using Guid(bf29a589e7327ae4a9c03ea9d347983f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd45b5a1c2acdaff43af5dd49cb117d2b') in 0.035901 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000414 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight26.png
-  artifactKey: Guid(8eb2c1e0417402a47bf0e957657af634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight26.png using Guid(8eb2c1e0417402a47bf0e957657af634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeaea89cd6e68e1d43e087f53ae050ac') in 0.034331 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000959 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight14.png
-  artifactKey: Guid(c91ca5c83bc0ab046bf7bf6afdd96e4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight14.png using Guid(c91ca5c83bc0ab046bf7bf6afdd96e4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac6fb1cf1406032fc313966bef425b41') in 0.033651 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight29.png
-  artifactKey: Guid(33ce11f6c4604764ea4c0bc98ca859bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight29.png using Guid(33ce11f6c4604764ea4c0bc98ca859bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65ff1d22bab01332445820275b592ef9') in 0.027631 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight21.png
-  artifactKey: Guid(65cfe3d6e87f6ff4ab085ff4ec0b24cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-light/flatLight21.png using Guid(65cfe3d6e87f6ff4ab085ff4ec0b24cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '711cc50cef6e3a82bb2be467485b3d75') in 0.029004 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 4.840295 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark03.png
-  artifactKey: Guid(bb5811db589438c479ebc640a31f1971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark03.png using Guid(bb5811db589438c479ebc640a31f1971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14bafdde6612a16bd99495ec28a02eff') in 0.028977 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000326 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark28.png
-  artifactKey: Guid(8ca6ce780a3af394fbff85450f27ce99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark28.png using Guid(8ca6ce780a3af394fbff85450f27ce99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b13fb9490a4c7219d1c74d79de80559') in 0.022356 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark32.png
-  artifactKey: Guid(d4745ec6387ca494b945e63772f75dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark32.png using Guid(d4745ec6387ca494b945e63772f75dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f27d5d83f5d298a89f3f85c977b328df') in 0.044397 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.001060 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark22.png
-  artifactKey: Guid(c38abbe0c380b5843ac9608f31daab48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark22.png using Guid(c38abbe0c380b5843ac9608f31daab48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4ec6cf64bf0553fef9b840f0a0938b9') in 0.030842 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark27.png
-  artifactKey: Guid(9b2f4229bb0e4b64b9417919b57637de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark27.png using Guid(9b2f4229bb0e4b64b9417919b57637de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2c7e78780befd95967368a29951efc5') in 0.043304 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000562 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark47.png
-  artifactKey: Guid(53ebc1746772adb4083ab5d8e604e9c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark47.png using Guid(53ebc1746772adb4083ab5d8e604e9c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '829c5cae4e0a196f4ac47d42b8330edd') in 0.033070 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark42.png
-  artifactKey: Guid(5369f727a68b4d649b3493d67013b77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark42.png using Guid(5369f727a68b4d649b3493d67013b77c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14aa2dec02936b9bb47ef51bc8618963') in 0.026486 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000361 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark26.png
-  artifactKey: Guid(c4397942815548f40a63486ca8bd1690) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/line-dark/lineDark26.png using Guid(c4397942815548f40a63486ca8bd1690) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7c683c3d7aae4c06dedace8354c55f6') in 0.035743 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 2.013915 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark03.png
-  artifactKey: Guid(f075b19f45972b5469c5f165b66c75a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark03.png using Guid(f075b19f45972b5469c5f165b66c75a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a86cee3a6a6d74696c01e5e6e493638') in 0.028445 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark27.png
-  artifactKey: Guid(8952597c178a498489ba7ed880b695ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark27.png using Guid(8952597c178a498489ba7ed880b695ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd25f101ea6a26f07cba07b7175708e0') in 0.019925 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark40.png
-  artifactKey: Guid(7b2f4cc561778144dab2de705edaecd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark40.png using Guid(7b2f4cc561778144dab2de705edaecd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88aa99b63c94fb0c5d2e67279f6e023') in 0.020486 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark41.png
-  artifactKey: Guid(b9c8e0bbce78a3d4293e0a347e89ed02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark41.png using Guid(b9c8e0bbce78a3d4293e0a347e89ed02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32914ae4750b81e0f8832b566fb79f9d') in 0.018633 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark24.png
-  artifactKey: Guid(1c71acc999b399c4ebe5ce03a6ecf9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark24.png using Guid(1c71acc999b399c4ebe5ce03a6ecf9ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '111309f24945670a90c981f79637df29') in 0.026646 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark30.png
-  artifactKey: Guid(eb9440c5b3ae1644bbac01b5b66f7638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark30.png using Guid(eb9440c5b3ae1644bbac01b5b66f7638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dbc55dc2dd13380df5a1d33654a76f0') in 0.024952 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000137 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark14.png
-  artifactKey: Guid(a9e59070f38724f44bbf50262bd1db78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark14.png using Guid(a9e59070f38724f44bbf50262bd1db78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '163fab0ec24c6e99d3d3cdfaf1489fc3') in 0.036697 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000651 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark23.png
-  artifactKey: Guid(0b4dd66dac1921c4581461b5d2a2db51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark23.png using Guid(0b4dd66dac1921c4581461b5d2a2db51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e50909b45331a1fd1b03408fb08b6cec') in 0.025086 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark06.png
-  artifactKey: Guid(02a83e2032cb98b4ea57d8d560c596ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-dark/shadedDark06.png using Guid(02a83e2032cb98b4ea57d8d560c596ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df6bce733791afa07a67f8f45bbee322') in 0.022624 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.425123 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight03.png
-  artifactKey: Guid(9e41c3fe991be5e4a9c9442a1a7c0c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight03.png using Guid(9e41c3fe991be5e4a9c9442a1a7c0c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'faf19c7429349cbe444d4fe6cd2e332d') in 0.030861 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000984 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight19.png
-  artifactKey: Guid(d5bef9f9e7a9522478a5a9a985a055ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight19.png using Guid(d5bef9f9e7a9522478a5a9a985a055ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53ca71bc47dc8e679a63a9068fe98a4b') in 0.018752 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight45.png
-  artifactKey: Guid(684c153080a63aa44aa84403b73d2892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight45.png using Guid(684c153080a63aa44aa84403b73d2892) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '223b8c69fa58a1ab62fef31f4f026299') in 0.021306 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight24.png
-  artifactKey: Guid(cf41c3a0d50f1ce4e832a2bb01656b96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight24.png using Guid(cf41c3a0d50f1ce4e832a2bb01656b96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '141e533555257199a259f1c9e6e4d171') in 0.031794 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000484 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight26.png
-  artifactKey: Guid(436d70142f30f8d4e93104cf923918f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight26.png using Guid(436d70142f30f8d4e93104cf923918f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f79ac4ed37817640e9ce32a8b5fbce25') in 0.023683 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000476 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight23.png
-  artifactKey: Guid(435e3881291156f498c3ac91bcf8e9ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight23.png using Guid(435e3881291156f498c3ac91bcf8e9ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9eb09d34ebac3dd4b8e77048c79cc8a') in 0.030398 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight13.png
-  artifactKey: Guid(60d31f17c151dc146a55313d21c21b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight13.png using Guid(60d31f17c151dc146a55313d21c21b75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf87f0f0f5eef93d721113718cd8f4e4') in 0.026920 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000116 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight49.png
-  artifactKey: Guid(a037b5c8a6434fe45bd0bc5348c08a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight49.png using Guid(a037b5c8a6434fe45bd0bc5348c08a61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8a8b9411371b049020763390648fcba') in 0.027145 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000366 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight33.png
-  artifactKey: Guid(e54bbd50a6cd6a64b8a0e2796f7a6f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/shaded-light/shadedLight33.png using Guid(e54bbd50a6cd6a64b8a0e2796f7a6f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5efd8ac807840e32aa184ca11b92901') in 0.016850 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.545669 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark03.png
-  artifactKey: Guid(3489656cd6acea54ab4ffaea5c017eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark03.png using Guid(3489656cd6acea54ab4ffaea5c017eff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77cb8a6d9ed0133fa755a6b78c967d8a') in 0.022718 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
   Time since last request: 0.000015 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark08.png
-  artifactKey: Guid(43acfef5be868f84daa827b964a09ab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark08.png using Guid(43acfef5be868f84daa827b964a09ab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b2f51c703f8a26a7721c5294ac97693') in 0.035502 seconds
+  path: Assets/Materials/Road.mat
+  artifactKey: Guid(1054e08e79434b74f94e21274971756d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Road.mat using Guid(1054e08e79434b74f94e21274971756d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3903c6b2c20791fdd91878d3aec26c2d') in 0.016538 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark44.png
-  artifactKey: Guid(3fac1ed056db67c4b89eb5062df1aff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark44.png using Guid(3fac1ed056db67c4b89eb5062df1aff3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2c77020531674e212ad7e8cd58fc938') in 0.025591 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000479 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark11.png
-  artifactKey: Guid(19d3096e58393d44ba3ae55a25f60e3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark11.png using Guid(19d3096e58393d44ba3ae55a25f60e3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cacd92c444fd802264ca29628f12052e') in 0.028207 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark13.png
-  artifactKey: Guid(1007bc9045f09fd4d98520852b258b80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark13.png using Guid(1007bc9045f09fd4d98520852b258b80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46279d446d486ec441e0f13f44733e51') in 0.040077 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.001696 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark07.png
-  artifactKey: Guid(8e78560d5767e05449ae5ae06745a966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark07.png using Guid(8e78560d5767e05449ae5ae06745a966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cc87f98fe88fe2cf8c28d6018ed39de') in 0.027792 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark33.png
-  artifactKey: Guid(63c5e3b702d0bbb48b0b31b1ddeca136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-dark/transparentDark33.png using Guid(63c5e3b702d0bbb48b0b31b1ddeca136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66b3cc24f755d2a9b19a168e586f987a') in 0.029598 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.645911 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight03.png
-  artifactKey: Guid(3b98535d240d02d4a98c3f070c921d4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight03.png using Guid(3b98535d240d02d4a98c3f070c921d4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e5e3deda8c3e003543bb6c416dc66a7') in 0.021127 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight13.png
-  artifactKey: Guid(d77d2eb0b972e9d4299e1ae166509e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight13.png using Guid(d77d2eb0b972e9d4299e1ae166509e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30595c42cc27d6d02fc2e9e8a6570158') in 0.022941 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight07.png
-  artifactKey: Guid(796f26fd981561d4e9309f36dfbd4404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight07.png using Guid(796f26fd981561d4e9309f36dfbd4404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8fd484b1672f6ea81309b54c3f8851f') in 0.020758 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight45.png
-  artifactKey: Guid(2614db7b0be08284f9295713aaaba07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight45.png using Guid(2614db7b0be08284f9295713aaaba07b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55880f95c91bd45e1dc70f00173ffe7c') in 0.029679 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight36.png
-  artifactKey: Guid(ae09a598baa94c04ca1356c670dcb512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight36.png using Guid(ae09a598baa94c04ca1356c670dcb512) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cebf10556c1ca02aac58b5dc2421dc0') in 0.021600 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight31.png
-  artifactKey: Guid(04f45e1ad28853c40b2d1380a178ca95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight31.png using Guid(04f45e1ad28853c40b2d1380a178ca95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aeef2af5c321dbd96c6383f13038b18') in 0.022689 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000679 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight25.png
-  artifactKey: Guid(4256801cdf2dbe944b8a5fbab75ce8a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight25.png using Guid(4256801cdf2dbe944b8a5fbab75ce8a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cb68ea61cb44f30189b55dab2fb1146') in 0.029690 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.001749 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight20.png
-  artifactKey: Guid(5dbd05e41f651d74d87b677c672e7674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight20.png using Guid(5dbd05e41f651d74d87b677c672e7674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '263bacd97a21d620a52797e502082601') in 0.033173 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight23.png
-  artifactKey: Guid(26b5c6c5eb7c6de4e9d5c358ec38823d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/transparent-light/transparentLight23.png using Guid(26b5c6c5eb7c6de4e9d5c358ec38823d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f2897594ac12eabd3a4c4301e28982') in 0.020712 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 54.666463 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark04.png
-  artifactKey: Guid(c4438890bca4c38428a8f945503f7818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark04.png using Guid(c4438890bca4c38428a8f945503f7818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8ec189bc49ec2a1f258778db3d35ea0') in 0.065951 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark39.png
-  artifactKey: Guid(76b8d1655d3ee1942bdab31357cff9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark39.png using Guid(76b8d1655d3ee1942bdab31357cff9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e719bdd36713872c66f96de48ea838') in 0.038460 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark21.png
-  artifactKey: Guid(4f4a7d109d9a4404cafbcabcae8d5fd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark21.png using Guid(4f4a7d109d9a4404cafbcabcae8d5fd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbb602def296227f3f2988a0368bd791') in 0.030820 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark17.png
-  artifactKey: Guid(5313096c08245cb4b977ae110db7650e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark17.png using Guid(5313096c08245cb4b977ae110db7650e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37796641953af652c06196d54ddfaa11') in 0.024730 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark42.png
-  artifactKey: Guid(03de29c772c7bf64a84ee43b4ef8ac45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark42.png using Guid(03de29c772c7bf64a84ee43b4ef8ac45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4bbb74a8b88579f18ad71b6b32eac69') in 0.042299 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark25.png
-  artifactKey: Guid(0710dbbe77510aa44a591c8bce784faa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark25.png using Guid(0710dbbe77510aa44a591c8bce784faa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0c7a8c185276d01b541ca4b76af7b12') in 0.030075 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark48.png
-  artifactKey: Guid(7f65db3388ab3dd449e984337e3f3884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark48.png using Guid(7f65db3388ab3dd449e984337e3f3884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebd959f782ff7efdeab82239a6517e35') in 0.030785 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000697 seconds.
-  path: Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark49.png
-  artifactKey: Guid(fbfcfaff106a85744bc550bdbcb62172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny setting UI/Sprites/flat-dark/flatDark49.png using Guid(fbfcfaff106a85744bc550bdbcb62172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57c0922e29cdfcc13fc7f25ee32a5564') in 0.022224 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Assembly 'Assets/ExternalDependencyManager/Editor/1.2.179/Google.IOSResolver.dll' will not be loaded due to errors:
-Unable to resolve reference 'UnityEditor.iOS.Extensions.Xcode'. Is the assembly missing or incompatible with the current platform?
-Reference validation can be disabled in the Plugin Inspector.
-- Loaded All Assemblies, in  0.769 seconds
-Refreshing native plugins compatible for Editor in 29.42 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.784 seconds
-Domain Reload Profiling: 2545ms
-	BeginReloadAssembly (202ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (37ms)
-	RebuildCommonClasses (38ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (49ms)
-	LoadAllAssembliesAndSetupDomain (459ms)
-		LoadAssemblies (567ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (14ms)
-			TypeCache.Refresh (6ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (7ms)
-	FinalizeReload (1784ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (497ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (38ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (92ms)
-			ProcessInitializeOnLoadAttributes (328ms)
-			ProcessInitializeOnLoadMethodAttributes (30ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (25ms)
-Refreshing native plugins compatible for Editor in 36.14 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3247 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 51 unused Assets / (42.4 KB). Loaded Objects now: 3743.
-Memory consumption went from 134.2 MB to 134.2 MB.
-Total: 3.455000 ms (FindLiveObjects: 0.283700 ms CreateObjectMapping: 0.324900 ms MarkObjects: 2.770200 ms  DeleteObjects: 0.074500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Assembly 'Assets/ExternalDependencyManager/Editor/1.2.179/Google.IOSResolver.dll' will not be loaded due to errors:
-Unable to resolve reference 'UnityEditor.iOS.Extensions.Xcode'. Is the assembly missing or incompatible with the current platform?
-Reference validation can be disabled in the Plugin Inspector.
-- Loaded All Assemblies, in  0.787 seconds
-Refreshing native plugins compatible for Editor in 29.74 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.649 seconds
-Domain Reload Profiling: 2429ms
-	BeginReloadAssembly (209ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (40ms)
-	RebuildCommonClasses (38ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (466ms)
-		LoadAssemblies (578ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (15ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1650ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (475ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (29ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (87ms)
-			ProcessInitializeOnLoadAttributes (320ms)
-			ProcessInitializeOnLoadMethodAttributes (30ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (26ms)
-Refreshing native plugins compatible for Editor in 33.60 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3248 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 51 unused Assets / (42.3 KB). Loaded Objects now: 3746.
-Memory consumption went from 136.4 MB to 136.4 MB.
-Total: 4.209100 ms (FindLiveObjects: 0.327000 ms CreateObjectMapping: 0.305900 ms MarkObjects: 3.503900 ms  DeleteObjects: 0.071500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 901.363898 seconds.
-  path: Assets/3_UI Images/Kenny UI/PNG/glassPanel_cornerBR.png
-  artifactKey: Guid(c107e4199d9fe0d469b31866dd4211b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny UI/PNG/glassPanel_cornerBR.png using Guid(c107e4199d9fe0d469b31866dd4211b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7fc1e6e522c12f63fae94537a16ff04') in 0.109540 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.012988 seconds.
-  path: Assets/3_UI Images/Kenny UI/PNG/metalPanel_red.png
-  artifactKey: Guid(8ed8a80e9d9829f408d25b70b92bf344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny UI/PNG/metalPanel_red.png using Guid(8ed8a80e9d9829f408d25b70b92bf344) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e936524ba67bc4857008216fb1e42d6') in 0.068713 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/3_UI Images/Kenny UI/PNG/glassPanel_cornerTL.png
-  artifactKey: Guid(c4a89b0660f818a4b8394b29cf3b35fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny UI/PNG/glassPanel_cornerTL.png using Guid(c4a89b0660f818a4b8394b29cf3b35fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7f19831251a5b654bc538649ff67f7b') in 0.032976 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.001222 seconds.
-  path: Assets/3_UI Images/Kenny UI/PNG/glassPanel_tab.png
-  artifactKey: Guid(b5efee52c5a694f4389f868c4e430894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny UI/PNG/glassPanel_tab.png using Guid(b5efee52c5a694f4389f868c4e430894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86e6ffaae221b7b7034487b59eaca811') in 0.119648 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.922441 seconds.
-  path: Assets/3_UI Images/Kenny UI/PNG/metalPanel_yellow.png
-  artifactKey: Guid(a774fe234df964e44913942e0abe9e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny UI/PNG/metalPanel_yellow.png using Guid(a774fe234df964e44913942e0abe9e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '657f33060511cd26c9a319b486a5e4f6') in 0.037723 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000085 seconds.
-  path: Assets/3_UI Images/Kenny UI/PNG/squareRed.png
-  artifactKey: Guid(0a5e0f980d8f3034184555e37c56a8ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny UI/PNG/squareRed.png using Guid(0a5e0f980d8f3034184555e37c56a8ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbd8708537d39c0b4afeafb38085d86c') in 0.052654 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/3_UI Images/Kenny UI/PNG/squareBlue.png
-  artifactKey: Guid(9d57a99a836e5bd4b84702cdbf663b99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny UI/PNG/squareBlue.png using Guid(9d57a99a836e5bd4b84702cdbf663b99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd599bd9565a743eba106ad7672247a05') in 0.029563 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/3_UI Images/Kenny UI/PNG/squareGreen.png
-  artifactKey: Guid(eee4937aa6f5cc942a38536746424b3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3_UI Images/Kenny UI/PNG/squareGreen.png using Guid(eee4937aa6f5cc942a38536746424b3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e73868affe3f4bf0cc8e46c5b5ea0393') in 0.030963 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
+Number of asset objects unloaded after import = 1
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다.
 AssetImportWorker is now disconnected from the server

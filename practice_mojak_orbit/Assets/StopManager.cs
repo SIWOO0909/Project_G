@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class StopManager : MonoBehaviour
 {
-    public GameObject stopWindow;
+    //public GameObject stopWindow;
 
     public void OnclickStopBtn()
     {
         Time.timeScale = 0;
-        stopWindow.SetActive(true);
+        //stopWindow.SetActive(true);
     }
 
     public void OnClickContinBtn()
     {
         Time.timeScale = 1;
-        stopWindow.SetActive(false);
+        //stopWindow.SetActive(false);
     }
 }
