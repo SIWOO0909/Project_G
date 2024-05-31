@@ -19127,6 +19127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadVoice: {fileID: 1798269824}
+  Jump: {fileID: 181386851}
+  Music1BGM: {fileID: 1288726238}
+  Music2BGM: {fileID: 790121290}
   x: 0
   carril: 0
   lateral: 0
@@ -22869,7 +22872,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 614952515}
+      - m_Target: {fileID: 901366957}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -26721,18 +26724,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: -1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1924274077}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: JumpSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -34211,6 +34202,7 @@ MonoBehaviour:
   RDate4: {fileID: 0}
   RDate5: {fileID: 0}
   pf: 0
+  hap: 0
 --- !u!114 &1456844650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36799,18 +36791,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1924274077}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: JumpSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1582229181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37591,18 +37571,6 @@ MonoBehaviour:
       - m_Target: {fileID: 675710698}
         m_TargetAssemblyTypeName: Move, Assembly-CSharp
         m_MethodName: Avanzar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1924274077}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: JumpSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -40314,18 +40282,6 @@ MonoBehaviour:
       - m_Target: {fileID: 675710698}
         m_TargetAssemblyTypeName: Move, Assembly-CSharp
         m_MethodName: Retroceder
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1924274077}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: JumpSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -43103,6 +43059,8 @@ MonoBehaviour:
   bora: {fileID: 790121290}
   BtnVolumeSlider: {fileID: 2087394883}
   MusicVolumeSlider: {fileID: 165104762}
+  IngameBtnVolumeSlider: {fileID: 271493912}
+  IngameMusicVolumeSlider: {fileID: 538892219}
   ClickSoundBug: {fileID: 318434296}
 --- !u!1 &1925100945
 GameObject:
@@ -43478,6 +43436,7 @@ MonoBehaviour:
   RDate4: {fileID: 961033652}
   RDate5: {fileID: 395377142}
   pf: 0.85
+  hap: 0
 --- !u!4 &1933687967
 Transform:
   m_ObjectHideFlags: 0

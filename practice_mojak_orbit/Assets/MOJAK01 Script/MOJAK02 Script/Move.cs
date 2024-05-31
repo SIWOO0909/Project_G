@@ -11,6 +11,9 @@ public class Move : MonoBehaviour
 
     // Á×´Â ¼Ò¸®
     public AudioSource deadVoice;
+    public AudioSource Jump;
+    public AudioSource Music1BGM;
+    public AudioSource Music2BGM;
 
     public int x = 0;
 
@@ -133,6 +136,7 @@ public class Move : MonoBehaviour
             mundo.CrearPiso();
         }
         StartCoroutine(CambiarPosition());
+        Jump.Play();
     }
     #endregion
 
@@ -154,6 +158,7 @@ public class Move : MonoBehaviour
             //animations.SetTrigger("run");
         }
         StartCoroutine(CambiarPosition());
+        Jump.Play();
     }
     #endregion
 
@@ -173,6 +178,7 @@ public class Move : MonoBehaviour
         //animations.SetTrigger("run");
         lateral = Mathf.Clamp(lateral, -10, 10);
         StartCoroutine(CambiarPosition());
+        Jump.Play();
     }
     #endregion
 
@@ -201,6 +207,8 @@ public class Move : MonoBehaviour
             if (x < 1)
             {
                 deadVoice.Play();
+                Music1BGM.Stop();
+                Music2BGM.Stop();
                 x = 1;
             }
 
@@ -226,6 +234,8 @@ public class Move : MonoBehaviour
                 if (x < 1)
                 {
                     deadVoice.Play();
+                    Music1BGM.Stop();
+                    Music2BGM.Stop();
                     x = 1;
                 } 
              }

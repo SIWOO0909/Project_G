@@ -31,6 +31,9 @@ public class SoundManager : MonoBehaviour
     public Slider BtnVolumeSlider;
     public Slider MusicVolumeSlider;
 
+    public Slider IngameBtnVolumeSlider;
+    public Slider IngameMusicVolumeSlider;
+
     public GameObject ClickSoundBug;
 
     public void Start()
@@ -95,12 +98,14 @@ public class SoundManager : MonoBehaviour
         if (BtnVolumeSlider != null)
         {
             BtnVolumeSlider.value = BtnSavedVolume;
+            IngameBtnVolumeSlider.value = BtnSavedVolume;
         }
 
         // 슬라이더 값도 불러온 볼륨으로 설정 // 배경음
         if (BtnVolumeSlider != null)
         {
             MusicVolumeSlider.value = MusicSavedVolume;
+            IngameMusicVolumeSlider.value = MusicSavedVolume;
         }
 
         ClickSoundBug.SetActive(true);

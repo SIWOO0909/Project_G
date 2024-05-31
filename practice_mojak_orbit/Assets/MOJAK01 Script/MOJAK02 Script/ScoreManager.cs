@@ -51,6 +51,7 @@ public class ScoreManager : MonoBehaviour
 
     public float pf;
 
+    public int hap = 0;
     // public float i;
     // 변수 선언
     static public int abc = 0; // 랭크 시스템 작동 여부 abc값이 1일때 실행
@@ -64,6 +65,7 @@ public class ScoreManager : MonoBehaviour
     // public float NowScoreSlowEffect;
     // public float BestScoreSlowEffect;
     public static int abc_score = 0; // 점수 연출
+    public static int HaSeGi = 0;
     //float text_score = 0f;
 
     #endregion
@@ -75,6 +77,9 @@ public class ScoreManager : MonoBehaviour
         abc_score = 0;
         previousXPosition = trackedObject.position.x;
         minsu1 = 0;
+        HaSeGi = 0;
+        PlayerPrefs.SetInt("plus", 0);
+        PlayerPrefs.SetInt("hap", 0);
     }
 
     
@@ -110,7 +115,9 @@ public class ScoreManager : MonoBehaviour
 
         // 점수가 10점 단위로 증가하게 됩니다.
         int a = (scoreValueSaved / 10) * 10;
-        PlayerPrefs.SetInt("siwoo",a);
+        PlayerPrefs.SetInt("siwoo", a);
+        a = PlayerPrefs.GetInt("siwoo");
+
         #endregion
 
         #region 폴리스와의 거리 계산
@@ -134,8 +141,8 @@ public class ScoreManager : MonoBehaviour
         switch (abc)
         {
             case 1:
-                RankSys(a);
-                PlayerPrefs.SetInt("NowScore", a);
+                RankSys(PlayerPrefs.GetInt("hap"));
+                PlayerPrefs.SetInt("NowScore", PlayerPrefs.GetInt("hap"));
                 // RecentSys(a);
                 abc = 0;
                 Debug.Log("TOP5함수를 실행합니다.");
@@ -143,30 +150,35 @@ public class ScoreManager : MonoBehaviour
         }
         #endregion
 
+
         #region 100점 = 1코인
-        if (a % 100 == 0)
+        if (PlayerPrefs.GetInt("hap") % 100 == 0)
         {
             int crrCoins = PlayerPrefs.GetInt("scoreCoins"); // scoreCoins형태로 기기저장 점수가 crrCoins에 값이 입력되고
-            crrCoins = a / 100; // 현 점수를 100으로 나눈값이 crrCoins
+            crrCoins = PlayerPrefs.GetInt("hap") / 100; // 현 점수를 100으로 나눈값이 crrCoins
             PlayerPrefs.SetInt("scoreCoins", crrCoins); // crrCoins를 다시 scoreCoins형태로 기기저장
 
             // UI상 기기에 저장된 scoreCoin 보여지기
             totalCoinsTxt_InGame.text = PlayerPrefs.GetInt("scoreCoins").ToString();
 
-            if (a >= 100)
+            if (PlayerPrefs.GetInt("hap") >= 100)
             {
                 crrCoins += PlayerPrefs.GetInt("scoreCoins");
                 PlayerPrefs.SetInt("totalCoins", crrCoins - 1);
             }
         }
-        TotalScoreTxt.text = PlayerPrefs.GetInt("siwoo").ToString(); // 현재 점수 출력
+
+        PlayerPrefs.SetInt("siwoo", a);
+        hap = PlayerPrefs.GetInt("siwoo") + PlayerPrefs.GetInt("plus");
+        PlayerPrefs.SetInt("hap", hap);
+        TotalScoreTxt.text = hap.ToString(); // 현재 점수 출력
         #endregion
 
-        #region 점수 연출
+        #region 게임 오버시 점수 연출
         float scaledIncrement = 1000 * Time.deltaTime *pf; // Time.deltaTime을 곱하여 프레임당 증가량 계산
 
         // 현재 점수
-        float floata = a;
+        float floata = PlayerPrefs.GetInt("hap");
         floata += scaledIncrement;
         gameOverTotalScoreTxt.text = floata.ToString();
 
@@ -176,7 +188,7 @@ public class ScoreManager : MonoBehaviour
         gameOverBestScoreTxt.text = floatb.ToString(); // 게임오버UI베스트 점수 출력
 
         // 얻은 코인
-        if (a > 100)
+        if (PlayerPrefs.GetInt("hap") > 100)
         {
             float floatc = PlayerPrefs.GetInt("scoreCoins");
             floatc += scaledIncrement;
@@ -273,7 +285,7 @@ public class ScoreManager : MonoBehaviour
 
         // 1등 <- 현재 점수
         Rtemp1 = PlayerPrefs.GetInt(0 + "RecentScore"); // temp <- 1등
-        PlayerPrefs.SetInt(0 + "RecentScore", a); // 1등 <- 현재 점수
+        PlayerPrefs.SetInt(0 + "RecentScore", PlayerPrefs.GetInt("hap")); // 1등 <- 현재 점수
         // 1등 날짜 <- 현 날짜
         RtempStr1 = PlayerPrefs.GetString(0 + "RDate");
         PlayerPrefs.SetString(0 + "RDa'te", DateTime.Now.ToString("yyyy/MM/dd"));
