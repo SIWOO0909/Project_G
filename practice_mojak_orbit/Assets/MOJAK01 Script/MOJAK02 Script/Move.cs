@@ -15,6 +15,9 @@ public class Move : MonoBehaviour
     public AudioSource Music1BGM;
     public AudioSource Music2BGM;
 
+    // 물소리
+    public AudioSource ChumBeong;
+
     public int x = 0;
 
     public int carril;
@@ -233,7 +236,8 @@ public class Move : MonoBehaviour
 
                 if (x < 1)
                 {
-                    deadVoice.Play();
+                    ChumBeong.Play();
+                    // deadVoice.Play();
                     Music1BGM.Stop();
                     Music2BGM.Stop();
                     x = 1;
@@ -271,6 +275,8 @@ public class Move : MonoBehaviour
 
         // 게임오버 씬으로 갑니다.
         // SceneManager.LoadScene("GameOverScene");
+
+
     }
 }
 #endregion

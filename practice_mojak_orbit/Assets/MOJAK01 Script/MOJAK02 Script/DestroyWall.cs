@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyWall : MonoBehaviour
 {
+    // public AudioSource ChumBeong;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,7 @@ public class DestroyWall : MonoBehaviour
         }
         if (other.transform.CompareTag("carro"))
         {
+            // ChumBeong.Play();
             Destroy(other.transform.gameObject);
             Debug.Log("비행체 하세기!");
             int biggerScore = PlayerPrefs.GetInt("plus") + 10;

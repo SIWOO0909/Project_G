@@ -15,6 +15,10 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource coinSound;
 
+    public AudioSource attack;
+
+    //public AudioSource ChumBeong;
+
     public AudioSource jumpSound;
 
     public AudioSource ClickSound;
@@ -23,6 +27,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource Reset;
     public AudioSource PlayBtn;
     public AudioSource LvUpBtn;
+
+    public AudioSource SangJeomBGM; // 상점소리
 
     public AudioSource Siren; // 사이렌 소리
 
@@ -54,6 +60,7 @@ public class SoundManager : MonoBehaviour
         LobbyMusicsource.volume = volume;
         IngameMusicSource.volume = volume;
         bora.volume = volume;
+        SangJeomBGM.volume = volume;
 
         PlayerPrefs.SetFloat("MusicVolume", volume);
     }
@@ -130,6 +137,12 @@ public class SoundManager : MonoBehaviour
 
         // 버튼 소리 판넬 재활성화
         ClickSoundBug.SetActive(true);
+    }
+
+    // 공격사운드
+    public void attackSound()
+    {
+        attack.Play();
     }
 
     public void CoinBtnSound()

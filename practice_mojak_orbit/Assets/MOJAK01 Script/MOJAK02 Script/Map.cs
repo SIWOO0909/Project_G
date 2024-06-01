@@ -26,18 +26,21 @@ public class Map : MonoBehaviour
     {
         // 맵이 바뀔때
         // 
+        if(carril >= nextmap+24)
+        {
+            // 사운드 발동
+            if (x < 1)
+            {
+                OriginBGM.Stop();
+                MapChangeBGM.Play();
+                x = 1;
+            }
+        }
         if(carril >= nextmap)
         {
             Instantiate(nextpisos[UnityEngine.Random.Range(0, nextpisos.Length)], Vector3.right * carril, Quaternion.identity);
             carril++;
             Debug.Log("보라맵 등장!!!");
-
-            if (x < 1)
-            { 
-                OriginBGM.Stop();
-                MapChangeBGM.Play();
-                x = 1;
-            }
         }
         else
         {
