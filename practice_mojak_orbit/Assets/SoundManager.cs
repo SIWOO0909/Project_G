@@ -32,6 +32,8 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource Siren; // 荤捞坊 家府
 
+    public AudioSource MulSoRi; // 拱 梅骸 家府
+
     public AudioSource bora;
 
     static public float ButtonVolume;
@@ -78,6 +80,8 @@ public class SoundManager : MonoBehaviour
         GameOverSound.volume = btnVolume;
         LvUpBtn.volume = btnVolume;
         dead.volume = btnVolume;
+        MulSoRi.volume = btnVolume;
+        attack.volume = btnVolume;
 
         PlayerPrefs.SetFloat("BtnVolume", btnVolume);
     }

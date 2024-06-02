@@ -13,6 +13,8 @@ public class Show : MonoBehaviour
         {
             // 지정된 오브젝트를 활성화합니다.
             objectToActivate.SetActive(true);
+            Debug.Log("빰빠레 시작");
+
         }
         else
         {

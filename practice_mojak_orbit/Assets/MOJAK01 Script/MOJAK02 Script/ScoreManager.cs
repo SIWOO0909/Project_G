@@ -11,6 +11,8 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI TotalScoreTxt;
     public TextMeshProUGUI totalCoinsTxt_InGame;
 
+    public int x = 0;
+
     public TextMeshProUGUI gameOverTotalScoreTxt;
     public TextMeshProUGUI gameOverBestScoreTxt;
     public TextMeshProUGUI gameOverEarnCoinTxt;
@@ -120,7 +122,7 @@ public class ScoreManager : MonoBehaviour
 
         #endregion
 
-        #region 폴리스와의 거리 계산
+        #region 폴리스 좌표
         // 폴리스 x좌표
         float PoliceCurrentXPosition = police.position.x;
 
@@ -137,37 +139,41 @@ public class ScoreManager : MonoBehaviour
         }
         #endregion
 
-        #region 게임오버시
+        // 게임오버시 // 죽을 때 한번 실행됨
         switch (abc)
         {
             case 1:
                 RankSys(PlayerPrefs.GetInt("hap"));
                 PlayerPrefs.SetInt("NowScore", PlayerPrefs.GetInt("hap"));
-                // RecentSys(a);
+                Debug.Log("난 두번 ㅎㅎ");
+                if (x < 1)
+                {
+                    PlayerPrefs.SetInt( "totalCoins", ( PlayerPrefs.GetInt("totalCoins") + PlayerPrefs.GetInt("scoreCoins") ) );
+                    x = 1;
+                }
                 abc = 0;
-                Debug.Log("TOP5함수를 실행합니다.");
                 break;
         }
-        #endregion
 
-
-        #region 100점 = 1코인
-        if (PlayerPrefs.GetInt("hap") % 100 == 0)
+        // 100점수 도달시 1코인 지급
+        if (PlayerPrefs.GetInt("hap") % 100 == 0) // 만약 점수가 100단위 일시
         {
             int crrCoins = PlayerPrefs.GetInt("scoreCoins"); // scoreCoins형태로 기기저장 점수가 crrCoins에 값이 입력되고
             crrCoins = PlayerPrefs.GetInt("hap") / 100; // 현 점수를 100으로 나눈값이 crrCoins
             PlayerPrefs.SetInt("scoreCoins", crrCoins); // crrCoins를 다시 scoreCoins형태로 기기저장
 
-            // UI상 기기에 저장된 scoreCoin 보여지기
+            // 인게임 코인 출력
             totalCoinsTxt_InGame.text = PlayerPrefs.GetInt("scoreCoins").ToString();
 
-            if (PlayerPrefs.GetInt("hap") >= 100)
-            {
-                crrCoins += PlayerPrefs.GetInt("scoreCoins");
-                PlayerPrefs.SetInt("totalCoins", crrCoins - 1);
-            }
+            //if (PlayerPrefs.GetInt("hap") >= 100)
+            //{
+            //    crrCoins += PlayerPrefs.GetInt("scoreCoins");
+            //    PlayerPrefs.SetInt("totalCoins", crrCoins - 1);
+            //    Debug.Log("현재 코인" + PlayerPrefs.GetInt("scoreCoins"));
+            //}
         }
 
+        #region 점수 출력
         PlayerPrefs.SetInt("siwoo", a);
         hap = PlayerPrefs.GetInt("siwoo") + PlayerPrefs.GetInt("plus");
         PlayerPrefs.SetInt("hap", hap);
