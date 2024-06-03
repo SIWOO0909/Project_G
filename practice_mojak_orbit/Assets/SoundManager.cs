@@ -28,6 +28,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource PlayBtn;
     public AudioSource LvUpBtn;
 
+    public AudioSource PamPhaRe;
+
     public AudioSource SangJeomBGM; // 상점소리
 
     public AudioSource Siren; // 사이렌 소리
@@ -82,6 +84,7 @@ public class SoundManager : MonoBehaviour
         dead.volume = btnVolume;
         MulSoRi.volume = btnVolume;
         attack.volume = btnVolume;
+        PamPhaRe.volume = btnVolume;
 
         PlayerPrefs.SetFloat("BtnVolume", btnVolume);
     }
