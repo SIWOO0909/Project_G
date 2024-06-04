@@ -85,6 +85,7 @@ public class SoundManager : MonoBehaviour
         MulSoRi.volume = btnVolume;
         attack.volume = btnVolume;
         PamPhaRe.volume = btnVolume;
+        Siren.volume = btnVolume;
 
         PlayerPrefs.SetFloat("BtnVolume", btnVolume);
     }

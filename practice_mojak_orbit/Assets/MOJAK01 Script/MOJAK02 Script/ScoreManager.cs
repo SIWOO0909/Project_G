@@ -57,6 +57,8 @@ public class ScoreManager : MonoBehaviour
     // public float i;
     // 변수 선언
     static public int abc = 0; // 랭크 시스템 작동 여부 abc값이 1일때 실행
+
+
     static public int a = 0;
     public static int scoreValueSaved;
     private int scoreValue;
@@ -148,6 +150,7 @@ public class ScoreManager : MonoBehaviour
                 Debug.Log("난 두번 ㅎㅎ");
                 if (x < 1)
                 {
+                    Debug.Log("난 한번 ㅎㅎ");
                     PlayerPrefs.SetInt( "totalCoins", ( PlayerPrefs.GetInt("totalCoins") + PlayerPrefs.GetInt("scoreCoins") ) );
                     x = 1;
                 }
@@ -186,12 +189,12 @@ public class ScoreManager : MonoBehaviour
         // 현재 점수
         float floata = PlayerPrefs.GetInt("hap");
         floata += scaledIncrement;
-        gameOverTotalScoreTxt.text = floata.ToString();
+        gameOverTotalScoreTxt.text = ((int)floata).ToString();
 
         // 베스트 점수
         float floatb = PlayerPrefs.GetInt(0 + "BestScore");
         floatb += scaledIncrement;
-        gameOverBestScoreTxt.text = floatb.ToString(); // 게임오버UI베스트 점수 출력
+        gameOverBestScoreTxt.text = ((int)floatb).ToString(); // 게임오버UI베스트 점수 출력
 
         // 얻은 코인
         if (PlayerPrefs.GetInt("hap") > 100)

@@ -260,13 +260,13 @@ public class Move : MonoBehaviour
         // gameoverPanel.SetActive(true);
 
         Debug.Log("게임 오버");
-        Time.timeScale = 0;
+        
 
         // 게임오버 판넬 보이기
         gameoverPanel.SetActive(true);
         ingamePanel.SetActive(false);
 
-
+        Time.timeScale = 0;
         // 점수 Top 5 시작점
         ScoreManager.abc = 1;
 
