@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
-
-
     #region 선언
 
     // 죽는 소리
@@ -46,27 +44,7 @@ public class Move : MonoBehaviour
         InvokeRepeating("MirarAqua", 1, 0.5f);
     }
 
-    #region 키보드 조작1 (구버전)
-    //public void LeftClick()
-    //{
-    //    Laterales(1); // 왼쪽
-    //}
-    //public void RightClick()
-    //{
-    //    Laterales(-1); // 오른쪽
-    //}
-    //public void ForwardClick() // 앞키
-    //{
-    //    Avanzar();
-    //}
-
-    //public void BackClick()
-    //{
-    //    Retroceder(); // 뒤키
-    //}
-    #endregion
-
-    #region 키보드 조작2
+    
     void Update()
     {
         ActualizarPosition();
@@ -88,7 +66,7 @@ public class Move : MonoBehaviour
             Laterales(1);
         }
     }
-    #endregion
+
 
     private void OnDrawGizmos()
     {

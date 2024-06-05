@@ -12,6 +12,7 @@ public class Attack : MonoBehaviour
     public GameObject targetObject; // 활성화/비활성화할 게임 오브젝트
     bool isOn;
     public Button targetButton; // 비활성화할 버튼
+    public AudioSource attack; // 공격 효과음
 
     public void Hit()
     {
@@ -74,9 +75,10 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J)) // J키 누를시
         {
             Hit();
+            attack.Play(); // 공격 효과음 재생
         }
     }
 
