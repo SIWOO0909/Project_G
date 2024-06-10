@@ -37,6 +37,9 @@ public class Move : MonoBehaviour
     public GameObject gameoverPanel;
     public GameObject ingamePanel;
 
+    // 경찰
+    public GameObject Police;
+
     bool bloqueo = false;
     #endregion
     private void Start()
@@ -244,7 +247,7 @@ public class Move : MonoBehaviour
         gameoverPanel.SetActive(true);
         ingamePanel.SetActive(false);
 
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
         // 점수 Top 5 시작점
         ScoreManager.abc = 1;
 
@@ -254,7 +257,7 @@ public class Move : MonoBehaviour
         // 게임오버 씬으로 갑니다.
         // SceneManager.LoadScene("GameOverScene");
 
-
+        Police.SetActive(false);
     }
 }
 #endregion

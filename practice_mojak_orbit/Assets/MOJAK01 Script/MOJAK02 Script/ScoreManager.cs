@@ -187,22 +187,27 @@ public class ScoreManager : MonoBehaviour
         float scaledIncrement = 1000 * Time.deltaTime *pf; // Time.deltaTime을 곱하여 프레임당 증가량 계산
 
         // 현재 점수
-        float floata = PlayerPrefs.GetInt("hap");
-        floata += scaledIncrement;
-        gameOverTotalScoreTxt.text = ((int)floata).ToString();
+        //float floata = PlayerPrefs.GetInt("hap");
+        //floata += scaledIncrement;
+        //gameOverTotalScoreTxt.text = ((int)floata).ToString();
+        gameOverTotalScoreTxt.text = PlayerPrefs.GetInt("hap").ToString();
 
         // 베스트 점수
-        float floatb = PlayerPrefs.GetInt(0 + "BestScore");
-        floatb += scaledIncrement;
-        gameOverBestScoreTxt.text = ((int)floatb).ToString(); // 게임오버UI베스트 점수 출력
+        //float floatb = PlayerPrefs.GetInt(0 + "BestScore");
+        //floatb += scaledIncrement;
+        //gameOverBestScoreTxt.text = ((int)floatb).ToString(); // 게임오버UI베스트 점수 출력
+        gameOverBestScoreTxt.text = PlayerPrefs.GetInt(0 + "BestScore").ToString();
 
         // 얻은 코인
-        if (PlayerPrefs.GetInt("hap") > 100)
-        {
-            float floatc = PlayerPrefs.GetInt("scoreCoins");
-            floatc += scaledIncrement;
-            gameOverEarnCoinTxt.text = floatc.ToString();
-        }
+        //if (PlayerPrefs.GetInt("hap") > 100)
+        //{
+        //    float floatc = PlayerPrefs.GetInt("scoreCoins");
+        //    floatc += scaledIncrement;
+        //    gameOverEarnCoinTxt.text = floatc.ToString();
+        //}
+
+        gameOverEarnCoinTxt.text = PlayerPrefs.GetInt("scoreCoins").ToString();
+
         #endregion
 
         #region TOP 5 출력

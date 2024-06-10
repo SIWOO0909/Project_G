@@ -19,7 +19,7 @@ public class SoundManager : MonoBehaviour
 
     //public AudioSource ChumBeong;
 
-    public AudioSource jumpSound;
+    public AudioSource FootSound;
 
     public AudioSource ClickSound;
     public AudioSource OutSound;
@@ -40,16 +40,13 @@ public class SoundManager : MonoBehaviour
 
     static public float ButtonVolume;
 
-    // 볼륨 조절 바 (로비)
-    public Slider BtnVolumeSlider;
-    public Slider MusicVolumeSlider;
+
 
     // 볼륨 조절바 (인게임)
-    public Slider IngameBtnVolumeSlider;
     public Slider IngameMusicVolumeSlider;
-    public Slider IngameSirenVolumeSlider; // 사이렌
-
-    public GameObject ClickSoundBug;
+    public Slider IngameBtnVolumeSlider;
+    public Slider IngameFootVolumeSlider; // 발소리
+    public Slider IngameSirenVolumeSlider; // 사이렌 소리
 
 
     public void Start()
@@ -73,7 +70,6 @@ public class SoundManager : MonoBehaviour
     public void SetButtonVolume(float btnVolume)
     {
         coinSound.volume = btnVolume;
-        jumpSound.volume = btnVolume;
         ClickSound.volume = btnVolume; // 버튼 클릭음
         OutSound.volume = btnVolume;
         PopUpSound.volume = btnVolume;
@@ -85,11 +81,18 @@ public class SoundManager : MonoBehaviour
         MulSoRi.volume = btnVolume;
         attack.volume = btnVolume;
         PamPhaRe.volume = btnVolume;
-        Siren.volume = btnVolume;
 
         PlayerPrefs.SetFloat("BtnVolume", btnVolume);
     }
 
+    // 발소리 조절
+    public void FootVolume(float footVolume)
+    {
+        FootSound.volume = footVolume; // 발소리
+        PlayerPrefs.SetFloat("FootVolume", footVolume);
+    }
+
+    // 사이렌 소리 조절
     public void SirenVolume(float sirenVolume)
     {
         Siren.volume = sirenVolume;
@@ -99,54 +102,38 @@ public class SoundManager : MonoBehaviour
     public void LoadVolume()
     {
         // 기본값 0.5를 사용하여 저장된 버튼볼륨을 불러옴
-        float BtnSavedVolume = PlayerPrefs.GetFloat("BtnVolume", 0.5f); // 효과음
         float MusicSavedVolume = PlayerPrefs.GetFloat("MusicVolume", 0.5f); // 배경음
-        float SirenSavedVolume = PlayerPrefs.GetFloat("SirenVolume", 0.5f); // 사이렌음
+        float BtnSavedVolume = PlayerPrefs.GetFloat("BtnVolume", 0.5f); // 효과음
+        float FootSavedVolume = PlayerPrefs.GetFloat("FootVolume", 0.5f); // 발소리
+        float SirenSavedVolume = PlayerPrefs.GetFloat("SirenVolume", 0.5f); // 사이렌소리
 
-        // 불러온 볼륨을 적용 // 효과음
-        coinSound.volume = BtnSavedVolume;
-        jumpSound.volume = BtnSavedVolume;
-        ClickSound.volume = BtnSavedVolume; // 버튼 클릭음
-        OutSound.volume = BtnSavedVolume;
-        PopUpSound.volume = BtnSavedVolume;
-        Reset.volume = BtnSavedVolume;
-        PlayBtn.volume = BtnSavedVolume;
-        GameOverSound.volume = BtnSavedVolume;
-        LvUpBtn.volume = BtnSavedVolume;
-        dead.volume = BtnSavedVolume;
-
-        // 불러온 볼륨을 적용 // 배경음
-        LobbyMusicsource.volume = MusicSavedVolume;
-        IngameMusicSource.volume = MusicSavedVolume;
-        bora.volume = MusicSavedVolume;
-
-        // 불러온 볼륨을 적용 // 사이렌
-        Siren.volume = SirenSavedVolume;
-
-        // 슬라이더 값도 불러온 볼륨으로 설정 // 효과음
-        if (BtnVolumeSlider != null)
+        // 배경음 조절
+        if (IngameMusicVolumeSlider != null)
         {
-            BtnVolumeSlider.value = BtnSavedVolume;
+            IngameMusicVolumeSlider.value = MusicSavedVolume;
+        }
+
+        // 효과음 조절
+        if (IngameBtnVolumeSlider != null)
+        {
             IngameBtnVolumeSlider.value = BtnSavedVolume;
         }
 
-        // 슬라이더 값도 불러온 볼륨으로 설정 // 배경음
-        if (BtnVolumeSlider != null)
+        // 발소리 조절
+        if (IngameFootVolumeSlider != null)
         {
-            MusicVolumeSlider.value = MusicSavedVolume; // 로비
-            IngameMusicVolumeSlider.value = MusicSavedVolume; // 인게임
+            IngameFootVolumeSlider.value = FootSavedVolume;
         }
 
-        // 슬라이더 값도 불러온 볼륨으로 설정 // 사이렌음
+        // 사이렌 소리 조절
         if (IngameSirenVolumeSlider != null)
         {
-            IngameSirenVolumeSlider.value = SirenSavedVolume;//인게임
+            IngameSirenVolumeSlider.value = SirenSavedVolume;
         }
-
-        // 버튼 소리 판넬 재활성화
-        ClickSoundBug.SetActive(true);
     }
 
+
+    #region 사운드 재생
     // 공격사운드
     public void attackSound()
     {
@@ -160,7 +147,7 @@ public class SoundManager : MonoBehaviour
 
     public void JumpSound()
     {
-        jumpSound.Play();
+        FootSound.Play();
     }
 
     public void ClickBtnSound()
@@ -202,4 +189,5 @@ public class SoundManager : MonoBehaviour
     {
         LvUpBtn.Play();
     }
+    #endregion
 }
