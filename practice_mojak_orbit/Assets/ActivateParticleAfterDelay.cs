@@ -5,7 +5,8 @@ public class ActivateParticleAfterDelay : MonoBehaviour
 {
     public float delayTime = 3f; // 3초 후에 동작할 시간
 
-    private ParticleSystem particleSystem;
+    //private ParticleSystem particleSystem;
+    private new ParticleSystem particleSystem;
 
     private void Start()
     {
