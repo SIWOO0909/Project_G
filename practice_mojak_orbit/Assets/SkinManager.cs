@@ -17,6 +17,7 @@ public class SkinManager : MonoBehaviour
     public GameObject WPi;
     public GameObject WG;
     public GameObject WW;
+    public GameObject HD;
 
     // 민수 변수
     public int minsu;
@@ -103,7 +104,13 @@ public class SkinManager : MonoBehaviour
             minsu = 10;
             PlayerPrefs.SetInt("Character", 10);
         }
-        
+        else if (PlayerPrefs.GetInt("Character") == 11)
+        {
+            DestroyAllCharacter();
+            HD.SetActive(true);
+            minsu = 11;
+            PlayerPrefs.SetInt("Character", 11);
+        }
     }
 #endregion
 
@@ -179,6 +186,12 @@ public class SkinManager : MonoBehaviour
         PlayerPrefs.SetInt("Character", 10);
     }
 
+    public void Hdg()
+    {
+        minsu = 11;
+        PlayerPrefs.SetInt("Character", 11);
+    }
+
     #endregion
 
     #region 모든 캐릭터 안보이게하는 함수
@@ -195,6 +208,7 @@ public class SkinManager : MonoBehaviour
         WPi.SetActive(false);
         WG.SetActive(false);
         WW.SetActive(false);
+        HD.SetActive(false);
     }
     #endregion
 

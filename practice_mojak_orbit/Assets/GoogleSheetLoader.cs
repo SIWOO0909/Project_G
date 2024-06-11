@@ -9,7 +9,7 @@ public class GoogleSheetLoader : MonoBehaviour
     string sheetData;
     public Text displayText;
     const string googleSheetURL = 
-    "https://docs.google.com/spreadsheets/d/1z7UZzpB2PKaaPLIW4Y8rFDShH3QTwbKjA06Fqoqz0Ls/export?format=tsv&range=A2:D12";
+    "https://docs.google.com/spreadsheets/d/1z7UZzpB2PKaaPLIW4Y8rFDShH3QTwbKjA06Fqoqz0Ls/export?format=tsv&range=A2:D13";
 
     IEnumerator Start()
     {
@@ -42,11 +42,13 @@ public class GoogleSheetLoader : MonoBehaviour
         string[] columns9 = rows[8].Split('\t');
         string[] columns10 = rows[9].Split('\t');
         string[] columns11 = rows[10].Split('\t');
+        string[] columns12 = rows[11].Split('\t');
 
 
         // 첫번째 행의 아이템 이름과 Description을 출력한다.
         // displayText.text = columns[1] + "\n" + columns[2];
         displayText.text = columns[3].ToString(); // 윤일동 차렷 
+        //displayText.text = columns11[2].ToString(); // 윤일동 차렷 
         // columns[2].ToString(); // 위글리 확률 0.3
         // columns2[2].ToString(); // 박스 확률 0.2
 
@@ -61,5 +63,6 @@ public class GoogleSheetLoader : MonoBehaviour
         gachaManager.wpi = float.Parse(columns9[2]);
         gachaManager.wg = float.Parse(columns10[2]);
         gachaManager.ww = float.Parse(columns11[2]);
+        gachaManager.hotDog = float.Parse(columns12[2]); // 핫도그 확률
     }
 }
