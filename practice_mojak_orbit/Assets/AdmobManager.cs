@@ -26,7 +26,6 @@ public class AdmobAds : MonoBehaviour
     RewardedAd rewardedAd;
     // NativeAd nativeAd;
 
-    #region 시작함수
     private void Start()
     {
         ShowCoins();
@@ -36,11 +35,13 @@ public class AdmobAds : MonoBehaviour
 
             print("광고 준비 중..");
         });
-        // LoadBannerAd();
+        LoadBannerAd();
     }
-    #endregion
 
-    
+    private void Update()
+    {
+        ShowCoins();
+    }
 
     #region 배너광고
     public void LoadBannerAd()
@@ -302,7 +303,7 @@ public class AdmobAds : MonoBehaviour
 
     public int zeroCoins = 0;
 
-    // 코인 초기화
+    #region 코인 초기화 버튼
     public void ResetCoins(int zeroCoins)
     {
         int crrCoins = PlayerPrefs.GetInt("totalCoins");
@@ -311,7 +312,7 @@ public class AdmobAds : MonoBehaviour
 
         ShowCoins();
     }
-
+    #endregion
     // UI에서 보여주개
     public void ShowCoins()
     {

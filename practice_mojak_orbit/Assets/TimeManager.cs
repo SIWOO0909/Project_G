@@ -21,11 +21,12 @@ public class TimeManager : MonoBehaviour
 
     private void Start()
     {
-        TimeStop();
+        TimeStart();
+        Debug.Log("현재 세상은 움직이고 있습니다.");
     }
     public void TimeStop()
     {
-        Time.timeScale = 0;
+        // Time.timeScale = 0;
         Debug.Log("현재 게임세상은 멈춰져 있습니다.");
     }
 
