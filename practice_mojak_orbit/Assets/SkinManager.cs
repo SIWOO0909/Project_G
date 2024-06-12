@@ -18,6 +18,9 @@ public class SkinManager : MonoBehaviour
     public GameObject WG;
     public GameObject WW;
     public GameObject HD;
+    public GameObject DBlue;
+    public GameObject KrabRed;
+    public GameObject Plankton;
 
     // 민수 변수
     public int minsu;
@@ -111,6 +114,30 @@ public class SkinManager : MonoBehaviour
             minsu = 11;
             PlayerPrefs.SetInt("Character", 11);
         }
+
+        else if (PlayerPrefs.GetInt("Character") == 12)
+        {
+            DestroyAllCharacter();
+            DBlue.SetActive(true);
+            minsu = 12;
+            PlayerPrefs.SetInt("Character", 12);
+        }
+
+        else if (PlayerPrefs.GetInt("Character") == 13)
+        {
+            DestroyAllCharacter();
+            KrabRed.SetActive(true);
+            minsu = 13;
+            PlayerPrefs.SetInt("Character", 13);
+        }
+
+        else if (PlayerPrefs.GetInt("Character") == 14)
+        {
+            DestroyAllCharacter();
+            Plankton.SetActive(true);
+            minsu = 14;
+            PlayerPrefs.SetInt("Character", 14);
+        }
     }
 #endregion
 
@@ -192,6 +219,22 @@ public class SkinManager : MonoBehaviour
         PlayerPrefs.SetInt("Character", 11);
     }
 
+    public void Dblue()
+    {
+        minsu = 12;
+        PlayerPrefs.SetInt("Character", 12);
+    }
+    public void KrabRedCh()
+    {
+        minsu = 13;
+        PlayerPrefs.SetInt("Character", 13);
+    }
+    public void PlanktonCh()
+    {
+        minsu = 14;
+        PlayerPrefs.SetInt("Character", 14);
+    }
+
     #endregion
 
     #region 모든 캐릭터 안보이게하는 함수
@@ -209,6 +252,9 @@ public class SkinManager : MonoBehaviour
         WG.SetActive(false);
         WW.SetActive(false);
         HD.SetActive(false);
+        DBlue.SetActive(false);
+        KrabRed.SetActive(false);
+        Plankton.SetActive(false);
     }
     #endregion
 

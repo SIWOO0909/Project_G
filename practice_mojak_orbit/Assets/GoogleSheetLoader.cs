@@ -7,10 +7,10 @@ using System;
 public class GoogleSheetLoader : MonoBehaviour
 {
     string sheetData;
-    public Text displayText;
+    public Text displayText; 
     const string googleSheetURL = 
-    "https://docs.google.com/spreadsheets/d/1z7UZzpB2PKaaPLIW4Y8rFDShH3QTwbKjA06Fqoqz0Ls/export?format=tsv&range=A2:D13";
-
+    "https://docs.google.com/spreadsheets/d/1z7UZzpB2PKaaPLIW4Y8rFDShH3QTwbKjA06Fqoqz0Ls/export?format=tsv&range=A2:D16";  
+    // ±¸±Û½ÃÆ® A2~D16±îÁö¸¸ °¡Á®¿À°Ú´Ù~
     IEnumerator Start()
     {
         // UnityWebRequest ÀÎ½ºÅÏ½º ¸®¼Ò½º ÇØÁ¦¸¦ À§ÇÑ using
@@ -42,15 +42,14 @@ public class GoogleSheetLoader : MonoBehaviour
         string[] columns9 = rows[8].Split('\t');
         string[] columns10 = rows[9].Split('\t');
         string[] columns11 = rows[10].Split('\t');
-        string[] columns12 = rows[11].Split('\t');
+        string[] columns12 = rows[11].Split('\t'); //ÇÖµµ±¸
+        string[] columns13 = rows[12].Split('\t'); //D ÆÄ¶û
+        string[] columns14 = rows[13].Split('\t'); //Å©·¦ ·¹µå
+        string[] columns15 = rows[14].Split('\t'); //ÇÃ·©Å©Åæ
 
 
         // Ã¹¹øÂ° ÇàÀÇ ¾ÆÀÌÅÛ ÀÌ¸§°ú DescriptionÀ» Ãâ·ÂÇÑ´Ù.
-        // displayText.text = columns[1] + "\n" + columns[2];
-        displayText.text = columns[3].ToString(); // À±ÀÏµ¿ Â÷·Ç 
-        //displayText.text = columns11[2].ToString(); // À±ÀÏµ¿ Â÷·Ç 
-        // columns[2].ToString(); // À§±Û¸® È®·ü 0.3
-        // columns2[2].ToString(); // ¹Ú½º È®·ü 0.2
+        displayText.text = columns[3].ToString(); 
 
         gachaManager.w = float.Parse(columns[2]); // À§±Û¸® È®·ü 0.3
         gachaManager.b = float.Parse(columns2[2]); // ¹Ú½º È®·ü 0.2
@@ -64,5 +63,8 @@ public class GoogleSheetLoader : MonoBehaviour
         gachaManager.wg = float.Parse(columns10[2]);
         gachaManager.ww = float.Parse(columns11[2]);
         gachaManager.hotDog = float.Parse(columns12[2]); // ÇÖµµ±× È®·ü
+        gachaManager.Dblue = float.Parse(columns13[2]); // D ÆÄ¶û È®·ü
+        gachaManager.KrabRed = float.Parse(columns14[2]); // Å©·¦ ·¹µå È®·ü
+        gachaManager.hotDogGreen = float.Parse(columns15[2]); // ÇÃ·©Å©Åæ È®·ü
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class gachaManager : MonoBehaviour
 {
-    #region 선언
     // 뽑기 버튼
     public GameObject gachaBtn;
 
@@ -22,6 +21,10 @@ public class gachaManager : MonoBehaviour
     public GameObject WG;
     public GameObject WW;
     public GameObject HotDog; // 핫도그
+    public GameObject DBLUE; // 
+    public GameObject KrabRedimg; //
+    public GameObject HotDogGreen; //
+
 
     // 해금
     public GameObject BoxLocked;
@@ -35,8 +38,10 @@ public class gachaManager : MonoBehaviour
     public GameObject WGLocked;
     public GameObject WWLocked;
     public GameObject HDLocked;
+    public GameObject DBlueLocked;
+    public GameObject KrabRedLocked;
+    public GameObject HotDogGreenLocked;
 
-    // 뽑힐 확률 // from 구글 시트
     public static float w;
     public static float b;
     public static float k;
@@ -49,13 +54,13 @@ public class gachaManager : MonoBehaviour
     public static float wg;
     public static float ww;
     public static float hotDog;
+    public static float Dblue;
+    public static float KrabRed;
+    public static float hotDogGreen;
 
-    #endregion
 
-    #region 매 프레임마다 해금 여부 확인
     private void Update()
     {
-        #region 가챠 살돈 없으면 못사요
         if (PlayerPrefs.GetInt("totalCoins") < 2000)
         {
             gachaBtn.SetActive(false);
@@ -64,7 +69,7 @@ public class gachaManager : MonoBehaviour
         {
             gachaBtn.SetActive(true);
         }
-        #endregion
+
 
         // 박스 2
         if (PlayerPrefs.GetInt("BoxCharacter") == 1) // 박스캐릭터가 한번 이상 뽑힐시
@@ -87,11 +92,11 @@ public class gachaManager : MonoBehaviour
         }
 
         // 위글리 빨강 4
-        if (PlayerPrefs.GetInt("WRC") == 1) 
+        if (PlayerPrefs.GetInt("WRC") == 1)
         {
             WRLocked.SetActive(false);
         }
-        else if (PlayerPrefs.GetInt("WRC") == 0) 
+        else if (PlayerPrefs.GetInt("WRC") == 0)
         {
             WRLocked.SetActive(true);
         }
@@ -169,13 +174,41 @@ public class gachaManager : MonoBehaviour
         {
             HDLocked.SetActive(true);
         }
-    }
-    #endregion
+        // DBLUE
+        if (PlayerPrefs.GetInt("DBlue") == 1)
+        {
+            DBlueLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("DBlue") == 0)
+        {
+            DBlueLocked.SetActive(true);
+        }
 
-    #region 뽑기 시스템 함수
+        // 크랩 레드
+        if (PlayerPrefs.GetInt("KrabRed") == 1)
+        {
+            KrabRedLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("KrabRed") == 0)
+        {
+            KrabRedLocked.SetActive(true);
+        }
+
+        // 플랭크톤
+        if (PlayerPrefs.GetInt("Plankton") == 1)
+        {
+            HotDogGreenLocked.SetActive(false);
+        }
+        else if (PlayerPrefs.GetInt("Plankton") == 0)
+        {
+            HotDogGreenLocked.SetActive(true);
+        }
+    }
+
+
     public void GachaStart()
     {
-        float hap = w + b + k + wr + wo + wy + wb + wpu + wpi + wg + ww + hotDog;
+        float hap = w + b + k + wr + wo + wy + wb + wpu + wpi + wg + ww + hotDog + Dblue + KrabRed + hotDogGreen;
         float GachaResult = Random.Range(0, hap);
         Debug.Log("뽑기 확률" + GachaResult);
         // 위글리1
@@ -257,19 +290,38 @@ public class gachaManager : MonoBehaviour
             PlayerPrefs.SetInt("WWC", 1);
         }
         // 핫도그
-        else if (GachaResult >= w + b + k + wr + wo + wy + wb + wpu + wpi + wg + ww && GachaResult < hap)
+        else if (GachaResult >= w + b + k + wr + wo + wy + wb + wpu + wpi + wg + ww && GachaResult < w + b + k + wr + wo + wy + wb + wpu + wpi + wg + ww + hotDog) 
         {
             HotDog.SetActive(true);
             HDLocked.SetActive(false);
-            PlayerPrefs.SetInt("HD",1);
+            PlayerPrefs.SetInt("HD", 1);
+        }
+        // D blue
+        else if (GachaResult >= w + b + k + wr + wo + wy + wb + wpu + wpi + wg + ww + hotDog && GachaResult < w + b + k + wr + wo + wy + wb + wpu + wpi + wg + ww + hotDog + Dblue)
+        {
+            DBLUE.SetActive(true);
+            DBlueLocked.SetActive(false);
+            PlayerPrefs.SetInt("DBlue", 1);
+        }
+        // Krab Red
+        else if (GachaResult >= w + b + k + wr + wo + wy + wb + wpu + wpi + wg + ww + hotDog + Dblue && GachaResult < w + b + k + wr + wo + wy + wb + wpu + wpi + wg + ww + hotDog + Dblue + KrabRed)
+        {
+            KrabRedimg.SetActive(true);
+            KrabRedLocked.SetActive(false);
+            PlayerPrefs.SetInt("KrabRed", 1);
+        }
+        // plankton
+        else if (GachaResult >= w + b + k + wr + wo + wy + wb + wpu + wpi + wg + ww + hotDog + Dblue + KrabRed && GachaResult < hap)
+        {
+            HotDogGreen.SetActive(true);
+            HotDogGreenLocked.SetActive(false);
+            PlayerPrefs.SetInt("Plankton", 1);
         }
     }
-    #endregion
 
-    #region 뽑기시 보여질 이미지 없애는 함수
     public void UnShowGachaPopUpImage()
     {
-        Wigley.SetActive(false);
+        //Wigley.SetActive(false);
         Box.SetActive(false);
         Krab.SetActive(false);
         WR.SetActive(false);
@@ -281,10 +333,11 @@ public class gachaManager : MonoBehaviour
         WG.SetActive(false);
         WW.SetActive(false);
         HotDog.SetActive(false);
+        DBLUE.SetActive(false);
+        KrabRedimg.SetActive(false);
+        HotDogGreen.SetActive(false);
     }
-    #endregion
 
-    #region 캐릭터 전부 해금
     public void AllCharacterGetto()
     {
         PlayerPrefs.SetInt("BoxCharacter", 1);
@@ -298,10 +351,11 @@ public class gachaManager : MonoBehaviour
         PlayerPrefs.SetInt("WGC", 1);
         PlayerPrefs.SetInt("WWC", 1);
         PlayerPrefs.SetInt("HD", 1);
+        PlayerPrefs.SetInt("DBlue", 1);
+        PlayerPrefs.SetInt("KrabRed", 1);
+        PlayerPrefs.SetInt("Plankton", 1);
     }
-    #endregion
 
-    #region 캐릭터 전부 잠금
     public void CharacterUnGetted()
     {
         PlayerPrefs.SetInt("BoxCharacter", 0); // 박스 캐릭터 잠금
@@ -315,6 +369,8 @@ public class gachaManager : MonoBehaviour
         PlayerPrefs.SetInt("WGC", 0);
         PlayerPrefs.SetInt("WWC", 0);
         PlayerPrefs.SetInt("HD", 0);
+        PlayerPrefs.SetInt("DBlue", 0);
+        PlayerPrefs.SetInt("KrabRed", 0);
+        PlayerPrefs.SetInt("Plankton", 0);
     }
-    #endregion
 }
